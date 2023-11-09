@@ -86,11 +86,12 @@ window.addEventListener('load', async () => {
     // Show bar expand button
     $('.pork-toggler').each((i, el) => {el.remove()})
 
-    $('.social-sidebar .menu .accordion').append(`
+                    // .accordion
+    $('.social-sidebar .menu').append(` 
     <div class="according-group pork-toggler">
         <div class="according-heading">
             <a class="accordion-toggle">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-solid fa-bars"></i>
             </a>
         </div>
     </div>`
@@ -102,13 +103,21 @@ window.addEventListener('load', async () => {
     $('.pork-toggler').on('click', () => {
         comp = $('.sidebar-complement')
         comp.css('display', 'block')
+
+        // Get items to show
+        els = $('.social-sidebar .accordion-group:not(.pork-toggler)')
+
+        els.each((i, el) => {
+            if ($(el).css('display') === 'none') {
+                console.log('Showing', el)
+            }
+        })
     })
 })
 
-
 compute_bar = () => {
     // Calculate how many items should be in the sidebar
-    // Hidden ones will be transfered to a submenu
+    // Hidden ones will be transfered to .sidebar-complement
 
     item_size = 50
     bar_size = $('.social-sidebar').height()

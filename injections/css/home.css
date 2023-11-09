@@ -231,12 +231,35 @@ html:not(.pork) {
     display: none;
 }
 
+.accordion-toggle.opened::after {
+    /* Hide current page arrow */
+    display: none;
+}
+
+.social-sidebar .menu .accordion {
+    display: block !important;
+    overflow: hidden !important;
+}
+
 .social-sidebar .menu .accordion-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    display: block;
+
+    background-color: blue !important;
+    border-radius: 50% !important;
+    margin: 10px 0 !important;
+    width: 50px;
+    height: 50px !important;
+}
+
+.social-sidebar .menu {
+    display: flex !important;
+    flex-direction: column !important;
+
+    height: calc(100% - 70px - 10px - 15px) !important;
+}
+
+.social-sidebar .menu .accordion {
+    flex-grow: 1 !important;
 }
 
 .social-sidebar .menu .accordion-group i {
@@ -251,8 +274,20 @@ html:not(.pork) {
     color: #BD93F9 !important;
 }
 
-.social-sidebar .menu .accordion-group img {
-    opacity: 0 !important;
+.social-sidebar .menu .accordion-group {
+    /* Sidebar elements wrappers */
+
+    background-color: red !important;
+    height: 50px;
+}
+
+.social-sidebar .menu .accordion-group {
+    margin-right: 0 !important;
+}
+
+.social-sidebar .menu .accordion-group i {
+    /* Sidebar icon */
+    flex-grow: 100 !important;
 }
 
 #footer {
@@ -261,6 +296,7 @@ html:not(.pork) {
 
 .pork-toggler {
     font-size: 24px;
+    bottom: 0 !important;
 }
 
 .pork-toggler i {
