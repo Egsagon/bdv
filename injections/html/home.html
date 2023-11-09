@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="pork">
+<head>
+    <meta charset="UTF-8">
+    <title>LDV - Connection</title>
+</head>
+<body class="pork">
+
+    <div id="ball"></div>
+
+    <div class="container">
+        <h1>Connect to LDV</h1>
+
+        <p id="msg" style="display: none"></p>
+        
+        <form onsubmit="identify(); return false;">
+            <input id="log" type="text" required placeholder="Your LeoID">
+            <input type="submit" value="OK">
+        </form>
+    </div>
+
+    <script>
+        identify = () => {
+            // Attempt to identify
+            
+            id = $('#log')[0].value
+
+            payload = {'act': 'ident_analyse', 'login': id}
+            
+            $.post('ajax.inc.php', payload, response => {
+                
+                if (response.startsWith('$(location)')) {
+                    // Request succeeded, save id as cookie
+
+                    cookie_date = new Date()
+                    cookie_date.setDate(cookie_date.getDate() + 30) // Will expire every month
+                    document.cookie = `leo=${id}; expires=${cookie_date.toUTCString()}; path=/`
+
+                    return eval(response) // execute jquery string
+                }
+
+                // Request failed
+                msg = /html: \"(.*?)\",/gms.exec(response)[1]
+                
+                $('#msg')[0].style.display = 'block'
+                $('#msg')[0].innerHTML = msg
+            })
+        }
+
+        // Try to use cookie if exists
+        if (document.cookie.includes('leo=')) {
+            cookie = /leo=(.*?);/g.exec(document.cookie)
+            $('#log').value = cookie
+        }
+    </script>
+</body>
+</html>

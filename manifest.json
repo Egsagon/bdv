@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "Pork",
+    "version": "0.1",
+    "description": "Pork for LDV",
+
+    "permissions": [
+        "tabs",
+        "cookies",
+        "activeTab",
+        "webRequest"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.leonard-de-vinci.net/*"
+            ],
+            "js": [
+                "injections/js/jq.js",
+                "injections/js/base.js",
+                "injections/js/home.js"
+            ],
+            "css": ["injections/css/home.css"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["*://adfs.devinci.fr/adfs/ls/*"],
+            "js": [
+                "injections/js/jq.js",
+                "injections/js/adfs.js"
+            ],
+            "css": ["injections/css/adfs.css"],
+            "run_at": "document_start"
+        }
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "pork@ldv.fr",
+            "strict_min_version": "57.0a1"
+        }
+    },
+
+    "web_accessible_resources": [
+        "injections/html/*.html"
+    ]
+}
