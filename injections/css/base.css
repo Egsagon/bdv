@@ -1,5 +1,24 @@
+/* Base fonts and colors */
+
+/* Note - blocked in adfs for some reason */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 :root {
 
-    
+    /* Color and settings */
+
+    --pork-bg-color: #18181a;
+    --pork-bg-color-2: #232327;
+    --pork-fg-color: #F8F8F2;
+    --pork-accent-color: var(--school-accent);
+    --pork-error-color: #FF5555;
+
+    --pork-accent-color-2: #ffff80;
+
+    --pork-border-radius: 10px;
+    --pork-gap: 10px;
+
+    /* Default while loading */
+    --school-accent: transparent;
 
 }

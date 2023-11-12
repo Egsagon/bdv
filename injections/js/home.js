@@ -119,7 +119,7 @@ compute_bar = () => {
     // Calculate how many items should be in the sidebar
     // Hidden ones will be transfered to .sidebar-complement
 
-    item_size = 50
+    item_size = 42 + 2 * 8
     bar_size = $('.social-sidebar').height()
     space = Math.floor(bar_size / item_size) - 1
 

@@ -1,8 +1,5 @@
 /* ADFS page stylesheet */
 
-/* Blocked by MS for some reason */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 #header,
 #footer,
 #footerPlaceholder {
@@ -29,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
 }
 
 #content main {
@@ -39,10 +36,10 @@
 #workArea {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
-    background-color: #44475A;
+    background-color: var(--pork-bg-color-2);
     border-radius: 10px;
     padding: 24px;
-    color: #F8F8F2;
+    color: var(--porf-fg-color);
 }
 
 #authArea {
@@ -68,13 +65,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F8F8F2;
-    color: #282A36;
+    background-color: var(--pork-fg-color);
+    color: var(--pork-bg-color);
     transition: all ease-in-out .2s;
 }
 
 #submitButton:hover {
-    background-color: #BD93F9;
+    background-color: var(--pork-accent-color);
 }
 
 #submitButton, input {
@@ -84,7 +81,7 @@
 input {
     background-color: transparent;
     border: none !important;
-    border-bottom: 2px solid #F8F8F2 !important;
+    border-bottom: 2px solid var(--porf-fg-color) !important;
     outline: none !important;
-    color: #F8F8F2;
+    color: var(--porf-fg-color);
 }

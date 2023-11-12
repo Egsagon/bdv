@@ -21,7 +21,10 @@
                 "injections/js/base.js",
                 "injections/js/home.js"
             ],
-            "css": ["injections/css/home.css"],
+            "css": [
+                "injections/css/base.css",
+                "injections/css/home.css"
+            ],
             "run_at": "document_start"
         },
         {
@@ -30,7 +33,10 @@
                 "injections/js/jq.js",
                 "injections/js/adfs.js"
             ],
-            "css": ["injections/css/adfs.css"],
+            "css": [
+                "injections/css/base.css",
+                "injections/css/adfs.css"
+            ],
             "run_at": "document_start"
         }
     ],

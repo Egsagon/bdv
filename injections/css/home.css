@@ -1,14 +1,9 @@
 /* Stylesheet for home and auth page */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
-:root {
-    --school-accent: #44475A;
-}
-
 * {
     font-family: Poppins;
     box-shadow: none !important;
+    scrollbar-width: thin; /* Firefox only */
 }
 
 /* Auth page styles */
@@ -23,23 +18,22 @@ body.pork {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
 }
 
 body.pork .container {
     text-align: center;
-    color: #F8F8F2;
-    background-color: #44475A;
+    color: var(--pork-fg-color);
+    background-color: var(--pork-bg-color-2);
     padding: 32px;
     border-radius: 10px;
 }
 
 body.pork #msg {
-    background-color: #FF5555;
+    background-color: var(--pork-error-color);
     padding: 16px;
     margin: 10px;
-    border-radius: 10px;
-}
+    border-radius: 10px;}
 
 body.pork form {
     display: flex;
@@ -49,33 +43,35 @@ body.pork form {
 body.pork input {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #F8F8F2;
+    border-bottom: 2px solid var(--pork-fg-color);
     padding: 5px;
     text-align: start;
     outline: none;
-    color: #F8F8F2;
+    color: var(--pork-fg-color);
 }
 
 body.pork input[type='submit'] {
-    background-color: #F8F8F2;
+    background-color: var(--pork-accent-color);
     border: none;
-    color: #282A36;
+    border-radius: 10px;
+    color: var(--pork-fg-color);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
     transition: all ease-in-out .2s;
+    height: 40px;
 }
 
 body.pork input[type='submit']:hover,
 body.pork input[type='submit']:focus {
-    background-color: #BD93F9;
-    color: #F8F8F2;
+    background-color: var(--pork-fg-color);
+    color: var(--pork-bg-color);
 }
 
 body.pork #ball {
     width: 60px;
     height: 60px;
-    background-color: #BD93F9;
+    background-color: var(--pork-accent-color);
     margin-bottom: 100px;
     border-radius: 4px;
     animation: move-ball 4s infinite forwards alternate;
@@ -100,12 +96,12 @@ html:not(.pork) {
     margin-left: 70px;
     margin-top: 70px;
     margin-right: 10px;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
 }
 
 .navbar-inner,
 .navbar-inner .container-fluid {
-    background-color: #44475A !important;
+    background-color: var(--pork-bg-color-2) !important;
     border: none !important;
     border-radius: 10px !important;
     margin: 0 !important;
@@ -123,7 +119,6 @@ html:not(.pork) {
 
 .navbar-inner .container-fluid {
     height: 50px !important;
-    background-color: green;
 }
 
 .navbar-inner::after,
@@ -135,12 +130,12 @@ html:not(.pork) {
     padding: 0;
     margin: 0;
     height: 50px;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
     overflow: visible !important;
 }
 
 .navbar-inner-title {
-    background-color: #44475A;
+    background-color: var(--pork-bg-color-2);
     height: 50px;
     padding: 0;
     margin: 0;
@@ -184,6 +179,8 @@ html:not(.pork) {
     text-align: center;
     border-radius: 10px !important;
     overflow-y: hidden;
+    color: var(--pork-bg-color) !important;
+    background-color: var(--pork-bg-color) !important;
 }
 
 .schoole_pastil {
@@ -219,7 +216,7 @@ html:not(.pork) {
 
 .social-sidebar-content {
     border: none !important;
-    background-color: #44475A !important;
+    background-color: var(--pork-bg-color-2) !important;
     border-radius: 10px !important;
 }
 
@@ -236,6 +233,10 @@ html:not(.pork) {
     display: none;
 }
 
+.social-sidebar .menu {
+    /* flex-grow: 1; */
+}
+
 .social-sidebar .menu .accordion {
     display: block !important;
     overflow: hidden !important;
@@ -244,7 +245,6 @@ html:not(.pork) {
 .social-sidebar .menu .accordion-group {
     display: block;
 
-    background-color: blue !important;
     border-radius: 50% !important;
     margin: 10px 0 !important;
     width: 50px;
@@ -263,21 +263,26 @@ html:not(.pork) {
 }
 
 .social-sidebar .menu .accordion-group i {
-    color: #F8F8F2 !important;
-    font-size: 18px !important;
+    color: var(--pork-fg-color) !important;
+    font-size: 20px !important;
     transition: all ease-in-out .1s;
     text-align: center !important;
     margin-right: 0 !important;
+    margin-bottom: 12px;
+}
+
+.social-sidebar .menu .accordion-group i:first-child {
+    margin-top: 10px;
 }
 
 .social-sidebar .menu .accordion-group:hover i {
-    color: #BD93F9 !important;
+    color: var(--pork-accent-color) !important;
 }
 
 .social-sidebar .menu .accordion-group {
     /* Sidebar elements wrappers */
 
-    background-color: red !important;
+    background-color: transparent !important;
     height: 50px;
 }
 
@@ -300,15 +305,15 @@ html:not(.pork) {
 }
 
 .pork-toggler i {
-    color: #F8F8F2;
+    color: var(--pork-fg-color);
 }
 
 .pork-toggler i:hover {
-    color: #BD93F9;
+    color: var(--pork-accent-color);
 }
 
 .hello {
-    color: #BD93F9;
+    color: var(--pork-accent-color);
     padding-left: 10px;
 }
 
@@ -318,6 +323,11 @@ html:not(.pork) {
     background-color: red;
     min-width: 100px;
     min-height: 100px;
+}
+
+.scrollable {
+    /* display: flex;
+    flex-direction: column; */
 }
 
 /* Calendar styles */
@@ -331,15 +341,15 @@ html:not(.pork) {
 }
 
 #main * {
-    background-color: #44475A !important;
-    color: #F8F8F2 !important;
+    background-color: var(--pork-bg-color-2) !important;
+    color: var(--pork-fg-color) !important;
 }
 
 #main {
     margin-left: 0 !important;
     margin-top: 0 !important;
     padding-bottom: 0 !important;
-    border: 10px solid #44475A;
+    border: 10px solid var(--pork-bg-color-2);
     background-color: transparent;
     border-radius: 10px;
 }
@@ -347,12 +357,12 @@ html:not(.pork) {
 .page-content {
     min-width: 100px !important;
     min-height: 100px !important;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
 }
 
 body:not(.pork) {
     padding: 0 !important;
-    background-color: #282A36;
+    background-color: var(--pork-bg-color);
     overflow-y: hidden;
 }
 
@@ -376,21 +386,45 @@ body:not(.pork) {
 }
 
 .b-dayview-day-container .b-calendar-cell:not(.b-last-cell) {
-    border-right: 2px solid #282A36;
+    border-right: 2px solid var(--pork-bg-color);
 }
 
 .b-calendar > * > .b-top-toolbar {
-    border-bottom: 2px solid #282A36;
+    border-bottom: 2px solid var(--pork-bg-color);
 }
 
 .b-dayview-day-container {
-    border-left: 2px solid #282A36;
+    border-left: 2px solid var(--pork-bg-color);
 }
 
 .b-dayview-day-content {
-    border-top: 2px solid #282A36;
+    border-top: 2px solid var(--pork-bg-color);
+}
+
+.b-yscroll-pad {
+    border-left: 1px solid var(--pork-bg-color);
 }
 
 .b-dayview-schedule-container {
     border-left: 2px solid transparent;
 }
+
+.b-current-time-indicator {
+    border-top: 2px solid var(--school-accent) !important;
+}
+
+.b-current-time-indicator::before {
+    background-color: var(--school-accent) !important;
+}
+
+.b-cal-event-wrap {
+    width: 100% !important;
+    background-color: var(--pork-accent-color-2) !important;
+}
+
+.b-cal-event,
+.b-cal-event-body,
+.b-cal-event-body > div {
+    background-color: var(--pork-accent-color-2) !important;
+}
+
