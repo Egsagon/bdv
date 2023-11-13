@@ -1,0 +1,36 @@
+/* Promotions (extends home.css) */
+
+#main > .container-fluid {
+    display: block !important;
+}
+
+.social-box {
+    display: block;
+}
+
+.social-box:first-child {
+    display: none;
+}
+
+
+#social-timeline > .row-fluid {
+    height: calc(100vh - 80px - 20px - 20px);
+    overflow-y: scroll !important;
+}
+
+#main .header {
+    display: none;
+}
+
+#rigth-bar {
+    position: fixed;
+    right: 15px;
+}
+
+#rigth-bar .nav-header {
+    margin-bottom: 0 !important;
+}
+
+.span12:first-child {
+    display: none !important;
+}

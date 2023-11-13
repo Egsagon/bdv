@@ -49,6 +49,10 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/student/cours/"],
             "css": ["injections/css/cours.css"]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/promotion/"],
+            "css": ["injections/css/promotion.css"]
         }
     ],
 
