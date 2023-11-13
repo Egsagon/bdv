@@ -8,7 +8,7 @@
 - [x] Finances (www.leonard-de-vinci.net/student/finances/) (out of the box)
 - [x] Presences (www.leonard-de-vinci.net/student/presences/)
 - [x] Specific presence (https://www.leonard-de-vinci.net/student/presences/<token>) (out of the box)
-- [ ] Promotion (www.leonard-de-vinci.net/promotion)
+- [x] Promotion (www.leonard-de-vinci.net/promotion)
 - [x] Cours (www.leonard-de-vinci.net/student/cours/)
 - [ ] Atestations presence (https://www.leonard-de-vinci.net/student/attestations_presences/)
 - [ ] Offres de stages (https://www.leonard-de-vinci.net/student/stages_offres/?gotx=stage-search)
