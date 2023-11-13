@@ -60,6 +60,7 @@ window.addEventListener('load', async () => {
     acc = window.pork.accent(favicon)
     code = `rgb(${acc.r}, ${acc.g}, ${acc.b})`
     document.documentElement.style.cssText = `--school-accent: ${code}`;
+    $('.schoole_pastil').css('animation', 'swip forwards 1.5s')
 
     // Set hello message
     title = $('.navbar-inner-title')

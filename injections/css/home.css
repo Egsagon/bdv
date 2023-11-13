@@ -126,7 +126,7 @@ body.pork #ball {
 .site-menubar .dropdown-menu {
     background-color: var(--pork-bg-color-2) !important;
     border: 4px solid var(--pork-bg-color);
-    transform: translateY(10px);
+    transform: translate(-50%, 10px);
     border-radius: 10px;
 }
 
@@ -136,6 +136,10 @@ body.pork #ball {
 
 .site-menu > li:first-child {
     display: none;
+}
+
+.site-menubar .site-menu-item:hover {
+    color: var(--pork-accent-color) !important;
 }
 
 html:not(.pork) {
@@ -238,6 +242,29 @@ html:not(.pork) {
     width: 50px;
     height: 50px;
     margin-right: 10px !important;
+    cursor: pointer;
+}
+
+@keyframes swip {
+    0% {
+        rotate: 0deg;
+        scale: 1;
+    }
+
+    70% {
+        rotate: 20deg;
+        scale: 1.18;
+    }
+
+    90% {
+        rotate: -5deg;
+        scale: 1.01;
+    }
+
+    100% {
+        rotate: 0deg;
+        scale: 1;
+    }
 }
 
 .schoole_pastil img {
@@ -347,7 +374,6 @@ html:not(.pork) {
 
 .pork-toggler {
     font-size: 24px;
-    bottom: 0 !important;
 }
 
 .pork-toggler i {
@@ -516,4 +542,17 @@ body:not(.pork) {
 .b-cal-event-desc > .b-event-name:nth-child(2) {
     font-size: 10px !important;
     margin-top: 5px;
+}
+
+#main .b-button {
+    border: none;
+    padding: 0 10px;
+}
+
+#main .b-button label {
+    margin-bottom: 0;
+}
+
+.b-timeaxis-container {
+    background-image: none !important;
 }
