@@ -86,7 +86,6 @@ window.addEventListener('load', async () => {
     // Show bar expand button
     $('.pork-toggler').each((i, el) => {el.remove()})
 
-                    // .accordion
     $('.social-sidebar .menu').append(` 
     <div class="according-group pork-toggler">
         <div class="according-heading">
@@ -97,21 +96,12 @@ window.addEventListener('load', async () => {
     </div>`
     )
 
-    $(document).append(`<div class="sidebar-complement"></div>`)
+    $(document.body).append(`<div class="sidebar-complement"></div>`)
 
     // Display hidden icons when asked
     $('.pork-toggler').on('click', () => {
-        comp = $('.sidebar-complement')
-        comp.css('display', 'block')
-
-        // Get items to show
-        els = $('.social-sidebar .accordion-group:not(.pork-toggler)')
-
-        els.each((i, el) => {
-            if ($(el).css('display') === 'none') {
-                console.log('Showing', el)
-            }
-        })
+        $('.sidebar-complement').toggleClass('active')
+        compute_bar()
     })
 })
 
@@ -125,6 +115,21 @@ compute_bar = () => {
 
     $('.social-sidebar .accordion-group:not(.pork-toggler)').each((i, el) => {
         $(el).css('display', i >= space ? 'none' : 'unset')
+    })
+
+    // Hidden elements are placed on a different box
+    comp = $('.sidebar-complement')
+    comp.empty()
+
+    // Get items to show
+    els = $('.social-sidebar .accordion-group:not(.pork-toggler)')
+
+    els.each((i, el) => {
+        if ($(el).css('display') === 'none') {
+            clone = $(el).clone()
+            clone.css('display', 'block')
+            comp.append(clone)
+        }
     })
 }
 

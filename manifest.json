@@ -16,6 +16,9 @@
             "matches": [
                 "*://www.leonard-de-vinci.net/*"
             ],
+            "exclude_globs": [
+                "*my=*"
+            ],
             "js": [
                 "injections/js/jq.js",
                 "injections/js/base.js",
@@ -38,6 +41,12 @@
                 "injections/css/adfs.css"
             ],
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/presences/"],
+            "css": [
+                "injections/css/presence.css"
+            ]
         }
     ],
 

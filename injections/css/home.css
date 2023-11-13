@@ -87,8 +87,54 @@ body.pork #ball {
 .social-box,
 .navbar .divider-vertical,
 .social-sidebar .user,
-.social-sidebar .navigation-sidebar,
-.site-menubar /* temp */ {
+.social-sidebar .navigation-sidebar {
+    display: none;
+}
+
+.site-menubar {
+    all: unset;
+    position: fixed;
+    top: 10px;
+    height: 40px;
+    right: 200px;
+
+    background-color: transparent !important;
+}
+
+.site-menubar * {
+    background-color: transparent !important;
+}
+
+.site-menubar .site-menu-arrow {
+    display: none;
+}
+
+.site-menubar a {
+    padding: 3px;
+    color: var(--pork-fg-color) !important;
+}
+
+.site-menubar ul {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-menubar .site-menu-title-main {
+    display: none;
+}
+
+.site-menubar .dropdown-menu {
+    background-color: var(--pork-bg-color-2) !important;
+    border: 4px solid var(--pork-bg-color);
+    transform: translateY(10px);
+    border-radius: 10px;
+}
+
+.site-menubar .site-menu-icon {
+    margin-right: 0 !important;
+}
+
+.site-menu > li:first-child {
     display: none;
 }
 
@@ -318,11 +364,48 @@ html:not(.pork) {
 }
 
 .sidebar-complement {
+    all: unset;
+    display: none;
     position: fixed;
-    left: 70px;
-    background-color: red;
+    left: 75px;
+    bottom: 15px;
+    background-color: var(--pork-bg-color-2);
+    border: 4px solid var(--pork-bg-color);
+    border-radius: 10px;
     min-width: 100px;
-    min-height: 100px;
+    height: 80px;
+    align-items: center;
+}
+
+.sidebar-complement.active {
+    display: flex;
+}
+
+.sidebar-complement.active > * {
+    display: flex;
+    border: none;
+    margin: 0 4px;
+}
+
+.sidebar-complement.active .accordion-heading {
+    background-color: var(--pork-bg-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sidebar-complement.active .accordion-toggle {
+    color: var(--pork-fg-color);
+    transition: all ease-in-out .2s;
+}
+
+.sidebar-complement.active .accordion-toggle:hover {
+    color: var(--pork-accent-color);
 }
 
 .scrollable {
