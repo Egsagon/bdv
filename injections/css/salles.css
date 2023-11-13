@@ -1,0 +1,90 @@
+/* Salles (extend home.css) */
+
+#main > .container-fluid,
+#main .social-box {
+    display: block !important;
+}
+
+#main table * {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-color: var(--pork-bg-color) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    user-select: none;
+}
+
+#main table {
+    width: 100%;
+    table-layout: fixed;
+    border: none !important;
+    border-top: 1px solid var(--pork-bg-color) !important;
+    border-bottom: 1px solid var(--pork-bg-color) !important;
+}
+
+#main table th {
+    width: 100px !important;
+}
+
+#main table img {
+    display: none;
+}
+
+#main table .label {
+    display: none;
+}
+
+#main .social-box {
+    margin-bottom: none !important;
+}
+
+#main .social-blue .body {
+    height: calc(100vh - 80px - 20px - 114px);
+    overflow-y: scroll !important;
+}
+
+#main .social-box {
+    border-top: none !important;
+}
+
+#main .breadcrumb,
+#main .span12 {
+    display: none;
+}
+
+#main table td.success {
+    padding: 4px 10px !important;
+    border: 1px solid var(--pork-bg-color) !important;
+    overflow: hidden !important;
+    background-color: var(--pork-accent-color) !important;
+    font-size: 0 !important;
+}
+
+#main table td.success > div {
+    font-size: 10px !important;
+    background-color: var(--pork-accent-color) !important;
+    text-align: end;
+}
+
+#main table td.success *:not(div) {
+    display: none;
+}
+
+#main table thead {
+    display: none; /* Maybe */
+}
+
+#salle_dpt {
+    display: none;
+}
+
+#main .btn {
+    all: unset;
+    padding: 10px !important;
+    background-color: var(--pork-fg-color) !important;
+    color: var(--pork-bg-color) !important;
+}
+
+#main .body .row-fluid {
+    display: flex !important;
+}
