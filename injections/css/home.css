@@ -419,12 +419,18 @@ body:not(.pork) {
 
 .b-cal-event-wrap {
     width: 100% !important;
-    background-color: var(--pork-accent-color-2) !important;
 }
 
-.b-cal-event,
-.b-cal-event-body,
-.b-cal-event-body > div {
-    background-color: var(--pork-accent-color-2) !important;
+.b-cal-event {
+    border-left: 3px solid var(--pork-accent-color);
 }
 
+.b-event-time,
+.b-cal-event-desc > div:first-child {
+    font-size: 10px !important;
+}
+
+.b-cal-event-desc > .b-event-name:nth-child(2) {
+    font-size: 10px !important;
+    margin-top: 5px;
+}
