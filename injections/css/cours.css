@@ -1,0 +1,25 @@
+/* Cours (extends home.css) */
+
+#main .row-fluid {
+    display: block;
+}
+
+.social-box {
+    display: block;
+    overflow-y: scroll !important;
+    height: calc(100vh - 80px - 20px - 27px);
+    border: none !important;
+}
+
+.social-box * {
+    border-color: var(--pork-bg-color) !important;
+    border-width: 2px !important;
+}
+
+#main > .row-fluid:nth-child(2) {
+    display: none;
+}
+
+#main .body {
+    overflow-y: scroll !important;
+}

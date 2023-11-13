@@ -44,9 +44,11 @@
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/student/presences/"],
-            "css": [
-                "injections/css/presence.css"
-            ]
+            "css": ["injections/css/presence.css"]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/cours/"],
+            "css": ["injections/css/cours.css"]
         }
     ],
 
