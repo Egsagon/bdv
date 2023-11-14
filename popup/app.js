@@ -1,23 +1,24 @@
-
-
-const css = browser.extension.getURL('injections/css/base.css')
-
 const edt = document.querySelector('#edit')
-const btn = document.querySelector('#button')
-
-btn.addEventListener('click', () => {
-    // Toggle button
-
-    btn.classList.toggle('on')
-
-    // Apply to page (TODO)
-    // tabs = browser.tabs.query({url: []})
-})
 
 edt.addEventListener('click', async () => {
     // Update button style
 
     await browser.runtime.openOptionsPage()
-})
+    window.close()
+});
+
+(async () => {
+    // Load CSS
+
+    // From injections/js/base.js
+    pool = await browser.storage.sync.get()
+
+        if (pool.color_scheme) {
+            style = document.createElement('style')
+            style.innerHTML = pool.color_scheme
+
+            document.body.append(style)
+        }
+})()
 
 // EOF

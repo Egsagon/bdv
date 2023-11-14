@@ -186,6 +186,7 @@ html:not(.pork) {
 
 .navbar-inner-title {
     background-color: var(--pork-bg-color-2);
+    color: var(--pork-fg-color) !important;
     height: 50px;
     padding: 0;
     margin: 0;
@@ -304,10 +305,6 @@ html:not(.pork) {
 .accordion-toggle.opened::after {
     /* Hide current page arrow */
     display: none;
-}
-
-.social-sidebar .menu {
-    /* flex-grow: 1; */
 }
 
 .social-sidebar .menu .accordion {
@@ -432,11 +429,6 @@ html:not(.pork) {
 
 .sidebar-complement.active .accordion-toggle:hover {
     color: var(--pork-accent-color);
-}
-
-.scrollable {
-    /* display: flex;
-    flex-direction: column; */
 }
 
 /* Calendar styles */

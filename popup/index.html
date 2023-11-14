@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <h1>PORK</h1>
+    <button id="edit">Edit extension</button>
 
-    <!--
-        Notice - Adding a toggle injection button
-        would require too much structure changes
-        (inject from bg script/popup and not from
-        manifest)
-        If you want to turn it off, go in the settings
-    -->
-    <!--<div id="button"></div>-->
-    <button id="edit">Edit theme</button>
+    <div class="socials">
+        <a href="https://github.com/Egsagon/pork"><i class="fa-brands fa-github"></i></a>
+        <!-- TODO - idk what to put here -->
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+    </div>
 
     <script src="app.js"></script>
 </body>

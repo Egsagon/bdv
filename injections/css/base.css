@@ -1,24 +1,27 @@
-/* Base fonts and colors */
+/*
+    Default settings and colors
+    Will be overrided by custom schemes
+*/
 
-/* Note - blocked in adfs for some reason */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 :root {
 
-    /* Color and settings */
-
+    /* Color scheme */
     --pork-bg-color: #18181a;
     --pork-bg-color-2: #232327;
     --pork-fg-color: #F8F8F2;
-    --pork-accent-color: var(--school-accent);
-    --pork-error-color: #FF5555;
+    --pork-accent-color: var(--school-accent); /* By default accent color will be school accent */
+    --pork-error-color: #FF5555; /* Not implemented */
+    --pork-accent-color-2: #ffff80; /* Not implemented */
 
-    --pork-accent-color-2: #ffff80;
-
+    /* Layout settings */
     --pork-border-radius: 10px;
     --pork-gap: 10px;
 
-    /* Default while loading */
+    /* This variable will be assigned
+       the school accent color (ESILV, EMLV or IIM color)
+       based on the user school.
+     */
     --school-accent: transparent;
-
 }

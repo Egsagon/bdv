@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+:root {
+    /* Minimal default settints from injections/css/base.css
+       These will be (hopefully) overriden on popup opening
+     */
+    --pork-bg-color: #18181a;
+    --pork-fg-color: #F8F8F2;
+    --pork-accent-color: #cf0f51;
+    --pork-border-radius: 10px;
+}
+
 * {
     font-family: Poppins, 'Segoe UI', sans-serif;
     user-select: none;
 }
+
+h1 {
+    color: var(--pork-fg-color);
+} 
 
 body {
     min-width: 150px;
@@ -11,48 +25,48 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-}
-
-#button {
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
-    border: 2px dashed #000;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all ease-in-out .3s;
-    margin: 10px;
-    margin-bottom: 30px;
-}
-
-#button::after {
-    content: 'OFF';
-    transition: all ease-in-out .3s;
-}
-
-#button.on::after {
-    content: 'ON';
-    rotate: -30deg;
-}
-
-#button.on {
-    rotate: 30deg;
-    background-color: #adff2f;
+    background-color: var(--pork-bg-color);
 }
 
 #edit {
     padding: 5px;
-    border: 2px solid #000;
+    height: 40px;
+    min-width: 120px;
+    text-align: center;
     border-radius: 4px;
-    background-color: #fff;
+    color: var(--pork-fg-color);
+    background-color: var(--pork-accent-color);
     transition: all ease-in-out .3s;
     cursor: pointer;
+    border: none;
 }
 
 #button:hover,
 #edit:hover {
     scale: 1.1;
+    background-color: var(--pork-fg-color);
+    color: var(--pork-bg-color);
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+}
+
+.socials i {
+    font-size: 20px;
+    color: var(--pork-fg-color);
+    margin: 4px;
+    transition: all ease-in-out .2s;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.socials i:hover {
+    background-color: var(--pork-accent-color);
 }

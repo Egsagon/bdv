@@ -35,6 +35,9 @@ hello_icons = [
 
 window.addEventListener('load', async () => {
 
+    // Inject color scheme
+    await window.pork.inject_scheme()
+
     // Check if we are on the auth page
     is_auth_page = Boolean($('body > .container').length)
 

@@ -48,6 +48,11 @@ input[type='number'] {
     border: 1px solid #fff;
 }
 
+#accent-color:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
 #demo {
     width: 300px;
     min-height: 300px;
@@ -146,4 +151,26 @@ input[type='number'] {
     display: flex;
     margin-right: 10px;
     justify-content: center;
+}
+
+#auto-accent {
+    display: none;
+}
+
+label[for='auto-accent']::after {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    content: 'No';
+    width: 100px;
+    height: 32px;
+    background-color: red;
+    border: 1px solid grey;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+
+#auto-accent:checked + label[for='auto-accent']::after {
+    content: 'Yes';
+    background-color: green;
 }

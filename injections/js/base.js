@@ -44,6 +44,20 @@ window.pork = {
         ctx.drawImage(img, x, y, 1, 1, 0, 0, 1, 1)
         pixel = ctx.getImageData(0, 0, 1, 1).data
         return {r: pixel[0], g: pixel[1], b: pixel[2]}
+    },
+
+    inject_scheme: async () => {
+        // Ask for the custom CSS settings
+
+        pool = await browser.storage.sync.get()
+
+        if (pool.color_scheme) {
+            style = document.createElement('style')
+            style.innerHTML = pool.color_scheme
+
+            document.body.append(style)
+            console.log('[PORK] [CSRIPT] Injected custom color scheme')
+        }
     }
 }
 
