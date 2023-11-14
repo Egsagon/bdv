@@ -18,8 +18,7 @@
     width: 100%;
     table-layout: fixed;
     border: none !important;
-    border-top: 1px solid var(--pork-bg-color) !important;
-    border-bottom: 1px solid var(--pork-bg-color) !important;
+    margin-bottom: 0 !important;
 }
 
 #main table th {
@@ -34,12 +33,12 @@
     display: none;
 }
 
-#main .social-box {
-    margin-bottom: none !important;
+.social-box {
+    margin-bottom: 0 !important;
 }
 
 #main .social-blue .body {
-    height: calc(100vh - 80px - 20px - 114px);
+    height: calc(100vh - 80px - 20px - 113px + 25px);
     overflow-y: scroll !important;
 }
 
@@ -83,8 +82,66 @@
     padding: 10px !important;
     background-color: var(--pork-fg-color) !important;
     color: var(--pork-bg-color) !important;
+    height: 40px !important;
+    text-overflow: nowrap !important;
+    white-space: nowrap !important;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-#main .body .row-fluid {
-    display: flex !important;
+#main .body .btn-small {
+    display: none !important;
+}
+
+#main .btn:hover {
+    background-color: var(--pork-accent-color) !important;
+    color: var(--pork-fg-color) !important;
+}
+
+#select_day {
+    all: unset;
+    background-color: var(--pork-fg-color) !important;
+    color: var(--pork-bg-color) !important;
+    height: 40px !important;
+    padding: 0 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#main .container-fluid > b:nth-last-child(5) {
+    /* Error messages */
+    display: block;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    background-color: red !important;
+}
+
+#main .social-blue .body {
+    border-top: 5px solid var(--pork-bg-color) !important;
+    border-bottom: 5px solid var(--pork-bg-color) !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 20px !important;
+}
+
+#main .social-blue .body > h4 {
+    display: none;
+}
+
+#pork-select {
+    display: inline;
+    cursor: pointer;
+    border: none !important;
+    background-color: var(--pork-fg-color) !important;
+    color: var(--pork-bg-color) !important;
+    height: 40px !important;
+    margin-left: 4px;
+    padding: 0 10px;
+    margin-bottom: 2px !important;
+    outline: none !important;
 }

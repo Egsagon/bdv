@@ -4,7 +4,7 @@ window.pork = {
 
     version: 0.1,
 
-    fetch: async (path) => {
+    fetch: async path => {
         // Fetch a local ressource
 
         var url = browser.runtime.getURL(path)
@@ -29,7 +29,7 @@ window.pork = {
         return array[index]
     },
 
-    accent: (img) => {
+    accent: img => {
         // Get school accent color
 
         x = 3

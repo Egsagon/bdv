@@ -56,7 +56,13 @@
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/student/salles/*"],
-            "css": ["injections/css/salles.css"]
+            "css": ["injections/css/salles.css"],
+            "js": [
+                "injections/js/jq.js",
+                "injections/js/base.js",
+                "injections/js/salles.js"
+            ],
+            "run_at": "document_start"
         }
     ],
 
