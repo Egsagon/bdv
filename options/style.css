@@ -1,0 +1,149 @@
+:root {
+    --fg-color: #F8F8F2;
+    --bg-color: #18181a;
+    --bg-color-2: #232327;
+    --accent-color: #cf0f51;
+    --border-radius: 10px;
+    --gap: 10px;
+}
+
+* {
+    color: #fff;
+}
+
+body {
+    background-color: #23222b; /* Firefox bg color */
+    display: block;
+    border-left: 5px solid var(--accent-color);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form {
+    margin-left: 15px;
+    float: left;
+}
+
+p {
+    font-size: 15px;
+    display: inline-block;
+    width: 150px;
+}
+
+input[type='color'] {
+    padding: 0;
+    transform: translateY(10px);
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type='number'] {
+    padding: 6px;
+    background-color: #fff;
+    color: #000;
+    width: 100px;
+    border: 1px solid #fff;
+}
+
+#demo {
+    width: 300px;
+    min-height: 300px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin: 10px;
+}
+
+#demo, #demo * {
+    transition: all ease-in-out .5s;
+}
+
+#demo .head {
+    display: flex;
+    margin-bottom: var(--gap);
+}
+
+#demo .logo {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+    margin-right: var(--gap);
+}
+
+#demo .content {
+    display: flex;
+    flex-grow: 1;
+}
+
+#demo .nbar,
+#demo .main {
+    flex-grow: 1;
+}
+
+#demo .nbar {
+    display: flex;
+    align-items: center;
+}
+
+#demo .nbar,
+#demo .sbar,
+#demo .main {
+    background-color: var(--bg-color-2);
+    border-radius: var(--border-radius);
+}
+
+#demo .sbar {
+    width: 50px;
+    margin-right: var(--gap);
+}
+
+#demo .main {
+    flex-grow: 1;
+}
+
+#demo p {
+    font-size: 16px;
+    margin: 10px;
+    color: var(--fg-color);
+}
+
+#reset, #save {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+#save {
+    border-color: green;
+}
+
+#reset:hover {
+    background-color: red;
+}
+
+#save:hover {
+    background-color: green;
+}
+
+#controls {
+    float: right;
+    width: 300px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+}

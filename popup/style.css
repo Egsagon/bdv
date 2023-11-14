@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    font-family: Poppins, 'Segoe UI', sans-serif;
+    user-select: none;
+}
+
+body {
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#button {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 2px dashed #000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .3s;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+#button::after {
+    content: 'OFF';
+    transition: all ease-in-out .3s;
+}
+
+#button.on::after {
+    content: 'ON';
+    rotate: -30deg;
+}
+
+#button.on {
+    rotate: 30deg;
+    background-color: #adff2f;
+}
+
+#edit {
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+#button:hover,
+#edit:hover {
+    scale: 1.1;
+}

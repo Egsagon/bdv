@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h1>Color palette</h1>
+
+        <p for="fg-color">Foreground color</p>
+        <input type="color" id="fg-color" value="#F8F8F2"><br>
+
+        <p for="bg-color">Background color</p>
+        <input type="color" id="bg-color" value="#18181a"><br>
+
+        <p for="bg-color-2">Background color 2</p>
+        <input type="color" id="bg-color-2" value="#232327"><br>
+
+        <p for="accent-color">Accent color</p>
+        <input type="color" id="accent-color" value="#cf0f51"><br>
+
+        <h1>Page style</h1>
+
+        <p for="border-radius">Border radius</p>
+        <input type="number" id="border-radius" value="10" min="0"><br>
+
+        <p for="gap">Gaps</p>
+        <input type="number" id="gap" value="10" min="0"><br>
+    </form>
+
+    <div id="demo">
+        <div class="head">
+            <div class="logo"></div>
+            <div class="nbar"><p>Demo Minimap</p></div>
+        </div>
+
+        <div class="content">
+            <div class="sbar"></div>
+            <div class="main">
+                <!-- Sample content -->
+                <p>How Are You Holding Up? Because I'm A Potato.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="controls">
+        <button id="reset">Reset</button>
+        <button id="save">Save</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

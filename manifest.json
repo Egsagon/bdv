@@ -4,11 +4,11 @@
     "version": "0.1",
     "description": "Pork for LDV",
 
+    "icons": { "32": "ldv.svg" },
+
     "permissions": [
         "tabs",
-        "cookies",
-        "activeTab",
-        "webRequest"
+        "storage"
     ],
 
     "content_scripts": [
@@ -73,7 +73,17 @@
         }
     },
 
+    "browser_action": {
+        "default_icon": "ldv.svg",
+        "default_title": "Pork",
+        "default_popup": "popup/index.html"
+    },
+
     "web_accessible_resources": [
         "injections/html/*.html"
-    ]
+    ],
+
+    "options_ui": {
+        "page": "options/index.html"
+    }
 }
