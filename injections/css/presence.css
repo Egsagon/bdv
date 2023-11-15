@@ -30,7 +30,7 @@
     cursor: pointer;
     background-color: var(--pork-accent-color) !important;
     padding: 6px !important;
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
     transition: all ease-in-out .3s;
 }
 

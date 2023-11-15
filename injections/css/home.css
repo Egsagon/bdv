@@ -26,14 +26,15 @@ body.pork .container {
     color: var(--pork-fg-color);
     background-color: var(--pork-bg-color-2);
     padding: 32px;
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
 }
 
 body.pork #msg {
     background-color: var(--pork-error-color);
     padding: 16px;
     margin: 10px;
-    border-radius: 10px;}
+    border-radius: var(--pork-border-radius);
+}
 
 body.pork form {
     display: flex;
@@ -53,7 +54,7 @@ body.pork input {
 body.pork input[type='submit'] {
     background-color: var(--pork-accent-color);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
     color: var(--pork-fg-color);
     text-align: center;
     margin-top: 20px;
@@ -73,7 +74,7 @@ body.pork #ball {
     height: 60px;
     background-color: var(--pork-accent-color);
     margin-bottom: 100px;
-    border-radius: 4px;
+    border-radius: var(--pork-border-radius);
     animation: move-ball 4s infinite forwards alternate;
 }
 
@@ -138,7 +139,7 @@ body.pork #ball {
     background-color: var(--pork-bg-color-2) !important;
     border: 4px solid var(--pork-bg-color);
     transform: translate(-50%, 10px);
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
 }
 
 .site-menubar .site-menu-icon {
@@ -227,7 +228,7 @@ html:not(.pork) {
 .navbar-inner .container-fluid {
     background-color: var(--pork-bg-color-2) !important;
     border: none !important;
-    border-radius: 10px !important;
+    border-radius: var(--pork-border-radius) !important;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -238,7 +239,7 @@ html:not(.pork) {
     height: 0 !important;
     margin: 10px !important;
     padding: none !important;
-    border-radius: 10px !important;
+    border-radius: var(--pork-border-radius) !important;
 }
 
 .navbar-inner .container-fluid {
@@ -264,8 +265,8 @@ html:not(.pork) {
     height: 50px;
     padding: 0;
     margin: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: var(--pork-border-radius);
+    border-bottom-left-radius: var(--pork-border-radius);
     display: flex;
     align-items: center;
     padding-left: 15px;
@@ -297,7 +298,7 @@ html:not(.pork) {
     left: 0 !important;
     overflow: hidden;
     text-align: center;
-    border-radius: 10px !important;
+    border-radius: var(--pork-border-radius) !important;
     overflow-y: hidden;
     color: var(--pork-bg-color) !important;
     background-color: var(--pork-bg-color) !important;
@@ -340,7 +341,7 @@ html:not(.pork) {
 .schoole_pastil img {
     width: calc(50px - 20px);
     height: calc(50px - 20px);
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
     background-color: none;
     border: none;
     padding: 0;
@@ -360,7 +361,7 @@ html:not(.pork) {
 .social-sidebar-content {
     border: none !important;
     background-color: var(--pork-bg-color-2) !important;
-    border-radius: 10px !important;
+    border-radius: var(--pork-border-radius) !important;
 }
 
 .social-sidebar-content * {
@@ -463,7 +464,7 @@ html:not(.pork) {
     bottom: 15px;
     background-color: var(--pork-bg-color-2);
     border: 4px solid var(--pork-bg-color);
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
     min-width: 100px;
     height: 80px;
     align-items: center;
@@ -521,7 +522,7 @@ html:not(.pork) {
     padding-bottom: 0 !important;
     border: 10px solid var(--pork-bg-color-2);
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: var(--pork-border-radius);
 }
 
 .page-content {
