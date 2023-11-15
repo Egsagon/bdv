@@ -2,7 +2,7 @@
 
 $(window).on('DOMContentLoaded', () => {
 
-    window.pork.log('Starting injection')
+    window.bdv.log('Starting injection')
 
     $('#loginMessage').html('<h1>Authentificate</h1>')
 

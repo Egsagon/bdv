@@ -49,7 +49,7 @@ hello_icons = [
 
 window.addEventListener('load', async () => {
 
-    window.pork.log('Starting injection')
+    window.bdv.log('Starting injection')
 
     // Check if we are on the auth page
     is_auth_page = Boolean($('body > .container').length)
@@ -57,15 +57,15 @@ window.addEventListener('load', async () => {
     if (is_auth_page) {
         // We are on the auth page, we inject our own html
 
-        window.pork.log('Replacing auth page html')
+        window.bdv.log('Replacing auth page html')
         document.wrappedJSObject.open('text/html') // Exploit because it's insecure
-        document.write(await window.pork.fetch('injections/html/home.html'))
+        document.write(await window.bdv.fetch('injections/html/home.html'))
         document.close()
     }
     
     // Inject color scheme
-    window.pork.log('Injecting custom CSS data')
-    await window.pork.inject_scheme()
+    window.bdv.log('Injecting custom CSS data')
+    await window.bdv.inject_scheme()
 
     if (is_auth_page) return
 
@@ -80,18 +80,18 @@ window.addEventListener('load', async () => {
     $("link[rel='shortcut icon']").attr("href", favicon.src)
 
     // Set school icon color
-    acc = window.pork.accent(favicon)
+    acc = window.bdv.accent(favicon)
     code = `rgb(${acc.r}, ${acc.g}, ${acc.b})`
     document.documentElement.style.cssText = `--school-accent: ${code}`;
     $('.schoole_pastil').css('animation', 'swip forwards 1.5s')
-    window.pork.log('Evaluated school accent color to ' + code)
+    window.bdv.log('Evaluated school accent color to ' + code)
 
     // Set hello message
     title = $('.navbar-inner-title')
     username = title.html().trim().split(' ')[0]
 
-    hello_message = window.pork.choice(hello_sentences).replace('@', username)
-    hello_icon = window.pork.choice(hello_icons)
+    hello_message = window.bdv.choice(hello_sentences).replace('@', username)
+    hello_icon = window.bdv.choice(hello_icons)
 
     title.html(`${hello_message} <i class="hello ${hello_icon}"></i`)
 
@@ -109,10 +109,10 @@ window.addEventListener('load', async () => {
     $(window).on('resize', compute_bar)
 
     // Show bar expand button
-    $('.pork-toggler').each((i, el) => {el.remove()})
+    $('.bdv-toggler').each((i, el) => {el.remove()})
 
     $('.social-sidebar .menu').append(` 
-    <div class="according-group pork-toggler">
+    <div class="according-group bdv-toggler">
         <div class="according-heading">
             <a class="accordion-toggle">
                 <i class="fa-solid fa-bars"></i>
@@ -124,7 +124,7 @@ window.addEventListener('load', async () => {
     $(document.body).append(`<div class="sidebar-complement"></div>`)
 
     // Display hidden icons when asked
-    $('.pork-toggler').on('click', () => {
+    $('.bdv-toggler').on('click', () => {
         $('.sidebar-complement').toggleClass('active')
         compute_bar()
     })
@@ -142,10 +142,10 @@ window.addEventListener('load', async () => {
     pool = await browser.storage.sync.get()
 
     if (pool.accent_override) {
-        hex = getComputedStyle(document.documentElement).getPropertyValue('--pork-accent-color').trim()
-        rgb = window.pork.hex_to_rgb(hex)
+        hex = getComputedStyle(document.documentElement).getPropertyValue('--bdv-accent-color').trim()
+        rgb = window.bdv.hex_to_rgb(hex)
 
-        window.pork.log('Modifying school logo with color ' + hex)
+        window.bdv.log('Modifying school logo with color ' + hex)
 
         /* Note - The source image is 28x28px so there will be a 1px border around the
            canvas, which we need to fill. Our output is 30x30px originally because of the
@@ -191,7 +191,7 @@ compute_bar = () => {
     bar_size = $('.social-sidebar').height()
     space = Math.floor(bar_size / item_size) - 1
 
-    $('.social-sidebar .accordion-group:not(.pork-toggler)').each((i, el) => {
+    $('.social-sidebar .accordion-group:not(.bdv-toggler)').each((i, el) => {
         $(el).css('display', i >= space ? 'none' : 'unset')
     })
 
@@ -200,7 +200,7 @@ compute_bar = () => {
     comp.empty()
 
     // Get items to show
-    els = $('.social-sidebar .accordion-group:not(.pork-toggler)')
+    els = $('.social-sidebar .accordion-group:not(.bdv-toggler)')
 
     els.each((i, el) => {
         if ($(el).css('display') === 'none') {

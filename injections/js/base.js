@@ -5,7 +5,7 @@ componentToHex = c => {
     return hex.length == 1 ? "0" + hex : hex;
 }
 
-window.pork = {
+window.bdv = {
 
     version: 0.1,
 
@@ -87,7 +87,7 @@ window.pork = {
     log: (...msg) => {
         // Log formatter
 
-        console.log('%c[ PORK ] ' + msg.join(' '), 'color: cyan')
+        console.log('%c[ BDV ] ' + msg.join(' '), 'color: cyan')
     }
 }
 

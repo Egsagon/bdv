@@ -4,10 +4,10 @@
     /* Minimal default settints from injections/css/base.css
        These will be (hopefully) overriden on popup opening
      */
-    --pork-bg-color: #18181a;
-    --pork-fg-color: #F8F8F2;
-    --pork-accent-color: #cf0f51;
-    --pork-border-radius: 10px;
+    --bdv-bg-color: #18181a;
+    --bdv-fg-color: #F8F8F2;
+    --bdv-accent-color: #cf0f51;
+    --bdv-border-radius: 10px;
 }
 
 * {
@@ -16,7 +16,7 @@
 }
 
 h1 {
-    color: var(--pork-fg-color);
+    color: var(--bdv-fg-color);
 } 
 
 body {
@@ -25,7 +25,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
 }
 
 #edit {
@@ -33,9 +33,9 @@ body {
     height: 50px;
     min-width: 120px;
     text-align: center;
-    border-radius: var(--pork-border-radius);
-    color: var(--pork-fg-color);
-    background-color: var(--pork-accent-color);
+    border-radius: var(--bdv-border-radius);
+    color: var(--bdv-fg-color);
+    background-color: var(--bdv-accent-color);
     transition: all ease-in-out .3s;
     cursor: pointer;
     border: none;
@@ -44,8 +44,8 @@ body {
 #button:hover,
 #edit:hover {
     scale: 1.1;
-    background-color: var(--pork-fg-color);
-    color: var(--pork-bg-color);
+    background-color: var(--bdv-fg-color);
+    color: var(--bdv-bg-color);
 }
 
 .socials {
@@ -55,7 +55,7 @@ body {
 
 .socials i {
     font-size: 20px;
-    color: var(--pork-fg-color);
+    color: var(--bdv-fg-color);
     margin: 4px;
     transition: all ease-in-out .2s;
     padding: 4px;
@@ -72,5 +72,5 @@ body {
 }
 
 .socials i:hover {
-    background-color: var(--pork-accent-color);
+    background-color: var(--bdv-accent-color);
 }

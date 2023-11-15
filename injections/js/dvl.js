@@ -2,7 +2,7 @@
 
 window.addEventListener('load', () => {
 
-    window.pork.log('Starting injection')
+    window.bdv.log('Starting injection')
 
     // Shorten title because hard to see when you have multiple
     // tabs opened with the same name

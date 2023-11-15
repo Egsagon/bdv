@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
 }
 
 #content main {
@@ -36,8 +36,8 @@
 #workArea {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
-    background-color: var(--pork-bg-color-2);
-    border-radius: var(--pork-border-radius);
+    background-color: var(--bdv-bg-color-2);
+    border-radius: var(--bdv-border-radius);
     padding: 24px;
     color: var(--porf-fg-color);
 }
@@ -65,13 +65,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--pork-fg-color);
-    color: var(--pork-bg-color);
+    background-color: var(--bdv-fg-color);
+    color: var(--bdv-bg-color);
     transition: all ease-in-out .2s;
 }
 
 #submitButton:hover {
-    background-color: var(--pork-accent-color);
+    background-color: var(--bdv-accent-color);
 }
 
 #submitButton, input {

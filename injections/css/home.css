@@ -8,7 +8,7 @@
 
 /* Auth page styles */
 
-body.pork {
+body.bdv {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -18,44 +18,44 @@ body.pork {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
 }
 
-body.pork .container {
+body.bdv .container {
     text-align: center;
-    color: var(--pork-fg-color);
-    background-color: var(--pork-bg-color-2);
+    color: var(--bdv-fg-color);
+    background-color: var(--bdv-bg-color-2);
     padding: 32px;
-    border-radius: var(--pork-border-radius);
+    border-radius: var(--bdv-border-radius);
 }
 
-body.pork #msg {
-    background-color: var(--pork-error-color);
+body.bdv #msg {
+    background-color: var(--bdv-error-color);
     padding: 16px;
     margin: 10px;
-    border-radius: var(--pork-border-radius);
+    border-radius: var(--bdv-border-radius);
 }
 
-body.pork form {
+body.bdv form {
     display: flex;
     flex-direction: column;
 }
 
-body.pork input {
+body.bdv input {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid var(--pork-fg-color);
+    border-bottom: 2px solid var(--bdv-fg-color);
     padding: 5px;
     text-align: start;
     outline: none;
-    color: var(--pork-fg-color);
+    color: var(--bdv-fg-color);
 }
 
-body.pork input[type='submit'] {
-    background-color: var(--pork-accent-color);
+body.bdv input[type='submit'] {
+    background-color: var(--bdv-accent-color);
     border: none;
-    border-radius: var(--pork-border-radius);
-    color: var(--pork-fg-color);
+    border-radius: var(--bdv-border-radius);
+    color: var(--bdv-fg-color);
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
@@ -63,18 +63,18 @@ body.pork input[type='submit'] {
     height: 40px;
 }
 
-body.pork input[type='submit']:hover,
-body.pork input[type='submit']:focus {
-    background-color: var(--pork-fg-color);
-    color: var(--pork-bg-color);
+body.bdv input[type='submit']:hover,
+body.bdv input[type='submit']:focus {
+    background-color: var(--bdv-fg-color);
+    color: var(--bdv-bg-color);
 }
 
-body.pork #ball {
+body.bdv #ball {
     width: 60px;
     height: 60px;
-    background-color: var(--pork-accent-color);
+    background-color: var(--bdv-accent-color);
     margin-bottom: 100px;
-    border-radius: var(--pork-border-radius);
+    border-radius: var(--bdv-border-radius);
     animation: move-ball 4s infinite forwards alternate;
 }
 
@@ -95,9 +95,9 @@ body.pork #ball {
 .site-menubar {
     all: unset;
     position: fixed;
-    top: var(--pork-gap);
+    top: var(--bdv-gap);
     height: 40px;
-    right: var(--pork-gap);
+    right: var(--bdv-gap);
 
     background-color: transparent !important;
 }
@@ -108,7 +108,7 @@ body.pork #ball {
 
 .site-menubar a {
     padding: 3px;
-    color: var(--pork-fg-color) !important;
+    color: var(--bdv-fg-color) !important;
     transition: all ease-in-out .2s;
     display: flex !important;
     align-items: center;
@@ -136,10 +136,10 @@ body.pork #ball {
 }
 
 .site-menubar .dropdown-menu {
-    background-color: var(--pork-bg-color-2) !important;
-    border: 4px solid var(--pork-bg-color);
-    transform: translate(-50%, var(--pork-gap));
-    border-radius: var(--pork-border-radius);
+    background-color: var(--bdv-bg-color-2) !important;
+    border: 4px solid var(--bdv-bg-color);
+    transform: translate(-50%, var(--bdv-gap));
+    border-radius: var(--bdv-border-radius);
 }
 
 .site-menubar .site-menu-icon {
@@ -151,13 +151,13 @@ body.pork #ball {
 }
 
 .site-menubar .site-menu-item:hover {
-    color: var(--pork-accent-color) !important;
+    color: var(--bdv-accent-color) !important;
     background-color: transparent !important;
 }
 
 .site-menu a:hover,
 .site-menu li.open a[data-toggle='dropdown'] {
-    color: var(--pork-accent-color) !important;
+    color: var(--bdv-accent-color) !important;
 }
 
 .nav-indicators a {
@@ -175,28 +175,28 @@ body.pork #ball {
 
 .site-menu .nav-indicators .dropdown-menu {
     position: fixed !important;
-    top: calc(50px + var(--pork-gap)) !important;
+    top: calc(50px + var(--bdv-gap)) !important;
 }
 
 .site-menu .nav-messages .dropdown-menu {
-    border: 4px solid var(--pork-bg-color) !important;
+    border: 4px solid var(--bdv-bg-color) !important;
     display: flex !important;
     flex-direction: column;
     padding: 10px;
-    background-color: var(--pork-bg-color-2);
+    background-color: var(--bdv-bg-color-2);
 }
 
 .site-menu .nav-messages .dropdown-menu a,
 .site-menu .nav-messages .dropdown-menu a:hover {
-    background-color: var(--pork-bg-color-2) !important;
+    background-color: var(--bdv-bg-color-2) !important;
     border: none !important;
-    color: var(--pork-fg-color) !important;
+    color: var(--bdv-fg-color) !important;
     background: none !important;
 }
 
 .site-menu .nav-messages-header span {
     padding: 6px !important;
-    color: var(--pork-accent-color) !important;
+    color: var(--bdv-accent-color) !important;
 }
 
 .nav-indicators .divider {
@@ -204,7 +204,7 @@ body.pork #ball {
 }
 
 .nav-indicators .dropdown-menu a:hover {
-    color: var(--pork-accent-color) !important;
+    color: var(--bdv-accent-color) !important;
     background-color: transparent !important;
 }
 
@@ -217,18 +217,18 @@ body.pork #ball {
     display: none !important;
 }
 
-html:not(.pork) {
-    margin-left: calc(50px + 2 * var(--pork-gap));
-    margin-top: calc(50px + 2 * var(--pork-gap));
-    margin-right: var(--pork-gap);
-    background-color: var(--pork-bg-color);
+html:not(.bdv) {
+    margin-left: calc(50px + 2 * var(--bdv-gap));
+    margin-top: calc(50px + 2 * var(--bdv-gap));
+    margin-right: var(--bdv-gap);
+    background-color: var(--bdv-bg-color);
 }
 
 .navbar-inner,
 .navbar-inner .container-fluid {
-    background-color: var(--pork-bg-color-2) !important;
+    background-color: var(--bdv-bg-color-2) !important;
     border: none !important;
-    border-radius: var(--pork-border-radius) !important;
+    border-radius: var(--bdv-border-radius) !important;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -239,7 +239,7 @@ html:not(.pork) {
     height: 0 !important;
     margin: 10px !important;
     padding: none !important;
-    border-radius: var(--pork-border-radius) !important;
+    border-radius: var(--bdv-border-radius) !important;
 }
 
 .navbar-inner .container-fluid {
@@ -255,18 +255,18 @@ html:not(.pork) {
     padding: 0;
     margin: 0;
     height: 50px;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
     overflow: visible !important;
 }
 
 .navbar-inner-title {
-    background-color: var(--pork-bg-color-2);
-    color: var(--pork-fg-color) !important;
+    background-color: var(--bdv-bg-color-2);
+    color: var(--bdv-fg-color) !important;
     height: 50px;
     padding: 0;
     margin: 0;
-    border-top-left-radius: var(--pork-border-radius);
-    border-bottom-left-radius: var(--pork-border-radius);
+    border-top-left-radius: var(--bdv-border-radius);
+    border-bottom-left-radius: var(--bdv-border-radius);
     display: flex;
     align-items: center;
     padding-left: 15px;
@@ -278,7 +278,7 @@ html:not(.pork) {
     padding: 0;
     display: flex !important;
     align-items: center;
-    margin-right: max(var(--pork-gap), 10px) !important;
+    margin-right: max(var(--bdv-gap), 10px) !important;
 }
 
 .nav-indicators > li:nth-child(3) { /* 2nd element but take into account separators */
@@ -289,19 +289,19 @@ html:not(.pork) {
     /* Make sure sidebar isn't affected by
        window resizes */
     width: 50px !important;
-    height: calc(100% - 50px - 3 * var(--pork-gap) - 1px) !important;
+    height: calc(100% - 50px - 3 * var(--bdv-gap) - 1px) !important;
     position: absolute !important;
-    margin: var(--pork-gap) !important;
+    margin: var(--bdv-gap) !important;
     padding: 0 !important;
     margin-top: 0 !important;
-    top: calc(50px + 2 * var(--pork-gap)) !important;
+    top: calc(50px + 2 * var(--bdv-gap)) !important;
     left: 0 !important;
     overflow: hidden;
     text-align: center;
-    border-radius: var(--pork-border-radius) !important;
+    border-radius: var(--bdv-border-radius) !important;
     overflow-y: hidden;
-    color: var(--pork-bg-color) !important;
-    background-color: var(--pork-bg-color) !important;
+    color: var(--bdv-bg-color) !important;
+    background-color: var(--bdv-bg-color) !important;
 }
 
 .schoole_pastil {
@@ -312,7 +312,7 @@ html:not(.pork) {
     background-color: transparent;
     width: 50px;
     height: 50px;
-    margin-right: var(--pork-gap) !important;
+    margin-right: var(--bdv-gap) !important;
     cursor: pointer;
 }
 
@@ -342,7 +342,7 @@ html:not(.pork) {
 .schoole_pastil canvas {
     width: calc(50px - 20px); /* Not gaps, see border property */
     height: calc(50px - 20px);
-    border-radius: var(--pork-border-radius);
+    border-radius: var(--bdv-border-radius);
     background-color: none;
     border: none;
     padding: 0;
@@ -352,7 +352,7 @@ html:not(.pork) {
     /* Image is low res, so we reduce it by a bit
        so people don't notice (temporary color
        until evaluated on js side) */
-    border: 10px solid var(--pork-accent-color) !important;
+    border: 10px solid var(--bdv-accent-color) !important;
 }
 
 
@@ -363,8 +363,8 @@ html:not(.pork) {
 
 .social-sidebar-content {
     border: none !important;
-    background-color: var(--pork-bg-color-2) !important;
-    border-radius: var(--pork-border-radius) !important;
+    background-color: var(--bdv-bg-color-2) !important;
+    border-radius: var(--bdv-border-radius) !important;
 }
 
 .social-sidebar-content * {
@@ -377,9 +377,9 @@ html:not(.pork) {
 
 .navbar-inner {
     position: fixed;
-    left: var(--pork-gap);
-    top: var(--pork-gap);
-    width: calc(100% - 2 * var(--pork-gap));
+    left: var(--bdv-gap);
+    top: var(--bdv-gap);
+    width: calc(100% - 2 * var(--bdv-gap));
 }
 
 .accordion-toggle.opened::after {
@@ -405,7 +405,7 @@ html:not(.pork) {
     display: flex !important;
     flex-direction: column !important;
 
-    height: calc(100% - 50px - 4 * var(--pork-gap) - 15px) !important;
+    height: calc(100% - 50px - 4 * var(--bdv-gap) - 15px) !important;
 }
 
 .social-sidebar .menu .accordion {
@@ -413,7 +413,7 @@ html:not(.pork) {
 }
 
 .social-sidebar .menu .accordion-group i {
-    color: var(--pork-fg-color) !important;
+    color: var(--bdv-fg-color) !important;
     font-size: 20px !important;
     transition: all ease-in-out .1s;
     text-align: center !important;
@@ -426,7 +426,7 @@ html:not(.pork) {
 }
 
 .social-sidebar .menu .accordion-group:hover i {
-    color: var(--pork-accent-color) !important;
+    color: var(--bdv-accent-color) !important;
 }
 
 .social-sidebar .menu .accordion-group {
@@ -449,20 +449,20 @@ html:not(.pork) {
     display: none;
 }
 
-.pork-toggler {
+.bdv-toggler {
     font-size: 24px;
 }
 
-.pork-toggler i {
-    color: var(--pork-fg-color);
+.bdv-toggler i {
+    color: var(--bdv-fg-color);
 }
 
-.pork-toggler i:hover {
-    color: var(--pork-accent-color);
+.bdv-toggler i:hover {
+    color: var(--bdv-accent-color);
 }
 
 .hello {
-    color: var(--pork-accent-color);
+    color: var(--bdv-accent-color);
     padding-left: 10px;
 }
 
@@ -470,11 +470,11 @@ html:not(.pork) {
     all: unset;
     display: none;
     position: fixed;
-    left: calc(50px + 2 * var(--pork-gap) + 5px);
-    bottom: calc(var(--pork-gap) + 5px);
-    background-color: var(--pork-bg-color-2);
-    border: 4px solid var(--pork-bg-color);
-    border-radius: var(--pork-border-radius);
+    left: calc(50px + 2 * var(--bdv-gap) + 5px);
+    bottom: calc(var(--bdv-gap) + 5px);
+    background-color: var(--bdv-bg-color-2);
+    border: 4px solid var(--bdv-bg-color);
+    border-radius: var(--bdv-border-radius);
     min-width: 100px;
     height: 80px;
     align-items: center;
@@ -491,7 +491,7 @@ html:not(.pork) {
 }
 
 .sidebar-complement.active .accordion-heading {
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
     border: none;
     width: 50px;
     height: 50px;
@@ -503,12 +503,12 @@ html:not(.pork) {
 }
 
 .sidebar-complement.active .accordion-toggle {
-    color: var(--pork-fg-color);
+    color: var(--bdv-fg-color);
     transition: all ease-in-out .2s;
 }
 
 .sidebar-complement.active .accordion-toggle:hover {
-    color: var(--pork-accent-color);
+    color: var(--bdv-accent-color);
 }
 
 /* Calendar styles */
@@ -522,28 +522,28 @@ html:not(.pork) {
 }
 
 #main * {
-    background-color: var(--pork-bg-color-2) !important;
-    color: var(--pork-fg-color) !important;
+    background-color: var(--bdv-bg-color-2) !important;
+    color: var(--bdv-fg-color) !important;
 }
 
 #main {
     margin-left: 0 !important;
     margin-top: 0 !important;
     padding-bottom: 0 !important;
-    border: 10px solid var(--pork-bg-color-2);
+    border: 10px solid var(--bdv-bg-color-2);
     background-color: transparent;
-    border-radius: var(--pork-border-radius);
+    border-radius: var(--bdv-border-radius);
 }
 
 .page-content {
     min-width: 100px !important;
     min-height: 100px !important;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
 }
 
-body:not(.pork) {
+body:not(.bdv) {
     padding: 0 !important;
-    background-color: var(--pork-bg-color);
+    background-color: var(--bdv-bg-color);
     overflow-y: hidden;
 }
 
@@ -558,7 +558,7 @@ body:not(.pork) {
 
 .app-root {
     /* Make calendar fit body */
-    height: calc(100vh - 50px - 3 * var(--pork-gap) - 20px - 1px);
+    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 20px - 1px);
     font-size: 10px !important;
 }
 
@@ -567,23 +567,23 @@ body:not(.pork) {
 }
 
 .b-dayview-day-container .b-calendar-cell:not(.b-last-cell) {
-    border-right: 2px solid var(--pork-bg-color);
+    border-right: 2px solid var(--bdv-bg-color);
 }
 
 .b-calendar > * > .b-top-toolbar {
-    border-bottom: 2px solid var(--pork-bg-color);
+    border-bottom: 2px solid var(--bdv-bg-color);
 }
 
 .b-dayview-day-container {
-    border-left: 2px solid var(--pork-bg-color);
+    border-left: 2px solid var(--bdv-bg-color);
 }
 
 .b-dayview-day-content {
-    border-top: 2px solid var(--pork-bg-color);
+    border-top: 2px solid var(--bdv-bg-color);
 }
 
 .b-yscroll-pad {
-    border-left: 1px solid var(--pork-bg-color);
+    border-left: 1px solid var(--bdv-bg-color);
 }
 
 .b-dayview-schedule-container {
@@ -591,11 +591,11 @@ body:not(.pork) {
 }
 
 .b-current-time-indicator {
-    border-top: 2px solid var(--pork-accent-color) !important;
+    border-top: 2px solid var(--bdv-accent-color) !important;
 }
 
 .b-current-time-indicator::before {
-    background-color: var(--pork-accent-color) !important;
+    background-color: var(--bdv-accent-color) !important;
 }
 
 .b-cal-event-wrap {
@@ -603,7 +603,7 @@ body:not(.pork) {
 }
 
 .b-cal-event {
-    border-left: 3px solid var(--pork-accent-color);
+    border-left: 3px solid var(--bdv-accent-color);
 }
 
 .b-event-time,

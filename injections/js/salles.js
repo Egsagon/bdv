@@ -2,7 +2,7 @@
 
 $(window).on('load', async () => {
 
-    window.pork.log('Starting injection')
+    window.bdv.log('Starting injection')
 
     input = $('#select_day')
     input.val('')
@@ -10,7 +10,7 @@ $(window).on('load', async () => {
 
     $('#select_day_btn').html('OK')
 
-    selector = $(`<select id="pork-select">
+    selector = $(`<select id="bdv-select">
     <option value=''>Tous</option>
         <option value='ARCH'>Arche</option>
         <option value='PULV'>PULV</option>

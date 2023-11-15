@@ -1,6 +1,29 @@
-# pork
+# BetterDeVinci
 
-### Pages:
+A style and script retheme for leonard-de-vinci.net.
+
+### Websites injected
+
+- www.leonard-de-vinci.net
+- learning.devinci.fr
+- adfs.devinci.fr (auther)
+
+### Project structure
+
+```
+|- manifest.json    Extension manifest
+|
+|- injections       All injection ressources
+|  |- css/*.css     CSS stylesheets to inject
+|  |- js/*.js       JS scripts to inject
+|  |- html/*.html   HTML pages to inject
+|
+|- options/*        Firefox settings page
+|
+|- popup/*          Firefox popup page
+```
+
+### Rethemed pages:
 
 - [x] Portal (www.leonard-de-vinci.net)
 - [x] ADFS (adfs.devinci.fr/adfs) (⚠️ fonts rejected)

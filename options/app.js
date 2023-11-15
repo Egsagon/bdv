@@ -25,7 +25,7 @@ default_scheme = {
 }
 
 log = (...msg) => {
-    console.log('%c[ PORK ] ' + msg, 'color: cyan')
+    console.log('%c[ BDV ] ' + msg, 'color: cyan')
 }
 
 settings.forEach(input => {
@@ -65,7 +65,7 @@ document.querySelector('#save').addEventListener('click', () => {
     settings.forEach(input => {
 
         if (input.value) {
-            scheme += `--pork-${input.id}: ${input.value}`
+            scheme += `--bdv-${input.id}: ${input.value}`
                     + (input.id.includes('color') ? '' : 'px')
                     + ' !important;'
         }
@@ -73,7 +73,7 @@ document.querySelector('#save').addEventListener('click', () => {
 
     auto = document.querySelector('#auto-accent')
     if (auto.checked) {
-        scheme += '--pork-accent-color: var(--school-accent);'
+        scheme += '--bdv-accent-color: var(--school-accent);'
     }
 
     log('Computed CSS scheme: ' + scheme)
@@ -100,7 +100,7 @@ document.querySelector('#save').addEventListener('click', () => {
 
     }, error => {
         alert('Operation failed:\n' + error)
-        console.error('[PORK]', error)
+        console.error('[bdv]', error)
     })
 })
 
@@ -132,7 +132,7 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
         // Apply theme
         settings.forEach(input => {
 
-            rule = new RegExp(`--pork-${input.id}: (.*?)(px)? (!important)?;`)
+            rule = new RegExp(`--bdv-${input.id}: (.*?)(px)? (!important)?;`)
             input.value = rule.exec(pool.color_scheme)[1]
 
             log('Color scheme injected. Calling hooks')
