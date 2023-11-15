@@ -1,6 +1,6 @@
 # BetterDeVinci
 
-A style and script retheme for leonard-de-vinci.net.
+A style and script rethemer for leonard-de-vinci.net.
 
 ### Websites injected
 
@@ -23,22 +23,24 @@ A style and script retheme for leonard-de-vinci.net.
 |- popup/*          Firefox popup page
 ```
 
-### Rethemed pages:
+### Currently rethemed pages:
 
-- [x] Portal (www.leonard-de-vinci.net)
-- [x] ADFS (adfs.devinci.fr/adfs) (⚠️ fonts rejected)
-- [x] Home (www.leonard-de-vinci.net)
-- [x] Finances (www.leonard-de-vinci.net/student/finances/) (out of the box)
-- [x] Presences (www.leonard-de-vinci.net/student/presences/)
-- [x] Specific presence (https://www.leonard-de-vinci.net/student/presences/<token>) (out of the box)
-- [x] Promotion (www.leonard-de-vinci.net/promotion)
-- [x] Cours (www.leonard-de-vinci.net/student/cours/)
-- [ ] Atestations presence (https://www.leonard-de-vinci.net/student/attestations_presences/)
-- [ ] Offres de stages (https://www.leonard-de-vinci.net/student/stages_offres/?gotx=stage-search)
-- [x] Job teaser (external)
-- [ ] Gestion stages (https://www.leonard-de-vinci.net/student/stages) 
-- [ ] International (www.leonard-de-vinci.net/student/international/)
-- [x] Double diplome (external)
-- [ ] Mes séjours (links to block at /student/international/)
-- [ ] Salles (www.leonard-de-vinci.net/student/salles/)
-- [ ] Plans arche (https://www.leonard-de-vinci.net/maps/arche/)
+> Out of static glob only
+
+| Done | Page            | Glob                                                                                                                   |
+|------|-----------------|------------------------------------------------------------------------------------------------------------------------|
+| [x]  | Home            | [`/`](https://www.leonard-de-vinci.net)                                                                                | 
+| [x]  | Portal          | [`/`](https://www.leonard-de-vinci.net)                                                                                |
+| [x]  | AFDS            | [`adfs.devinci.fr/adfs`](https://adfs.devinci.fr/adfs)                                                                 |
+| [x]  | Finances        | [`/student/finances`](https://www.leonard-de-vinci.net/student/finances)                                               |
+| [x]  | Presences       | [`/student/presences`](https://www.leonard-de-vinci.net/student/presences)                                             |
+| [x]  | Presence        | [`/student/presences/<token>`](https://www.leonard-de-vinci.net/student/presences/<token>)                             |
+| [x]  | Cours           | [`/student/cours`](https://www.leonard-de-vinci.net/student/cours)                                                     |
+| [ ]  | Offres de stage | [`/student/stages_offres`](https://www.leonard-de-vinci.net/student/stages_offres)                                     |
+| [ ]  | att. présences  | [`/student/attestations_presences`](https://www.leonard-de-vinci.net/student/attestations_presences)                   |
+| [ ]  | Gestion stages  | [`/student/stages`](https://www.leonard-de-vinci.net/student/stages)                                                   |
+| [ ]  | International   | [`/student/international`](https://www.leonard-de-vinci.net/student/international)                                     |
+| [ ]  | Mes séjours     | [`/student/international/#block_mon_sejour`](https://www.leonard-de-vinci.net/student/international/#block_mon_sejour) |
+| [ ]  | Salles          | [`/student/salles`](https://www.leonard-de-vinci.net/student/salles)                                                   |
+| [ ]  | Plans arche     | [`/maps/arche/](https://www.leonard-de-vinci.net/maps/arche/)                                                          |
+| [x]  | Promotion       | [`/promotion`](https://www.leonard-de-vinci.net/promotion)                                                             |
