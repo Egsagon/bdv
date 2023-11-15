@@ -42,5 +42,5 @@ A style and script rethemer for leonard-de-vinci.net.
 | [ ]  | International   | [`/student/international`](https://www.leonard-de-vinci.net/student/international)                                     |
 | [ ]  | Mes séjours     | [`/student/international/#block_mon_sejour`](https://www.leonard-de-vinci.net/student/international/#block_mon_sejour) |
 | [ ]  | Salles          | [`/student/salles`](https://www.leonard-de-vinci.net/student/salles)                                                   |
-| [ ]  | Plans arche     | [`/maps/arche/](https://www.leonard-de-vinci.net/maps/arche/)                                                          |
+| [ ]  | Plans arche     | [`/maps/arche/`](https://www.leonard-de-vinci.net/maps/arche/)                                                          |
 | [x]  | Promotion       | [`/promotion`](https://www.leonard-de-vinci.net/promotion)                                                             |
