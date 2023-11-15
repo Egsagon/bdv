@@ -54,7 +54,7 @@ window.pork = {
         if (pool.color_scheme) {
             style = document.createElement('style')
             style.innerHTML = pool.color_scheme
-
+            
             document.body.append(style)
             console.log('[PORK] [CSRIPT] Injected custom color scheme')
         }
