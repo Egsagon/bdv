@@ -95,9 +95,9 @@ body.pork #ball {
 .site-menubar {
     all: unset;
     position: fixed;
-    top: 10px;
+    top: var(--pork-gap);
     height: 40px;
-    right: 10px;
+    right: var(--pork-gap);
 
     background-color: transparent !important;
 }
@@ -138,7 +138,7 @@ body.pork #ball {
 .site-menubar .dropdown-menu {
     background-color: var(--pork-bg-color-2) !important;
     border: 4px solid var(--pork-bg-color);
-    transform: translate(-50%, 10px);
+    transform: translate(-50%, var(--pork-gap));
     border-radius: var(--pork-border-radius);
 }
 
@@ -175,7 +175,7 @@ body.pork #ball {
 
 .site-menu .nav-indicators .dropdown-menu {
     position: fixed !important;
-    top: 60px !important;
+    top: calc(50px + var(--pork-gap)) !important;
 }
 
 .site-menu .nav-messages .dropdown-menu {
@@ -218,9 +218,9 @@ body.pork #ball {
 }
 
 html:not(.pork) {
-    margin-left: 70px;
-    margin-top: 70px;
-    margin-right: 10px;
+    margin-left: calc(50px + 2 * var(--pork-gap));
+    margin-top: calc(50px + 2 * var(--pork-gap));
+    margin-right: var(--pork-gap);
     background-color: var(--pork-bg-color);
 }
 
@@ -278,7 +278,7 @@ html:not(.pork) {
     padding: 0;
     display: flex !important;
     align-items: center;
-    margin-right: 10px !important;
+    margin-right: max(var(--pork-gap), 10px) !important;
 }
 
 .nav-indicators > li:nth-child(3) { /* 2nd element but take into account separators */
@@ -289,12 +289,12 @@ html:not(.pork) {
     /* Make sure sidebar isn't affected by
        window resizes */
     width: 50px !important;
-    height: calc(100% - 70px - 10px) !important;
+    height: calc(100% - 50px - 4 * var(--pork-gap)) !important;
     position: absolute !important;
-    margin: 10px !important;
+    margin: var(--pork-gap) !important;
     padding: 0 !important;
     margin-top: 0 !important;
-    top: 70px !important;
+    top: calc(50px + 2 * var(--pork-gap)) !important;
     left: 0 !important;
     overflow: hidden;
     text-align: center;
@@ -312,7 +312,7 @@ html:not(.pork) {
     background-color: transparent;
     width: 50px;
     height: 50px;
-    margin-right: 10px !important;
+    margin-right: var(--pork-gap) !important;
     cursor: pointer;
 }
 
@@ -339,7 +339,7 @@ html:not(.pork) {
 }
 
 .schoole_pastil img {
-    width: calc(50px - 20px);
+    width: calc(50px - 20px); /* Not gaps, see border property */
     height: calc(50px - 20px);
     border-radius: var(--pork-border-radius);
     background-color: none;
@@ -372,6 +372,13 @@ html:not(.pork) {
     display: none;
 }
 
+.navbar-inner {
+    position: fixed;
+    left: var(--pork-gap);
+    top: var(--pork-gap);
+    width: calc(100% - 2 * var(--pork-gap));
+}
+
 .accordion-toggle.opened::after {
     /* Hide current page arrow */
     display: none;
@@ -395,7 +402,7 @@ html:not(.pork) {
     display: flex !important;
     flex-direction: column !important;
 
-    height: calc(100% - 70px - 10px - 15px) !important;
+    height: calc(100% - 50px - 4 * var(--pork-gap) - 15px) !important;
 }
 
 .social-sidebar .menu .accordion {
@@ -460,8 +467,8 @@ html:not(.pork) {
     all: unset;
     display: none;
     position: fixed;
-    left: 75px;
-    bottom: 15px;
+    left: calc(50px + 2 * var(--pork-gap) + 5px);
+    bottom: calc(var(--pork-gap) + 5px);
     background-color: var(--pork-bg-color-2);
     border: 4px solid var(--pork-bg-color);
     border-radius: var(--pork-border-radius);
@@ -548,7 +555,7 @@ body:not(.pork) {
 
 .app-root {
     /* Make calendar fit body */
-    height: calc(100vh - 80px - 20px);
+    height: calc(100vh - 50px - 4 * var(--pork-gap) - 20px);
     font-size: 10px !important;
 }
 

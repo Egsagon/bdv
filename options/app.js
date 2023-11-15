@@ -100,7 +100,6 @@ document.querySelector('form').addEventListener('submit', ev => {
     ev.preventDefault()
 })
 
-
 document.querySelector('#auto-accent').addEventListener('click', ev => {
     // Enable or disable accent setting
 
