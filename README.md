@@ -10,17 +10,17 @@ A style and script rethemer for leonard-de-vinci.net.
 
 ### Project structure
 
-```
-|- manifest.json    Extension manifest
+```shell
+|- manifest.json    # Extension manifest
 |
-|- injections       All injection ressources
-|  |- css/*.css     CSS stylesheets to inject
-|  |- js/*.js       JS scripts to inject
-|  |- html/*.html   HTML pages to inject
+|- injections       # All injection ressources
+|  |- css/*.css     # CSS stylesheets to inject
+|  |- js/*.js       # JS scripts to inject
+|  |- html/*.html   # HTML pages to inject
 |
-|- options/*        Firefox settings page
+|- options/*        # Firefox settings page
 |
-|- popup/*          Firefox popup page
+|- popup/*          # Firefox popup page
 ```
 
 ### Currently rethemed pages:
@@ -44,3 +44,20 @@ A style and script rethemer for leonard-de-vinci.net.
 | [ ]  | Salles          | [`/student/salles`](https://www.leonard-de-vinci.net/student/salles)                                                   |
 | [ ]  | Plans arche     | [`/maps/arche/`](https://www.leonard-de-vinci.net/maps/arche/)                                                          |
 | [x]  | Promotion       | [`/promotion`](https://www.leonard-de-vinci.net/promotion)                                                             |
+
+### Screenshot (WIP)
+
+#### Extension popup
+![](https://github.com/Egsagon/pork/blob/98a2f7babd33d4a5573b2a9c726cf80d03a7cb48/assets/popup.png)
+
+#### Extension settings
+![](https://github.com/Egsagon/pork/blob/98a2f7babd33d4a5573b2a9c726cf80d03a7cb48/assets/options_ui.png)
+
+#### Main page (default scheme with square borders)
+![](https://github.com/Egsagon/pork/blob/98a2f7babd33d4a5573b2a9c726cf80d03a7cb48/assets/squared.png)
+
+#### Main page (custom accent color, overrides school accent, rounded)
+![](https://github.com/Egsagon/pork/blob/98a2f7babd33d4a5573b2a9c726cf80d03a7cb48/assets/green.png)
+
+#### Main page (custom colors)
+![](https://github.com/Egsagon/pork/blob/98a2f7babd33d4a5573b2a9c726cf80d03a7cb48/assets/custom.png)
