@@ -18,6 +18,19 @@ sidebar_icons = Object.entries({
     'Langues':                   'fa-solid fa-language'
 })
 
+navbar_icons = [
+    // Honestly almost the same, this is just
+    // for modding 
+    'fa-solid fa-user',
+    'fa-solid fa-hotel',
+    'fa-solid fa-book-open',
+    'fa-solid fa-briefcase',
+    'fa-solid fa-flag',
+    'fa-regular fa-map',
+    'fa-solid fa-envelope',
+    'fa-solid fa-ellipsis-vertical'
+]
+
 hello_sentences = [
     // @ = name placeholder
     'Welcome, @!',
@@ -108,6 +121,15 @@ window.addEventListener('load', async () => {
     $('.pork-toggler').on('click', () => {
         $('.sidebar-complement').toggleClass('active')
         compute_bar()
+    })
+
+    // Move nav indicators
+    $('.site-menu').append($('.nav-indicators'))
+
+    // Re-style indicators
+    $('.site-menu a[data-toggle="dropdown"] i').each((i, el) => {
+        $(el).removeClass()
+        $(el).addClass(navbar_icons[i])
     })
 })
 
