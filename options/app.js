@@ -69,7 +69,8 @@ document.querySelector('#save').addEventListener('click', () => {
     }
 
     browser.storage.sync.set({
-        color_scheme: ':root {' + scheme + '}'
+        color_scheme: ':root {' + scheme + '}',
+        accent_override: auto.checked
     }).then(async () => {
         
         console.log('[PORK] [options] Saved color scheme')
@@ -108,9 +109,7 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
 
 // Try load custom theme on load
 
-; // DO NOT remove this code breaks otherwise
-
-(async () => {
+;/*~*/;(async () => {
 
     // Choose quote
     quote = quotes[Math.floor(Math.random() * quotes.length)]

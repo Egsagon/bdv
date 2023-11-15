@@ -289,7 +289,7 @@ html:not(.pork) {
     /* Make sure sidebar isn't affected by
        window resizes */
     width: 50px !important;
-    height: calc(100% - 50px - 4 * var(--pork-gap)) !important;
+    height: calc(100% - 50px - 3 * var(--pork-gap) - 1px) !important;
     position: absolute !important;
     margin: var(--pork-gap) !important;
     padding: 0 !important;
@@ -555,7 +555,7 @@ body:not(.pork) {
 
 .app-root {
     /* Make calendar fit body */
-    height: calc(100vh - 50px - 4 * var(--pork-gap) - 20px);
+    height: calc(100vh - 50px - 3 * var(--pork-gap) - 20px - 1px);
     font-size: 10px !important;
 }
 
