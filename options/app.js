@@ -24,6 +24,10 @@ default_scheme = {
     'gap': '10'
 }
 
+log = (...msg) => {
+    console.log('%c[ PORK ] ' + msg, 'color: cyan')
+}
+
 settings.forEach(input => {
 
     let updater = () => {
@@ -33,6 +37,8 @@ settings.forEach(input => {
 
     input.updater = updater
     input.addEventListener('change', updater)
+
+    log('Hooked all updaters to settings')
 })
 
 document.querySelector('#reset').addEventListener('mouseup', () => {
@@ -47,6 +53,8 @@ document.querySelector('#reset').addEventListener('mouseup', () => {
     // Reset auto accent
     document.querySelector('#auto-accent').checked = true
     document.querySelector('#accent-color').disabled = true
+
+    log('Settings reset amorced')
 })
 
 document.querySelector('#save').addEventListener('click', () => {
@@ -68,13 +76,14 @@ document.querySelector('#save').addEventListener('click', () => {
         scheme += '--pork-accent-color: var(--school-accent);'
     }
 
+    log('Computed CSS scheme: ' + scheme)
+
     browser.storage.sync.set({
         color_scheme: ':root {' + scheme + '}',
-        accent_override: auto.checked
+        accent_override: !auto.checked
     }).then(async () => {
         
-        console.log('[PORK] [options] Saved color scheme')
-        console.log(scheme)
+        log('Successfully saved scheme to storage')
 
         // Reload all opened target sites
         tabs = await browser.tabs.query({url: [
@@ -83,17 +92,16 @@ document.querySelector('#save').addEventListener('click', () => {
         ]})
 
         tabs.forEach(async tab => {
-            console.log('Reloading', tab.url)
+            log('Reloading target site: ' + tab.url)
             await browser.tabs.reload(tab.id)
         })
 
         alert('Scheme saved.')
 
     }, error => {
-        alert('Saving failed:\n' + error)
-        console.error('[PORK] [options]', error)
+        alert('Operation failed:\n' + error)
+        console.error('[PORK]', error)
     })
-
 })
 
 document.querySelector('form').addEventListener('submit', ev => {
@@ -119,11 +127,15 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
 
     if (pool.color_scheme) {
 
+        log('Recovering stored color scheme')
+
         // Apply theme
         settings.forEach(input => {
 
             rule = new RegExp(`--pork-${input.id}: (.*?)(px)? (!important)?;`)
             input.value = rule.exec(pool.color_scheme)[1]
+
+            log('Color scheme injected. Calling hooks')
 
             // Update setting
             input.updater()

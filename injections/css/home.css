@@ -338,7 +338,8 @@ html:not(.pork) {
     }
 }
 
-.schoole_pastil img {
+.schoole_pastil img,
+.schoole_pastil canvas {
     width: calc(50px - 20px); /* Not gaps, see border property */
     height: calc(50px - 20px);
     border-radius: var(--pork-border-radius);
@@ -353,6 +354,8 @@ html:not(.pork) {
        until evaluated on js side) */
     border: 10px solid var(--pork-accent-color) !important;
 }
+
+
 
 .social-sidebar span {
     display: none !important;

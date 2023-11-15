@@ -1,6 +1,8 @@
-
+/* student/salles injections */
 
 $(window).on('load', async () => {
+
+    window.pork.log('Starting injection')
 
     input = $('#select_day')
     input.val('')

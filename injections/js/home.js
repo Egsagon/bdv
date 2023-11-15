@@ -1,5 +1,6 @@
 // Injections for the home page and auth page
 
+const image_precision = 90
 
 sidebar_icons = Object.entries({
     'Home page':                 'fa-solid fa-house',
@@ -48,18 +49,22 @@ hello_icons = [
 
 window.addEventListener('load', async () => {
 
+    window.pork.log('Starting injection')
+
     // Check if we are on the auth page
     is_auth_page = Boolean($('body > .container').length)
 
     if (is_auth_page) {
         // We are on the auth page, we inject our own html
-        
+
+        window.pork.log('Replacing auth page html')
         document.wrappedJSObject.open('text/html') // Exploit because it's insecure
         document.write(await window.pork.fetch('injections/html/home.html'))
         document.close()
     }
     
     // Inject color scheme
+    window.pork.log('Injecting custom CSS data')
     await window.pork.inject_scheme()
 
     if (is_auth_page) return
@@ -79,6 +84,7 @@ window.addEventListener('load', async () => {
     code = `rgb(${acc.r}, ${acc.g}, ${acc.b})`
     document.documentElement.style.cssText = `--school-accent: ${code}`;
     $('.schoole_pastil').css('animation', 'swip forwards 1.5s')
+    window.pork.log('Evaluated school accent color to ' + code)
 
     // Set hello message
     title = $('.navbar-inner-title')
@@ -134,30 +140,46 @@ window.addEventListener('load', async () => {
 
     // Re-color school image
     pool = await browser.storage.sync.get()
-    
+
     if (pool.accent_override) {
+        hex = getComputedStyle(document.documentElement).getPropertyValue('--pork-accent-color').trim()
+        rgb = window.pork.hex_to_rgb(hex)
+
+        window.pork.log('Modifying school logo with color ' + hex)
+
+        /* Note - The source image is 28x28px so there will be a 1px border around the
+           canvas, which we need to fill. Our output is 30x30px originally because of the
+           10px border (30px+2*10px = 50px = sidebar width = navbar height) */
 
         canvas = document.createElement('canvas')
-        canvas.width = favicon.width
-        canvas.height = favicon.height
+        canvas.width = 30
+        canvas.height = 30
 
         ctx = canvas.getContext('2d')
-        ctx.drawImage(favicon, 0, 0, 1, 1, 0, 0, 1, 1)
-        data = ctx.getImageData(0, 0, favicon.width, favicon.height).data
+        ctx.fillStyle = 'green'
+        ctx.fillRect(0, 0, 30, 30)
 
-        dominants = {}
+        ctx.drawImage(favicon, -1, -1, favicon.width, favicon.height,
+                               0, 0, canvas.width, canvas.height)
+        
+        image = ctx.getImageData(0, 0, favicon.width, favicon.height)
 
-        for(let i = 0; i < data.length; i += 4) {
+        for (var i = 0; i < image.data.length; i += 4) {
 
-            hex = window.pork.rgb_to_hex(data[i], data[i + 1], data[i + 2])
-
-            if (!dominants[hex]) dominants[hex] = 0
-            dominants[hex] += 1
+            if (
+                image.data[i    ] < image_precision ||
+                image.data[i + 1] < image_precision ||
+                image.data[i + 2] < image_precision
+            ) {
+                image.data[i    ] = rgb.r
+                image.data[i + 1] = rgb.g
+                image.data[i + 2] = rgb.b
+            }
         }
 
-        console.log(dominants)
+        ctx.putImageData(image, 0, 0)
 
-        // TODO - cache canvas
+        $('.schoole_pastil img').replaceWith(canvas)
     }
 })
 
