@@ -4,9 +4,9 @@ A style and script rethemer for leonard-de-vinci.net.
 
 ### Websites injected
 
-- www.leonard-de-vinci.net
-- learning.devinci.fr
-- adfs.devinci.fr (auther)
+- [leonard-de-vinci.net](https://www.leonard-de-vinci.net)
+- [learning.devinci.fr](https://learning.devinci.fr)
+- [adfs.devinci.fr (auther)](https://adfs.devinci.fr)
 
 ### Project structure
 
