@@ -5,7 +5,7 @@ const css = document.documentElement.style
 var clicks = 0
 const reset_button = document.querySelector('#reset')
 
-const settings = document.querySelectorAll('input:not(#auto-accent)')
+const settings = document.querySelectorAll('input:not(.bypass)')
 
 const quotes = [
     // Random quotes to display in the minimap
@@ -80,7 +80,8 @@ document.querySelector('#save').addEventListener('click', () => {
 
     browser.storage.sync.set({
         color_scheme: ':root {' + scheme + '}',
-        accent_override: !auto.checked
+        accent_override: !auto.checked,
+        disable_logo: document.getElementById('rotate-log').checked
     }).then(async () => {
         
         log('Successfully saved scheme to storage')

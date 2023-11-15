@@ -25,16 +25,20 @@
             true  -> school accent will override accent color
             false -> accent color will be used as accent color
         -->
-        <input type="checkbox" id="auto-accent" checked value="var(--school-accent)">
+        <input class="bypass" type="checkbox" id="auto-accent" checked value="var(--school-accent)">
         <label for="auto-accent"></label>
 
         <h1>Page style</h1>
 
-        <p for="border-radius">Border radius</p>
+        <p>Border radius</p>
         <input type="number" id="border-radius" value="10" min="0"><br>
 
-        <p for="gap">Gaps</p>
+        <p>Gaps</p>
         <input type="number" id="gap" value="10" min="0"><br>
+
+        <p>Rotate logo</p>
+        <input type="checkbox" id="rotate-logo" checked>
+        <label for="rotate-logo"></label>
     </form>
 
     <div id="demo">

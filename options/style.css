@@ -153,11 +153,13 @@ input[type='number'] {
     justify-content: center;
 }
 
-#auto-accent {
+#auto-accent,
+#rotate-logo {
     display: none;
 }
 
-label[for='auto-accent']::after {
+label[for='auto-accent']::after,
+label[for='rotate-logo']::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -170,7 +172,8 @@ label[for='auto-accent']::after {
     cursor: pointer;
 }
 
-#auto-accent:checked + label[for='auto-accent']::after {
+#auto-accent:checked + label[for='auto-accent']::after,
+#rotate-logo:checked + label[for='rotate-logo']::after {
     content: 'Yes';
     background-color: green;
 }
