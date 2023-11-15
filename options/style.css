@@ -42,10 +42,11 @@ input[type='color'] {
 
 input[type='number'] {
     padding: 6px;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: #fff;
     width: 100px;
-    border: 1px solid #fff;
+    border: 1px solid gray;
+    height: 32px;
 }
 
 #accent-color:disabled {
@@ -164,7 +165,7 @@ label[for='rotate-logo']::after {
     align-items: center;
     justify-content: center;
     content: 'No';
-    width: 100px;
+    width: calc(100px - 2px);
     height: 32px;
     background-color: red;
     border: 1px solid grey;

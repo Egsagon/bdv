@@ -74,3 +74,11 @@ body {
 .socials i:hover {
     background-color: var(--bdv-accent-color);
 }
+
+p {
+    color: var(--bdv-fg-color);
+}
+
+span {
+    color: var(--bdv-accent-color);
+}

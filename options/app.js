@@ -81,7 +81,7 @@ document.querySelector('#save').addEventListener('click', () => {
     browser.storage.sync.set({
         color_scheme: ':root {' + scheme + '}',
         accent_override: !auto.checked,
-        disable_logo: document.getElementById('rotate-log').checked
+        disable_logo: !document.getElementById('rotate-logo').checked
     }).then(async () => {
         
         log('Successfully saved scheme to storage')

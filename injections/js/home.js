@@ -47,6 +47,13 @@ hello_icons = [
     'fa-solid fa-wind'
 ]
 
+window.addEventListener('DOMContentLoaded', () => {
+    // Show loader and html back
+
+    $('body').append('<div id="bdv-loader"><p>Loading...</p></div>')
+    $('body').css('visibility', 'visible')
+})
+
 window.addEventListener('load', async () => {
 
     window.bdv.log('Starting injection')
@@ -83,7 +90,6 @@ window.addEventListener('load', async () => {
     acc = window.bdv.accent(favicon)
     code = `rgb(${acc.r}, ${acc.g}, ${acc.b})`
     document.documentElement.style.cssText = `--school-accent: ${code}`;
-    $('.schoole_pastil').css('animation', 'swip forwards 1.5s')
     window.bdv.log('Evaluated school accent color to ' + code)
 
     // Set hello message
@@ -97,6 +103,7 @@ window.addEventListener('load', async () => {
 
     // Hide calendar minimap
     $('#b-button-7').click()
+    // $('#b-button-7').addClass('b-panel-collapse-size-locker')
 
     // Replace sidebar buttons with FA icons
     $('.social-sidebar .menu .accordion-group a').each((i, el) => {
@@ -181,6 +188,20 @@ window.addEventListener('load', async () => {
 
         $('.schoole_pastil img').replaceWith(canvas)
     }
+
+
+    /*
+        Further injection
+        ...
+    */
+
+    // Finalize injection
+    window.bdv.log('Injection finished')
+    $('#bdv-loader').remove()
+
+    if (!pool.disable_logo) {setTimeout(() => {
+        $('.schoole_pastil').css('animation', 'swip forwards 1.5s')
+    }, 500)}
 })
 
 compute_bar = () => {
