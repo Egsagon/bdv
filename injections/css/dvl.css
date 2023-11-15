@@ -1,0 +1,14 @@
+/* DVL stylesheet */
+
+.courseindex-item {
+    display: flex !important;
+    padding: 0 !important;
+    text-align: start;
+    justify-content: start;
+}
+
+.courseindex-item a {
+    flex-grow: 1;
+    margin: 0 !important;
+    padding: 4px !important;
+}

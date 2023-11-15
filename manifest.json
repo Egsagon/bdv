@@ -63,6 +63,15 @@
                 "injections/js/salles.js"
             ],
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://learning.devinci.fr/*"],
+            "css": [
+                "injections/css/base.css",
+                "injections/css/dvl.css"
+            ],
+            "js": ["injections/js/dvl.js"],
+            "run_at": "document_start"
         }
     ],
 

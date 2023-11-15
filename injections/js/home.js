@@ -57,7 +57,7 @@ window.addEventListener('load', async () => {
     $(document.head).append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">')
 
     // Set window title and favicon
-    window.title = 'De Vinci - Dashboard'
+    document.title = 'De Vinci - Dashboard'
     favicon = document.querySelector('.schoole_pastil img')
     $("link[rel='shortcut icon']").attr("href", favicon.src)
 
