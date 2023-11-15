@@ -67,6 +67,10 @@ body {
     border-radius: 50%;
 }
 
+.socials a {
+    text-decoration: none;
+}
+
 .socials i:hover {
     background-color: var(--pork-accent-color);
 }

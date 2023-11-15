@@ -174,3 +174,31 @@ label[for='auto-accent']::after {
     content: 'Yes';
     background-color: green;
 }
+
+#demo button {
+    height: 40px;
+    border: none;
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    border-radius: var(--border-radius);
+    min-width: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+#demo button:last-child {
+    background-color: var(--accent-color);
+    color: var(--fg-color);
+}
+
+#demo button:hover {
+    background-color: var(--accent-color);
+}
+
+#demo button:last-child:hover {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
