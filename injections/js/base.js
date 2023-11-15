@@ -1,5 +1,10 @@
 // Utilities
 
+componentToHex = c => {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
 window.pork = {
 
     version: 0.1,
@@ -58,6 +63,14 @@ window.pork = {
             document.body.append(style)
             console.log('[PORK] [CSRIPT] Injected custom color scheme')
         }
+    },
+
+    rgb_to_hex: (r, g, b) => {
+        // Convert a rgb color to hex format
+
+        return "#" + componentToHex(r)
+                   + componentToHex(g)
+                   + componentToHex(b)
     }
 }
 

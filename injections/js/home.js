@@ -131,6 +131,34 @@ window.addEventListener('load', async () => {
         $(el).removeClass()
         $(el).addClass(navbar_icons[i])
     })
+
+    // Re-color school image
+    pool = await browser.storage.sync.get()
+    
+    if (pool.accent_override) {
+
+        canvas = document.createElement('canvas')
+        canvas.width = favicon.width
+        canvas.height = favicon.height
+
+        ctx = canvas.getContext('2d')
+        ctx.drawImage(favicon, 0, 0, 1, 1, 0, 0, 1, 1)
+        data = ctx.getImageData(0, 0, favicon.width, favicon.height).data
+
+        dominants = {}
+
+        for(let i = 0; i < data.length; i += 4) {
+
+            hex = window.pork.rgb_to_hex(data[i], data[i + 1], data[i + 2])
+
+            if (!dominants[hex]) dominants[hex] = 0
+            dominants[hex] += 1
+        }
+
+        console.log(dominants)
+
+        // TODO - cache canvas
+    }
 })
 
 compute_bar = () => {

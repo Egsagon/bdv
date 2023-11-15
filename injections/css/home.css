@@ -351,7 +351,7 @@ html:not(.pork) {
     /* Image is low res, so we reduce it by a bit
        so people don't notice (temporary color
        until evaluated on js side) */
-    border: 10px solid var(--school-accent) !important;
+    border: 10px solid var(--pork-accent-color) !important;
 }
 
 .social-sidebar span {
@@ -588,11 +588,11 @@ body:not(.pork) {
 }
 
 .b-current-time-indicator {
-    border-top: 2px solid var(--school-accent) !important;
+    border-top: 2px solid var(--pork-accent-color) !important;
 }
 
 .b-current-time-indicator::before {
-    background-color: var(--school-accent) !important;
+    background-color: var(--pork-accent-color) !important;
 }
 
 .b-cal-event-wrap {
