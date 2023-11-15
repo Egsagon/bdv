@@ -40,7 +40,16 @@
                 }
 
                 // Request failed
-                msg = /html: \"(.*?)\",/gms.exec(response)[1]
+                try {
+                    msg = /html: \"(.*?)\",/gms.exec(response)[1]
+                } catch {
+                    msg = `
+                    Internal error. Check your credentials.
+                    The server might be encountering problems.
+                    <button onclick='alert("${response || 'No data received'}")'>
+                        See received data
+                    </button>`
+                }
                 
                 $('#msg')[0].style.display = 'block'
                 $('#msg')[0].innerHTML = msg

@@ -47,36 +47,16 @@ hello_icons = [
     'fa-solid fa-wind'
 ]
 
-window.addEventListener('DOMContentLoaded', () => {
-    // Show loader and html back
+window.bdv.init(async () => {
 
-    $('body').append('<div id="bdv-loader"><p>Loading...</p></div>')
-    $('body').css('visibility', 'visible')
-})
-
-window.addEventListener('load', async () => {
-
-    window.bdv.log('Starting injection')
-
-    // Check if we are on the auth page
-    is_auth_page = Boolean($('body > .container').length)
-
-    if (is_auth_page) {
+    if ($('body > .container').length) {
         // We are on the auth page, we inject our own html
 
         window.bdv.log('Replacing auth page html')
         document.wrappedJSObject.open('text/html') // Exploit because it's insecure
         document.write(await window.bdv.fetch('injections/html/home.html'))
-        document.close()
+        return document.close()
     }
-    
-    // Inject color scheme
-    window.bdv.log('Injecting custom CSS data')
-    await window.bdv.inject_scheme()
-
-    if (is_auth_page) return
-
-    // We are on the home page
 
     // Inject FA6
     $(document.head).append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">')
@@ -103,7 +83,6 @@ window.addEventListener('load', async () => {
 
     // Hide calendar minimap
     $('#b-button-7').click()
-    // $('#b-button-7').addClass('b-panel-collapse-size-locker')
 
     // Replace sidebar buttons with FA icons
     $('.social-sidebar .menu .accordion-group a').each((i, el) => {
@@ -194,10 +173,6 @@ window.addEventListener('load', async () => {
         Further injection
         ...
     */
-
-    // Finalize injection
-    window.bdv.log('Injection finished')
-    $('#bdv-loader').remove()
 
     if (!pool.disable_logo) {setTimeout(() => {
         $('.schoole_pastil').css('animation', 'swip forwards 1.5s')

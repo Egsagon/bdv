@@ -1,8 +1,6 @@
 /* student/salles injections */
 
-$(window).on('load', async () => {
-
-    window.bdv.log('Starting injection')
+window.bdv.init(async () => {
 
     input = $('#select_day')
     input.val('')
@@ -36,8 +34,12 @@ $(window).on('load', async () => {
     
     selector.insertAfter(input)
 
-    // Filter
-    filter = /filter=(.*?)/g.exec(location.href)[0]
+    // Filter (WIP)
+    //filter = /filter=(.*?)/g.exec(location.href)[0]
+    
+    /*
+    filter = 'placeholder'
+    
     console.log(filter)
     $('table th').each((i, el) => {
 
@@ -52,5 +54,6 @@ $(window).on('load', async () => {
             salle.parent().css('display', 'none')
         }
     })
+    */
 
 })

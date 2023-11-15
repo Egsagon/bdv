@@ -39,7 +39,7 @@
     background-color: var(--bdv-bg-color-2);
     border-radius: var(--bdv-border-radius);
     padding: 24px;
-    color: var(--porf-fg-color);
+    color: var(--bdv-fg-color);
 }
 
 #authArea {
@@ -67,21 +67,40 @@
     justify-content: center;
     background-color: var(--bdv-fg-color);
     color: var(--bdv-bg-color);
-    transition: all ease-in-out .2s;
 }
 
 #submitButton:hover {
     background-color: var(--bdv-accent-color);
+    border-color: var(--bdv-accent-color) !important;
+    color: var(--bdv-fg-color);
 }
 
 #submitButton, input {
-    height: 32px !important;
+    height: 40px !important;
+    padding: 4px !important;
+    margin: 4px !important;
+    border: none !important;
+    outline: none !important;
+    transition: all ease-in-out .2s;
 }
 
 input {
     background-color: transparent;
-    border: none !important;
-    border-bottom: 2px solid var(--porf-fg-color) !important;
-    outline: none !important;
-    color: var(--porf-fg-color);
+    color: var(--bdv-fg-color);
+    padding: 4px 10px !important;
+    border: 2px solid var(--bdv-bg-color) !important;
+}
+
+input:focus {
+    border-color: var(--bdv-fg-color) !important;
+}
+
+input:autofill {
+    /* Note - Chrome overrides this */
+    background-color: transparent;
+    background-image: none;
+}
+
+#introduction {
+    text-align: center;
 }

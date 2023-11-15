@@ -34,6 +34,7 @@
             "matches": ["*://adfs.devinci.fr/adfs/ls/*"],
             "js": [
                 "injections/js/jq.js",
+                "injections/js/base.js",
                 "injections/js/adfs.js"
             ],
             "css": [

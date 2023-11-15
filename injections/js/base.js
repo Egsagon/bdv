@@ -9,6 +9,44 @@ window.bdv = {
 
     version: 0.1,
 
+    init: (loader = true, async_func = undefined) => {
+        // Setup injection for a page
+
+        // Support 1 arg only
+        if (loader && !async_func) {
+            async_func = loader
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Show loader on page DOM load
+            
+            if (loader) {
+                $('body').append('<div id="bdv-loader"><p>Loading...</p></div>')
+            }
+
+            $('body').css('visibility', 'visible')
+        })
+
+        if (async_func) {
+            window.addEventListener('load', async () => {
+                // Trigger injection
+
+                // Update just in case DOM did not fire
+                $('body').css('visibility', 'visible')
+
+                window.bdv.log('Starting injection')
+                await async_func()
+
+                window.bdv.log('Injecting custom CSS')
+                await window.bdv.inject_scheme()
+                window.bdv.log('Injection finished')
+
+                // Remove loader
+                $('#bdv-loader').remove()
+            })
+        }
+    },
+
     fetch: async path => {
         // Fetch a local ressource
 

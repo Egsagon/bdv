@@ -31,7 +31,7 @@
     animation: wait forwards infinite linear 4s;
 }
 
-body {
+body:not(.bdv) {
     /* Prevent from showing body until injection has finished */
     visibility: hidden;
 }
@@ -75,6 +75,11 @@ body.bdv #msg {
     padding: 16px;
     margin: 10px;
     border-radius: var(--bdv-border-radius);
+    max-width: 320px;
+}
+
+body.bdv #msg button {
+    margin: 10px;
 }
 
 body.bdv form {

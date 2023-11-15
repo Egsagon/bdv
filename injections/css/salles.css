@@ -38,7 +38,8 @@
 }
 
 #main .social-blue .body {
-    height: calc(100vh - 80px - 20px - 113px + 25px);
+    /* height: calc(100vh - 80px - 20px - 113px + 25px); */
+    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 117px);
     overflow-y: scroll !important;
 }
 
@@ -102,6 +103,7 @@
 
 #select_day {
     all: unset;
+    font-family: Poppins;
     background-color: var(--bdv-fg-color) !important;
     color: var(--bdv-bg-color) !important;
     height: 40px !important;
