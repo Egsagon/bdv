@@ -1,7 +1,7 @@
 /* Stylesheet for home and auth page */
 
 * {
-    font-family: Poppins 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: none !important;
     scrollbar-width: thin; /* Firefox only */
 }
@@ -503,14 +503,41 @@ html:not(.bdv) {
     content: attr(data-title, 'Unknown link');
     display: inline-block;
     background-color: var(--bdv-bg-color);
-    transform: translate(calc(50px / 2 + var(--bdv-gap) + 5px), calc(-58px / 2 - 50%));
+    opacity: .3;
+    transform: translate(calc(50px / 2 + var(--bdv-gap) - 5px), calc(-58px / 2 - 50%));
     padding: 15px;
     color: var(--bdv-fg-color);
     border-radius: var(--bdv-border-radius);
+    animation: show-link forwards .5s;
 }
 
 .sidebar-complement .accordion-group:hover::after {
     transform: translate(calc(50px / 2 - 50%), -110px);
+    animation: show-link-upwards forwards .5s;
+}
+
+@keyframes show-link {
+    from {
+        opacity: .3;
+        transform: translate(calc(50px / 2 + var(--bdv-gap) - 5px), calc(-58px / 2 - 50%));
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(calc(50px / 2 + var(--bdv-gap) + 5px), calc(-58px / 2 - 50%));
+    }
+}
+
+@keyframes show-link-upwards {
+    from {
+        opacity: .3;
+        transform: translate(calc(50px / 2 - 50%), -105px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(calc(50px / 2 - 50%), -110px);
+    }
 }
 
 .social-sidebar .menu .accordion-group {
