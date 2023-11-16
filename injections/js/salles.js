@@ -1,5 +1,7 @@
 /* student/salles injections */
 
+const validate_date = /^(?:(?:31(-)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(-)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(-)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(-)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/g
+
 window.bdv.init(async () => {
 
     input = $('#select_day')
@@ -9,51 +11,46 @@ window.bdv.init(async () => {
     $('#select_day_btn').html('OK')
 
     selector = $(`<select id="bdv-select">
-    <option value=''>Tous</option>
+        <option value=''>Tous</option>
         <option value='ARCH'>Arche</option>
         <option value='PULV'>PULV</option>
         <option value='NTES'>Nantes</option>
         <option value='CYBR'>Cyber</option>
     <select>`)
     
-    selector.on('change', ev => {
-        
-        value = selector.val()
-
-        if (location.href.includes('filter=')) {
-            url = location.href.replace(/filter=(.*?)/g, value)
-        }
-
-        else {
-            pre = location.href.includes('?') ? '&' : '?'
-            url = location.href + pre + 'filter=' + value
-        }
-
-        location.replace(url)
-    })
-    
     selector.insertAfter(input)
 
-    // Filter (WIP)
-    //filter = /filter=(.*?)/g.exec(location.href)[0]
-    
-    /*
-    filter = 'placeholder'
-    
-    console.log(filter)
-    $('table th').each((i, el) => {
+    $('#select_day_btn').off('click')
+    $('#select_day_btn').on('click', ev => {
 
-        salle = $(el)
-        salle.html(salle.html().replace(/(\(|\[).*?(\)|\])/g, ''))
+        date = $('#select_day').val()
+        env = $('#bdv-select').val()
 
-        if (salle.html().startsWith(filter[0])) {
-        
+        if (!date) $(location).attr('href', './env=' + env)
+
+        if (!validate_date.test(date)) {
+            // Prevent server call if date is invalid
+            return alert('Invalid date. Please enter a date that has the following format:\ndd-mm-yyyy')
         }
-        else { 
-            console.log('hiding', salle)
-            salle.parent().css('display', 'none')
+
+        $(location).attr('href', `./day=${date}&env=${env}`)
+    })
+
+    // Parse filter
+    filter = /env=([A-Z]{4})/g.exec(location.href)
+    filter = filter?.length > 1 ? filter[1] : ''
+
+    $('table tr').each((i, el) => {
+
+        // Reformat title
+        line = $(el).find('th a')[0]
+        title = line.html().replace('((\[|\()\d*?(\)|\]))', '').trim()
+
+        if (!title.startsWith(filter)) {
+            // Delete
+            $(el).remove()
         }
     })
-    */
-
 })
+
+// EOF

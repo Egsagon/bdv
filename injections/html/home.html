@@ -30,11 +30,10 @@
             $.post('ajax.inc.php', payload, response => {
                 
                 if (response.startsWith('$(location)')) {
-                    // Request succeeded, save id as cookie
-
-                    cookie_date = new Date()
-                    cookie_date.setDate(cookie_date.getDate() + 30) // Will expire every month
-                    document.cookie = `leo=${id}; expires=${cookie_date.toUTCString()}; path=/`
+                    // Request succeeded
+                    
+                    ev = new CustomEvent('bdv-id-ok', { detail: id })
+                    window.dispatchEvent(ev)
 
                     return eval(response) // execute jquery string
                 }
@@ -56,10 +55,11 @@
             })
         }
 
-        // Try to use cookie if exists
-        if (document.cookie.includes('leo=')) {
-            cookie = /leo=(.*?);/g.exec(document.cookie)
-            $('#log').value = cookie
+        // Try to use id if exists
+        // {{ id }}
+        if ($('#log')[0].value) {
+            // Try autosubmit
+            // identify()
         }
     </script>
 </body>

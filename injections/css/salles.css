@@ -5,6 +5,26 @@
     display: block !important;
 }
 
+/*
+html {
+    min-width: 800px !important;
+    overflow: scroll !important;
+}
+*/
+
+#main .social-box .body .row-fluid {
+    width: unset !important;
+}
+
+#main .span6 {
+    width: unset !important;
+}
+
+#main .span6:not(#main .span6:first-child) {
+    display: none !important;
+
+}
+
 #main table * {
     margin: 0 !important;
     padding: 0 !important;

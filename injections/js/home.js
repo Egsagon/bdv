@@ -52,10 +52,25 @@ window.bdv.init(async (pool) => {
     if ($('body > .container').length) {
         // We are on the auth page, we inject our own html
 
+        html = await window.bdv.fetch('injections/html/home.html')
+        
+        if (pool.id) {
+            window.bdv.log('Autofilling id')
+            html = html.replace('// {{ id }}', `$("#log")[0].value="${pool.id}"`)
+        }
+
         window.bdv.log('Replacing auth page html')
         document.wrappedJSObject.open('text/html') // Exploit because it's insecure
-        document.write(await window.bdv.fetch('injections/html/home.html'))
-        return document.close()
+        document.write(html)
+        document.close()
+
+        window.addEventListener('bdv-id-ok', async data => {
+            // Save id
+            window.bdv.log('Saving id')
+            await browser.storage.sync.set({'id': data.detail})
+        })
+
+        return
     }
 
     // Inject FA6
@@ -88,6 +103,12 @@ window.bdv.init(async (pool) => {
     $('.social-sidebar .menu .accordion-group a').each((i, el) => {
         icon = sidebar_icons[i]
         $(el).html(`<i title="${icon[0]}" class="${icon[1]}"></i>`)
+    })
+
+    // Add sidebar titles
+    $('.social-sidebar .accordion-group').each((i, el) => {
+        // Note - $().data does not work
+        el.dataset.title = $(el).find('i').attr('title')
     })
 
     // Make sure no sidebar icon is overflowing
@@ -131,7 +152,12 @@ window.bdv.init(async (pool) => {
     })
 
     // Re-color school image
-    hex =  /accent-color: #(.*?) /g.exec(pool.color_scheme)[1] || '#000000'
+
+    hex = '#000000'
+    if (pool.color_scheme?.includes('accent-color: #')) {
+        hex =  /accent-color: #(.*?) /g.exec(pool.color_scheme)[1]
+    }
+
     rgb = window.bdv.hex_to_rgb(hex)
 
     if (pool.accent_override && rgb !== null) {
@@ -171,7 +197,6 @@ window.bdv.init(async (pool) => {
 
         $('.schoole_pastil img').replaceWith(canvas)
     }
-
 
     /*
         Further injection

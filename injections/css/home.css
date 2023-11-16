@@ -1,7 +1,7 @@
 /* Stylesheet for home and auth page */
 
 * {
-    font-family: Poppins;
+    font-family: Poppins 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: none !important;
     scrollbar-width: thin; /* Firefox only */
 }
@@ -497,6 +497,22 @@ html:not(.bdv) {
     color: var(--bdv-accent-color) !important;
 }
 
+.social-sidebar .menu .accordion-group:hover::after,
+.sidebar-complement .accordion-group:hover::after {
+    position: fixed;
+    content: attr(data-title, 'Unknown link');
+    display: inline-block;
+    background-color: var(--bdv-bg-color);
+    transform: translate(calc(50px / 2 + var(--bdv-gap) + 5px), calc(-58px / 2 - 50%));
+    padding: 15px;
+    color: var(--bdv-fg-color);
+    border-radius: var(--bdv-border-radius);
+}
+
+.sidebar-complement .accordion-group:hover::after {
+    transform: translate(calc(50px / 2 - 50%), -110px);
+}
+
 .social-sidebar .menu .accordion-group {
     /* Sidebar elements wrappers */
 
@@ -599,6 +615,10 @@ html:not(.bdv) {
 
 .sidebar-complement .accordion-toggle:hover {
     color: var(--bdv-accent-color);
+}
+
+.nav-indicators .dropdown-menu i {
+    display: none !important;
 }
 
 /* Calendar styles */

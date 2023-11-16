@@ -41,7 +41,7 @@ window.bdv = {
 
                 try { await async_func(pool) }
                 catch (err) {
-                    alert(`There was an error while loading the dashboard: ${err}`)
+                    console.error('[ BDV ] Error:', err)
                 }
 
                 window.bdv.log('Injecting custom CSS')
