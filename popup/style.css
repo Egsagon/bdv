@@ -31,17 +31,16 @@ body {
 #edit {
     padding: 5px;
     height: 50px;
-    min-width: 120px;
+    min-width: 140px;
     text-align: center;
     border-radius: var(--bdv-border-radius);
-    color: var(--bdv-fg-color);
-    background-color: var(--bdv-accent-color);
+    color: var(--bdv-bg-color);
     transition: all ease-in-out .3s;
+    background-color: var(--bdv-accent-color);
     cursor: pointer;
     border: none;
 }
 
-#button:hover,
 #edit:hover {
     scale: 1.1;
     background-color: var(--bdv-fg-color);

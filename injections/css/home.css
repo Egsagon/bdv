@@ -498,6 +498,10 @@ html:not(.bdv) {
 }
 
 .bdv-toggler {
+    position: fixed;
+    bottom: calc(var(--bdv-gap) + 15px);
+    left: calc(var(--bdv-gap) + 50px / 2);
+    transform: translateX(-50%);
     font-size: 24px;
 }
 

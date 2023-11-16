@@ -1,6 +1,6 @@
-const edt = document.querySelector('#edit')
+const edit = document.querySelector('#edit')
 
-edt.addEventListener('click', async () => {
+edit.addEventListener('click', async () => {
     // Update button style
 
     await browser.runtime.openOptionsPage()
