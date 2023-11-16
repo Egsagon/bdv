@@ -184,8 +184,11 @@ body.bdv #ball {
 .site-menubar .dropdown-menu {
     background-color: var(--bdv-bg-color-2) !important;
     border: 4px solid var(--bdv-bg-color);
-    transform: translate(-50%, var(--bdv-gap));
+    transform: translate(-50%, calc(var(--bdv-gap) + 5px));
     border-radius: var(--bdv-border-radius);
+
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22),
+                0 5px 14px 0 rgba(0, 0, 0, .18) !important;
 }
 
 .site-menubar .site-menu-icon {
@@ -224,25 +227,21 @@ body.bdv #ball {
     top: calc(50px + var(--bdv-gap)) !important;
 }
 
-.site-menu .nav-messages .dropdown-menu {
+.nav-indicators .nav-messages .dropdown-menu {
     border: 4px solid var(--bdv-bg-color) !important;
     display: flex !important;
     flex-direction: column;
     padding: 10px;
-    background-color: var(--bdv-bg-color-2);
-}
-
-.site-menu .nav-messages .dropdown-menu a,
-.site-menu .nav-messages .dropdown-menu a:hover {
     background-color: var(--bdv-bg-color-2) !important;
-    border: none !important;
-    color: var(--bdv-fg-color) !important;
     background: none !important;
+    background-image: none !important;
 }
 
-.site-menu .nav-messages-header span {
-    padding: 6px !important;
-    color: var(--bdv-accent-color) !important;
+.nav-indicators .nav-messages .nav-messages-header,
+.nav-indicators .nav-messages .nav-messages-footer {
+    background-color: var(--bdv-bg-color-2) !important;
+    border-radius: 0px !important;
+    border-top: none !important;
 }
 
 .nav-indicators .divider {
@@ -255,13 +254,28 @@ body.bdv #ball {
 }
 
 .nav-indicators .dropdown-menu:last-child {
-    /* TODO translate to right screen border */
+    position: fixed !important;
+    right: var(--bdv-gap) !important;
+    transform: translate(-5px, calc(var(--bdv-gap) + 5px));
 }
 
 .site-menu .dropdown-menu::before,
 .site-menu .dropdown-menu::after {
     display: none !important;
 }
+
+/*
+.site-menubar .dropdown-menu::before {
+    display: block !important;
+    position: fixed;
+    content: '';
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--bdv-bg-color);
+    transform: translate(calc(240px / 2), calc(-100% - 8px));
+}*/
 
 html:not(.bdv) {
     margin-left: calc(50px + 2 * var(--bdv-gap));
@@ -317,6 +331,12 @@ html:not(.bdv) {
     align-items: center;
     padding-left: 15px;
     user-select: none;
+}
+
+@media (max-width: 600px) {
+    .navbar-inner-title {
+        display: none !important;
+    }
 }
 
 .nav-indicators {
@@ -518,9 +538,28 @@ html:not(.bdv) {
     padding-left: 10px;
 }
 
+.sidebar-complement-wrapper {
+    z-index: 999999;
+}
+
+.sidebar-complement-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-complement-wrapper.active {
+    display: block;
+}
+
 .sidebar-complement {
     all: unset;
-    display: none;
+    display: flex;
     position: fixed;
     left: calc(50px + 2 * var(--bdv-gap) + 5px);
     bottom: calc(var(--bdv-gap) + 5px);
@@ -530,19 +569,18 @@ html:not(.bdv) {
     min-width: 100px;
     height: 80px;
     align-items: center;
+
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22),
+                0 5px 14px 0 rgba(0, 0, 0, .18) !important;
 }
 
-.sidebar-complement.active {
-    display: flex;
-}
-
-.sidebar-complement.active > * {
+.sidebar-complement > * {
     display: flex;
     border: none;
     margin: 0 4px;
 }
 
-.sidebar-complement.active .accordion-heading {
+.sidebar-complement .accordion-heading {
     background-color: var(--bdv-bg-color);
     border: none;
     width: 50px;
@@ -554,12 +592,12 @@ html:not(.bdv) {
 
 }
 
-.sidebar-complement.active .accordion-toggle {
+.sidebar-complement .accordion-toggle {
     color: var(--bdv-fg-color);
     transition: all ease-in-out .2s;
 }
 
-.sidebar-complement.active .accordion-toggle:hover {
+.sidebar-complement .accordion-toggle:hover {
     color: var(--bdv-accent-color);
 }
 
@@ -635,7 +673,7 @@ body:not(.bdv) {
 }
 
 .b-yscroll-pad {
-    border-left: 1px solid var(--bdv-bg-color);
+    border-left: 1px solid transparent !important;
 }
 
 .b-dayview-schedule-container {

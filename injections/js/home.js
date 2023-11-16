@@ -97,7 +97,7 @@ window.bdv.init(async (pool) => {
     // Show bar expand button
     $('.bdv-toggler').each((i, el) => {el.remove()})
 
-    $('.social-sidebar .menu').append(` 
+    $('.social-sidebar .menu').append(`
     <div class="according-group bdv-toggler">
         <div class="according-heading">
             <a class="accordion-toggle">
@@ -107,12 +107,18 @@ window.bdv.init(async (pool) => {
     </div>`
     )
 
-    $(document.body).append(`<div class="sidebar-complement"></div>`)
+    $(document.body).append(`<div class="sidebar-complement-wrapper">
+                                <div class="sidebar-complement"></div>
+                             </div>`)
 
     // Display hidden icons when asked
     $('.bdv-toggler').on('click', () => {
-        $('.sidebar-complement').toggleClass('active')
+        $('.sidebar-complement-wrapper').toggleClass('active')
         compute_bar()
+    })
+
+    $('.sidebar-complement-wrapper').on('click', () => {
+        $('.sidebar-complement-wrapper').removeClass('active')
     })
 
     // Move nav indicators
