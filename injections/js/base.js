@@ -1,8 +1,8 @@
 // Utilities
 
-componentToHex = c => {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+comp_to_hex = c => {
+    hex = c.toString(16)
+    return hex.length == 1 ? "0" + hex : hex
 }
 
 window.bdv = {
@@ -35,7 +35,14 @@ window.bdv = {
                 $('body').css('visibility', 'visible')
 
                 window.bdv.log('Starting injection')
-                await async_func()
+                pool = await browser.storage.sync.get()
+                window.bdv.log('Using settings:')
+                console.log(pool)
+
+                try { await async_func(pool) }
+                catch (err) {
+                    alert(`There was an error while loading the dashboard: ${err}`)
+                }
 
                 window.bdv.log('Injecting custom CSS')
                 await window.bdv.inject_scheme()
@@ -104,9 +111,9 @@ window.bdv = {
     rgb_to_hex: (r, g, b) => {
         // Convert a rgb color to hex format
 
-        return "#" + componentToHex(r)
-                   + componentToHex(g)
-                   + componentToHex(b)
+        return "#" + comp_to_hex(r)
+                   + comp_to_hex(g)
+                   + comp_to_hex(b)
     },
 
     hex_to_rgb: hex => {

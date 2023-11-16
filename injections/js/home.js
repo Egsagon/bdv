@@ -47,7 +47,7 @@ hello_icons = [
     'fa-solid fa-wind'
 ]
 
-window.bdv.init(async () => {
+window.bdv.init(async (pool) => {
 
     if ($('body > .container').length) {
         // We are on the auth page, we inject our own html
@@ -125,12 +125,10 @@ window.bdv.init(async () => {
     })
 
     // Re-color school image
-    pool = await browser.storage.sync.get()
+    hex =  /accent-color: #(.*?) /g.exec(pool.color_scheme)[1] || '#000000'
+    rgb = window.bdv.hex_to_rgb(hex)
 
-    if (pool.accent_override) {
-        hex = getComputedStyle(document.documentElement).getPropertyValue('--bdv-accent-color').trim()
-        rgb = window.bdv.hex_to_rgb(hex)
-
+    if (pool.accent_override && rgb !== null) {
         window.bdv.log('Modifying school logo with color ' + hex)
 
         /* Note - The source image is 28x28px so there will be a 1px border around the

@@ -24,9 +24,7 @@ default_scheme = {
     'gap': '10'
 }
 
-log = (...msg) => {
-    console.log('%c[ BDV ] ' + msg, 'color: cyan')
-}
+log = (...msg) => console.log('%c[ BDV ] ' + msg, 'color: cyan')
 
 settings.forEach(input => {
 
@@ -37,9 +35,8 @@ settings.forEach(input => {
 
     input.updater = updater
     input.addEventListener('change', updater)
-
-    log('Hooked all updaters to settings')
 })
+log('Hooked all updaters to settings')
 
 document.querySelector('#reset').addEventListener('mouseup', () => {
     // Reset scheme
@@ -136,11 +133,14 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
             rule = new RegExp(`--bdv-${input.id}: (.*?)(px)? (!important)?;`)
             input.value = rule.exec(pool.color_scheme)[1]
 
-            log('Color scheme injected. Calling hooks')
-
             // Update setting
             input.updater()
         })
+
+        // Apply boolean buttons
+        document.querySelector('#rotate-logo').checked = !pool.disable_logo
+        document.querySelector('#auto-accent').checked = !pool.accent_override
+        document.querySelector('#accent-color').disabled = !pool.accent_override
     }
 })()
 
