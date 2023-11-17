@@ -16,9 +16,6 @@
             "matches": [
                 "*://www.leonard-de-vinci.net/*"
             ],
-            "exclude_globs": [
-                "*my=*"
-            ],
             "js": [
                 "injections/js/jq.js",
                 "injections/js/base.js",
@@ -73,6 +70,12 @@
             ],
             "js": ["injections/js/dvl.js"],
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=fiche"],
+            "css": [
+                "injections/css/fiche.css"
+            ]
         }
     ],
 

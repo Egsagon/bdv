@@ -22,7 +22,54 @@ html {
 
 #main .span6:not(#main .span6:first-child) {
     display: none !important;
+}
 
+#main .span6:first-child::before {
+    content: 'Filter rooms';
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+#main .span6:first-child.invalid::after {
+    content: 'Invalid date';
+    background-color: var(--bdv-error-color);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    border-radius: var(--bdv-border-radius);
+    transform: translate(170px, 10px);
+    opacity: .3;
+    animation: show-up forwards 3s;
+}
+
+@keyframes show-up {
+    0% {
+        opacity: .3;
+        transform: translate(170px, 5px);
+    }
+
+    40%, 50%, 60%, 70% {
+        opacity: 1;
+        transform: translate(170px, 10px);
+    }
+
+    90% {
+        opacity: 0;
+        transform: translate(170px, 15px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(170px, 15px);
+        display: none;
+    }
+}
+
+#main .span6:first-child::after::after {
+    content: 'test';
 }
 
 #main table * {

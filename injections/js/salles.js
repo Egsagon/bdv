@@ -35,7 +35,11 @@ window.bdv.init(async () => {
 
         if (!validate_date.test(date)) {
             // Prevent server call if date is invalid
-            return alert('Invalid date. Please enter a date that has the following format:\ndd-mm-yyyy')
+            el.parent().addClass('invalid')
+
+            return setTimeout(() => {
+                el.parent().removeClass('invalid')
+            }, 3000)
         }
 
         $(location).attr('href', `./?day=${date}&env=${env}`)

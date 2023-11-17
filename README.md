@@ -2,6 +2,10 @@
 
 A style and script rethemer for leonard-de-vinci.net.
 
+```json
+"exclude_globs": [ "*my=*" ]
+```
+
 ### Websites injected
 
 - [leonard-de-vinci.net](https://www.leonard-de-vinci.net)

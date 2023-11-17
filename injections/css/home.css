@@ -516,6 +516,12 @@ html:not(.bdv) {
     animation: show-link-upwards forwards .5s;
 }
 
+.sidebar-complement:empty::after {
+    content: '[ No additional link to display ]';
+    margin: 10px;
+    color: var(--bdv-fg-color);
+}
+
 @keyframes show-link {
     from {
         opacity: .3;
@@ -764,4 +770,44 @@ body:not(.bdv) {
 
 .b-timeaxis-container {
     background-image: none !important;
+}
+
+#b-calendar-1-event-tip {
+    border: 4px solid var(--bdv-bg-color);
+    border-radius: var(--bdv-border-radius) !important;
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22),
+                0 5px 14px 0 rgba(0, 0, 0, .18) !important;
+}
+
+b-calendar-1-event-tip-panel-title {
+    color: var(--bdv-fg-color);
+}
+
+#b-calendar-1-event-tip header {
+    background-color: var(--bdv-bg-color-2);
+    color: var(--bdv-fg-color);
+    border-bottom: 4px solid var(--bdv-bg-color);
+    border-top-left-radius: var(--bdv-border-radius);
+    border-top-right-radius: var(--bdv-border-radius);
+}
+
+#b-calendar-1-event-tip .b-box-center {
+    background-color: var(--bdv-bg-color-2);
+    border-bottom-left-radius: var(--bdv-border-radius);
+    border-bottom-right-radius: var(--bdv-border-radius);
+}
+
+#b-calendar-1-event-tip .b-panel-content * {
+    color: var(--bdv-fg-color);
+    text-align: end;
+}
+
+#b-calendar-1-event-tip .b-panel-content dt {
+    color: var(--bdv-accent-color);
+    text-align: start;
+}
+
+#b-calendar-1-event-tip .b-anchor-bottom {
+    /* might re-enable because it somehow decided to inherit its parent borders */
+    display: none;
 }

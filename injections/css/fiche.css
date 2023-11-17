@@ -1,0 +1,128 @@
+/* my=fiche stylesheet */
+
+.social-blue,
+.social-blue header {
+    display: block;
+    border: none !important;
+}
+
+#main .body {
+    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 45px);
+    overflow-y: scroll !important;
+}
+
+#main .span12 .row-fluid {
+    display: flex !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100% !important;
+}
+
+#main .span12 .row-fluid > div {
+    flex-grow: 1;
+    display: flex !important;
+}
+
+#main .span12 .row-fluid > div > div {
+    flex-grow: 1;
+}
+
+#main .span12 .row-fluid > div:first-child {
+    margin-right: 5px !important;
+}
+
+#main .span12 .row-fluid > div:last-child {
+    margin-left: 5px !important;
+}
+
+#main .span12 .row-fluid:first-child {
+    margin-top: 0;
+}
+
+#main .span12 .body {
+    height: unset !important;
+    overflow-y: auto !important;
+}
+
+.social-blue * {
+    border-color: var(--bdv-bg-color) !important;
+}
+
+#main .span6 .social-box,
+#main .span5 {
+    background-color: var(--bdv-bg-color) !important;
+    padding: 10px !important;
+    border-radius: var(--bdv-border-radius) !important;
+}
+
+#main .span6 .social-box * {
+    background-color: transparent !important;
+    border-color: var(--bdv-bg-color-2) !important;
+    border-width: 4px !important;
+}
+
+#advancedTab1 {
+    display: none;
+}
+
+#main .accordion {
+    margin-bottom: 0 !important;
+}
+
+#main .accordion-group {
+    border: none !important;
+    display: flex;
+    align-items: center;
+}
+
+#main .accordion-group * {
+    display: inline !important;
+}
+
+#main .accordion-group::before {
+    content: '#';
+    color: var(--bdv-accent-color);
+    font-size: 20px;
+    margin-right: 10px;
+    display: inline !important;
+}
+
+#main .span1 {
+    flex-grow: 0 !important;
+    position: fixed;
+    top: -100vh;
+}
+
+#main .span5 {
+    margin-left: 0 !important;
+    margin-right: 5px !important;
+}
+
+#main .span5 * {
+    background-color: transparent !important;
+}
+
+#main .span5 table tr {
+    background-color: var(--bdv-bg-color-2) !important;
+}
+
+#main .span6,
+#main .social-box {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#main .btn {
+    all: unset;
+    display: block !important;
+    color: var(--bdv-fg-color) !important;
+    background: var(--bdv-accent-color) !important;
+}
+
+#main header {
+    display: none;
+}
+
+.span6 header {
+    display: block !important;
+}
