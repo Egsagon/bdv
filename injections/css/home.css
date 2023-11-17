@@ -811,3 +811,14 @@ b-calendar-1-event-tip-panel-title {
     /* might re-enable because it somehow decided to inherit its parent borders */
     display: none;
 }
+
+
+
+html::after {
+    content: 'BDV - BetterDeVinci | Egsagon, 2023';
+    position: fixed;
+    bottom: 0;
+    right: var(--bdv-gap);
+    font-size: 5px;
+    color: var(--bdv-fg-color);
+}
