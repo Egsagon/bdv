@@ -73,9 +73,11 @@
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/?my=fiche"],
-            "css": [
-                "injections/css/fiche.css"
-            ]
+            "css": [ "injections/css/fiche.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/finances/*"],
+            "css": [ "injections/css/finances.css" ]
         }
     ],
 

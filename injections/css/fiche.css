@@ -126,3 +126,8 @@
 .span6 header {
     display: block !important;
 }
+
+#main .span6 {
+    min-width: none !important;
+    overflow: scroll !important;
+}
