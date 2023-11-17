@@ -14,7 +14,7 @@
 
 
 #social-timeline > .row-fluid {
-    height: calc(100vh - 80px - 20px - 20px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 41px);
     overflow-y: scroll !important;
 }
 
@@ -24,7 +24,7 @@
 
 #rigth-bar {
     position: fixed;
-    right: 15px;
+    right: var(--bdv-ext-gap);
 }
 
 #rigth-bar .nav-header {

@@ -7,7 +7,7 @@
 }
 
 #main .body {
-    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 45px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 45px);
     overflow-y: scroll !important;
 }
 

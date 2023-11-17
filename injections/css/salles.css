@@ -105,8 +105,7 @@ html {
 }
 
 #main .social-blue .body {
-    /* height: calc(100vh - 80px - 20px - 113px + 25px); */
-    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 117px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 117px);
     overflow-y: scroll !important;
 }
 

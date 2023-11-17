@@ -7,7 +7,7 @@
 .social-box {
     display: block;
     overflow-y: scroll !important;
-    height: calc(100vh - 80px - 20px - 27px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 46px);
     border: none !important;
 }
 

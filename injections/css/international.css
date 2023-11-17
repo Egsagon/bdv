@@ -10,7 +10,7 @@
 }
 
 #main > .container-fluid {
-    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 21px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
     overflow-y: scroll !important;
 }
 

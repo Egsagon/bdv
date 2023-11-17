@@ -49,6 +49,12 @@ hello_icons = [
 
 window.bdv.init(async (pool) => {
 
+    // Temporary
+    if (location.href.includes('startpage=1')) {
+        // TODO - change css bdv ext gaps
+        // TODO - put that in options ui    
+    }
+
     if ($('body > .container').length) {
         // We are on the auth page, we inject our own html
 
