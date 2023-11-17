@@ -1,0 +1,27 @@
+/* International stylesheet */
+
+#main > .container-fluid,
+#main .social-box {
+    display: block !important;
+}
+
+#main .span12 {
+    display: none;
+}
+
+#main > .container-fluid {
+    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 21px);
+    overflow-y: scroll !important;
+}
+
+hr {
+    display: none;
+}
+
+#main * {
+    border: none !important;
+}
+
+a.well img {
+    border-radius: var(--bdv-border-radius);
+}

@@ -1,0 +1,45 @@
+/* Documents stylesheet */
+
+#main > .container-fluid {
+    height: calc(100vh - 50px - 3 * var(--bdv-gap) - 45px);
+    overflow-y: scroll !important;
+}
+
+#main .social-box {
+    border: 10px solid var(--bdv-bg-color) !important;
+    background-color: var(--bdv-bg-color) !important;
+    border-radius: var(--bdv-gap);
+}
+
+#main .social-box * {
+    background-color: transparent !important;
+}
+
+#main header {
+    border-bottom: none !important;
+}
+
+.row-fluid [class*="span"] {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#main a.well {
+    font-size: 0;
+    border: none !important;
+    padding: 0 !important;
+}
+
+#main a.well::after {
+    content: 'Reglement intérieur';
+    font-size: 14px;
+}
+
+.glyphicons {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+a.well i {
+    display: none;
+}

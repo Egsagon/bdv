@@ -1,0 +1,22 @@
+/* Attestations de présences stylesheet */
+
+#main > .container-fluid,
+#main .social-box {
+    display: block !important;
+}
+
+.span12,
+.page-title,
+#main .header {
+    display: none !important;
+}
+
+#main * {
+    border-color: var(--bdv-bg-color) !important;
+    border-width: 2px !important;
+}
+
+#main .social-box {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+}

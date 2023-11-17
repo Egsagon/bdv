@@ -1,0 +1,6 @@
+/* Offres de stages stylesheet */
+
+#main > .container-fluid,
+#main .social-box {
+    display: block !important;
+}

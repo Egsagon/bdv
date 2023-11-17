@@ -35,28 +35,28 @@ A style and script rethemer for leonard-de-vinci.net.
   - [x] ADFS MS login page
 
 - Globs
+  - [x] Salles
+  - [x] International
   - [x] Finances page
+  - [x] Promotion page
   - [x] Presences page
   - [x] Specific presence page
-  - [x] Promotion page
-  - [ ] Cours page
-  - [ ] Attestations présence
-  - [ ] Offres de stage
-  - [ ] Gestion de stages
-  - [ ] International
-  - [x] Salles
-  - [ ] Plans arche
   - [ ] Santé
+  - [ ] Cours page
+  - [ ] Plans arche
+  - [ ] Offres de stage
+  - [x] Attestations présence (waiting for content)
+  - [ ] Gestion de stages (waiting for content)
 
 - Root parts
   - [x] Fiche
-  - [ ] Contacts
-  - [ ] Emploi du temps
-  - [ ] Absences
+  - [x] Langues
+  - [x] Documents
+  - [x] Emploi du temps
   - [ ] Notes
-  - [ ] Documents
-  - [ ] Langues
-  - [ ] Messages
+  - [ ] Contacts
+  - [ ] Absences (waiting for content)
+  - [ ] Messages (waiting for content)
 
 - Other
   - [x] DVL cours

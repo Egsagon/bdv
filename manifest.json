@@ -78,6 +78,26 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/student/finances/*"],
             "css": [ "injections/css/finances.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=docs"],
+            "css": [ "injections/css/docs.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=langues"],
+            "css": [ "injections/css/langues.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/attestations_presences/*"],
+            "css": [ "injections/css/att_presences.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/stages_offres/*"],
+            "css": [ "injections/css/offres_stages.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/international/*"],
+            "css": [ "injections/css/international.css" ]
         }
     ],
 

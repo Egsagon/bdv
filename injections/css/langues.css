@@ -1,0 +1,10 @@
+/* Langues stylesheet */
+
+#toeic_tab {
+    overflow-x: scroll !important;
+}
+
+#main * {
+    border-color: var(--bdv-bg-color) !important;
+    border-width: 2px !important;
+}
