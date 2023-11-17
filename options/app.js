@@ -21,7 +21,8 @@ default_scheme = {
     'bg-color-2': '#232327',
     'accent-color': '#cf0f51',
     'border-radius': '10',
-    'gap': '10'
+    'gap': '10',
+    'ext_gap': '10'
 }
 
 log = (...msg) => console.log('%c[ BDV ] ' + msg, 'color: cyan')

@@ -8,35 +8,37 @@
     <form>
         <h1>Color palette</h1>
 
-        <p>Foreground color</p>
+        <p>Foreground color <i data-info="
+            The app foreground color for text and icons.
+        ">i</i> </p>
         <input type="color" id="fg-color" value="#F8F8F2"><br>
 
-        <p>Background color</p>
-        <input type="color" id="bg-color" value="#18181a"><br>
-
-        <p>Background color 2</p>
+        <p>Background color <i data-info="The app background color.">i</i></p>
+        <input type="color" id="bg-color" value="#18181a">
         <input type="color" id="bg-color-2" value="#232327"><br>
 
-        <p>Accent color</p>
-        <input type="color" id="accent-color" value="#cf0f51"><br>
-
-        <p>Use school accent</p>
-        <!--
-            true  -> school accent will override accent color
-            false -> accent color will be used as accent color (unbelievable)
-        -->
+        <p>Accent color <i data-info="
+            The app accent. By default it represents the school color
+            (ESILV: red, etc.). If a custom value is writen, Will also
+            change the school logo background color.
+        ">i</i></p>
         <input class="bypass" type="checkbox" id="auto-accent" checked value="var(--school-accent)">
         <label for="auto-accent"></label>
+        <input type="color" id="accent-color" value="#cf0f51"><br>
 
         <h1>Page style</h1>
 
-        <p>Border radius</p>
+        <p>Border radius <i data-info="App border radius.">i</i></p>
         <input type="number" id="border-radius" value="10" min="0"><br>
 
-        <p>Gaps</p>
-        <input type="number" id="gap" value="10" min="0"><br>
+        <p>Gaps <i data-info="
+            1. Gaps between each widget (inner gaps)
+            2. Gaps from the windw (outer gaps)
+        ">i</i></p>
+        <input type="number" id="gap" value="10" min="0">
+        <input type="number" id="ext_gap" value="10" min="0"><br>
 
-        <p>Rotate logo</p>
+        <p>Rotate logo <i data-info="Whether to animate the school logo.">i</i></p>
         <input class="bypass" type="checkbox" id="rotate-logo" checked>
         <label for="rotate-logo"></label>
     </form>

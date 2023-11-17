@@ -5,6 +5,7 @@
     --accent-color: #cf0f51;
     --border-radius: 10px;
     --gap: 10px;
+    --ext-gap: 10px;
 }
 
 * {
@@ -35,7 +36,6 @@ p {
 input[type='color'] {
     padding: 0;
     transform: translateY(10px);
-    width: 100px;
     border: none;
     cursor: pointer;
 }
@@ -46,6 +46,10 @@ input[type='number'] {
     color: #fff;
     width: 100px;
     border: 1px solid gray;
+}
+
+input {
+    width: 32px;
     height: 32px;
 }
 
@@ -61,7 +65,7 @@ input[type='number'] {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-color);
-    padding: 10px;
+    padding: var(--ext-gap);
     border-radius: var(--border-radius);
     margin: 10px;
 }
@@ -154,31 +158,6 @@ input[type='number'] {
     justify-content: center;
 }
 
-#auto-accent,
-#rotate-logo {
-    display: none;
-}
-
-label[for='auto-accent']::after,
-label[for='rotate-logo']::after {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    content: 'No';
-    width: calc(100px - 2px);
-    height: 32px;
-    background-color: red;
-    border: 1px solid grey;
-    transition: all ease-in-out .2s;
-    cursor: pointer;
-}
-
-#auto-accent:checked + label[for='auto-accent']::after,
-#rotate-logo:checked + label[for='rotate-logo']::after {
-    content: 'Yes';
-    background-color: green;
-}
-
 #demo button {
     height: 40px;
     border: none;
@@ -205,4 +184,48 @@ label[for='rotate-logo']::after {
 #demo button:last-child:hover {
     background-color: var(--fg-color);
     color: var(--bg-color);
+}
+
+form i {
+    all: unset;
+    display: inline-flex;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #2d8493;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+form i:hover::after {
+    position: fixed;
+    content: attr(data-info);
+    background-color: #2d8493;
+    transform: translateX(calc(50% + 20px));
+    max-width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+input[type='number'] {
+    width: 32px !important;
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    border: 1px solid gray;
+}
+
+input[type='checkbox']:checked::before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    background-color: green;
+
 }
