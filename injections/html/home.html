@@ -57,9 +57,10 @@
 
         // Try to use id if exists
         // {{ id }}
-        if ($('#log')[0].value) {
+
+        if (location.href.includes('startpage=1') && $('#log')[0].value) {
             // Try autosubmit
-            // identify()
+            identify()
         }
     </script>
 </body>

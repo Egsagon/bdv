@@ -15,6 +15,8 @@
     --bdv-error-color: #FF5555; /* Not implemented */
     --bdv-accent-color-2: #ffff80; /* Not implemented */
 
+    --bdv-sp-color: var(--bdv-bg-color) /* Startpage background */
+
     /* Layout settings */
     --bdv-border-radius: 10px;
     --bdv-gap: 10px;

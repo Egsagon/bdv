@@ -49,12 +49,6 @@ hello_icons = [
 
 window.bdv.init(async (pool) => {
 
-    // Temporary
-    if (location.href.includes('startpage=1')) {
-        // TODO - change css bdv ext gaps
-        // TODO - put that in options ui    
-    }
-
     if ($('body > .container').length) {
         // We are on the auth page, we inject our own html
 
@@ -95,12 +89,22 @@ window.bdv.init(async (pool) => {
 
     // Set hello message
     title = $('.navbar-inner-title')
-    username = title.html().trim().split(' ')[0]
+    
+    page = /.*\/(?:\?my=)?(.+?)(?:&|\?|$)/g.exec(location.href)[1].replace('/', ' ')
 
-    hello_message = window.bdv.choice(hello_sentences).replace('@', username)
-    hello_icon = window.bdv.choice(hello_icons)
+    if (page.startsWith('www.')) {
+        username = title.html().trim().split(' ')[0]
 
-    title.html(`${hello_message} <i class="hello ${hello_icon}"></i`)
+        header = `${window.bdv.choice(hello_sentences).replace('@', username)
+                    } <i class="hello ${window.bdv.choice(hello_icons)}"></i`
+    }
+
+    else {
+        header = `<i class="hello fa-solid fa-circle-chevron-right"></i> ${
+                page.charAt(0).toUpperCase() + page.slice(1)}`
+    }
+
+    title.html(header)
 
     // Hide calendar minimap
     $('#b-button-7').click()
@@ -202,6 +206,20 @@ window.bdv.init(async (pool) => {
         ctx.putImageData(image, 0, 0)
 
         $('.schoole_pastil img').replaceWith(canvas)
+    }
+
+    // Startpage mode
+    if (location.href.includes('startpage=1')) {
+        // TODO - change css bdv ext gaps
+        // TODO - put that in options ui
+
+        gap = pool.ext_gap || 80
+        $('html')[0].style.setProperty('--bdv-ext-gap', gap + 'px')
+        
+        spbg = document.createElement('div')
+        spbg.id = 'spbg'
+        document.body.appendChild(spbg)
+        // $('html').css('background-color', '--bdv-sp-color')
     }
 
     /*

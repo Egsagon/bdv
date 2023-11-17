@@ -589,6 +589,11 @@ html:not(.bdv) {
 .hello {
     color: var(--bdv-accent-color);
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hello.fa-circle-chevron-right {
+    padding-left: 0;
 }
 
 .sidebar-complement-wrapper {
@@ -826,4 +831,17 @@ html::after {
     right: var(--bdv-ext-gap);
     font-size: 5px;
     color: var(--bdv-fg-color);
+}
+
+#spbg {
+    position: fixed;
+    top: calc(var(--bdv-ext-gap) - var(--bdv-gap));
+    left: calc(var(--bdv-ext-gap) - var(--bdv-gap));
+    width: calc(100% - 2 * (var(--bdv-ext-gap) - var(--bdv-gap)));
+    height: calc(100% - 2 * (var(--bdv-ext-gap) - var(--bdv-gap)));
+    background-color: var(--bdv-bg-color);
+    border-radius: var(--bdv-border-radius);
+
+    /* temp */
+    display: none;
 }
