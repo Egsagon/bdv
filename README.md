@@ -29,25 +29,38 @@ A style and script rethemer for leonard-de-vinci.net.
 
 ### Currently rethemed pages:
 
-> Out of static glob only
+- Domain roots
+  - [x] Home page
+  - [x] Portal page
+  - [x] ADFS MS login page
 
-| Done | Page            | Glob                                                                                                                   |
-|------|-----------------|------------------------------------------------------------------------------------------------------------------------|
-| [x]  | Home            | [`/`](https://www.leonard-de-vinci.net)                                                                                | 
-| [x]  | Portal          | [`/`](https://www.leonard-de-vinci.net)                                                                                |
-| [x]  | AFDS            | [`adfs.devinci.fr/adfs`](https://adfs.devinci.fr/adfs)                                                                 |
-| [x]  | Finances        | [`/student/finances`](https://www.leonard-de-vinci.net/student/finances)                                               |
-| [x]  | Presences       | [`/student/presences`](https://www.leonard-de-vinci.net/student/presences)                                             |
-| [x]  | Presence        | [`/student/presences/<token>`](https://www.leonard-de-vinci.net/student/presences/<token>)                             |
-| [x]  | Cours           | [`/student/cours`](https://www.leonard-de-vinci.net/student/cours)                                                     |
-| [ ]  | Offres de stage | [`/student/stages_offres`](https://www.leonard-de-vinci.net/student/stages_offres)                                     |
-| [ ]  | att. présences  | [`/student/attestations_presences`](https://www.leonard-de-vinci.net/student/attestations_presences)                   |
-| [ ]  | Gestion stages  | [`/student/stages`](https://www.leonard-de-vinci.net/student/stages)                                                   |
-| [ ]  | International   | [`/student/international`](https://www.leonard-de-vinci.net/student/international)                                     |
-| [ ]  | Mes séjours     | [`/student/international/#block_mon_sejour`](https://www.leonard-de-vinci.net/student/international/#block_mon_sejour) |
-| [ ]  | Salles          | [`/student/salles`](https://www.leonard-de-vinci.net/student/salles)                                                   |
-| [ ]  | Plans arche     | [`/maps/arche/`](https://www.leonard-de-vinci.net/maps/arche/)                                                          |
-| [x]  | Promotion       | [`/promotion`](https://www.leonard-de-vinci.net/promotion)                                                             |
+- Globs
+  - [x] Finances page
+  - [x] Presences page
+  - [x] Specific presence page
+  - [x] Promotion page
+  - [ ] Cours page
+  - [ ] Attestations présence
+  - [ ] Offres de stage
+  - [ ] Gestion de stages
+  - [ ] International
+  - [x] Salles
+  - [ ] Plans arche
+  - [ ] Santé
+
+- Root parts
+  - [x] Fiche
+  - [ ] Contacts
+  - [ ] Emploi du temps
+  - [ ] Absences
+  - [ ] Notes
+  - [ ] Documents
+  - [ ] Langues
+  - [ ] Messages
+
+- Other
+  - [x] DVL cours
+  - [ ] Logout page
 
 ### Screenshot (WIP)
 
