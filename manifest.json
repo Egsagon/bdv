@@ -116,7 +116,8 @@
     "browser_specific_settings": {
         "gecko": {
             "id": "betterdevinci@egsagon.id",
-            "strict_min_version": "57.0a1"
+            "strict_min_version": "57.0a1",
+            "update_url": ""
         }
     },
 

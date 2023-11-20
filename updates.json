@@ -1,0 +1,12 @@
+{
+    "addons": {
+      "{EXT-ID}": {
+        "updates": [
+            {
+            "version": "0.1",
+            "update_link": "https://github.com/Egsagon/bdv/releases/download/0.1/bdv-0.1-ff.xpi"
+          }
+        ]
+      }
+    }
+  }
