@@ -22,7 +22,7 @@ default_scheme = {
     'accent-color': '#cf0f51',
     'border-radius': '10',
     'gap': '10',
-    'ext_gap': '10'
+    'ext-gap': '10'
 }
 
 log = (...msg) => console.log('%c[ BDV ] ' + msg, 'color: cyan')
@@ -50,6 +50,7 @@ document.querySelector('#reset').addEventListener('mouseup', () => {
 
     // Reset auto accent
     document.querySelector('#auto-accent').checked = true
+    document.querySelector('#rotate-logo').checked = true
     document.querySelector('#accent-color').disabled = true
 
     log('Settings reset amorced')
@@ -78,7 +79,7 @@ document.querySelector('#save').addEventListener('click', () => {
 
     browser.storage.sync.set({
         color_scheme: ':root {' + scheme + '}',
-        accent_override: !auto.checked,
+        accent_override: auto.checked,
         disable_logo: !document.getElementById('rotate-logo').checked
     }).then(async () => {
         
@@ -111,7 +112,7 @@ document.querySelector('form').addEventListener('submit', ev => {
 document.querySelector('#auto-accent').addEventListener('click', ev => {
     // Enable or disable accent setting
 
-    document.querySelector('#accent-color').disabled = ev.target.checked
+    document.querySelector('#accent-color').disabled = !ev.target.checked
 })
 
 // Try load custom theme on load
@@ -140,7 +141,7 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
 
         // Apply boolean buttons
         document.querySelector('#rotate-logo').checked = !pool.disable_logo
-        document.querySelector('#auto-accent').checked = !pool.accent_override
+        document.querySelector('#auto-accent').checked = pool.accent_override
         document.querySelector('#accent-color').disabled = !pool.accent_override
     }
 })()

@@ -33,6 +33,11 @@ p {
     width: 150px;
 }
 
+input {
+    padding: 0;
+    margin: 0;
+}
+
 input[type='color'] {
     padding: 0;
     transform: translateY(10px);
@@ -51,6 +56,7 @@ input[type='number'] {
 input {
     width: 32px;
     height: 32px;
+    outline: none;
 }
 
 #accent-color:disabled {
@@ -72,6 +78,7 @@ input {
 
 #demo, #demo * {
     transition: all ease-in-out .5s;
+    overflow: hidden;
 }
 
 #demo .head {
@@ -100,6 +107,7 @@ input {
 #demo .nbar {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 #demo .nbar,
@@ -139,7 +147,7 @@ input {
 }
 
 #save {
-    border-color: green;
+    border-color: rgb(72, 174, 72);
 }
 
 #reset:hover {
@@ -147,7 +155,7 @@ input {
 }
 
 #save:hover {
-    background-color: green;
+    background-color: rgb(72, 174, 72);
 }
 
 #controls {
@@ -179,6 +187,7 @@ input {
 
 #demo button:hover {
     background-color: var(--accent-color);
+    color: var(--fg-color);
 }
 
 #demo button:last-child:hover {
@@ -214,18 +223,28 @@ form i:hover::after {
 }
 
 input[type='number'] {
+    appearance: textfield;
     width: 32px !important;
 }
 
 input[type='checkbox'] {
     appearance: none;
     border: 1px solid gray;
+    transform: translateY(10px);
+}
+
+input[type='checkbox']::before {
+    content: ' ';
+    display: block;
+    background-color: rgb(72, 174, 72);
+    width: 0;
+    height: 0;
+    transform: translate(16px, 16px);
+    transition: all ease-in-out .2s;
 }
 
 input[type='checkbox']:checked::before {
-    content: ' ';
-    width: 20px;
-    height: 20px;
-    background-color: green;
-
+    width: 16px;
+    height: 16px;
+    transform: translate(7px, 7px);
 }
