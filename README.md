@@ -6,7 +6,7 @@ A style and script rethemer for leonard-de-vinci.net.
 
 1. Download the extension XPI file [here](https://github.com/Egsagon/bdv/releases/download/0.1/bdv-0.1-ff.xpi)
 2. Drag and drop the file into Firefox
-3. 
+3. Confim installation.
 
 ## TODO:
 
