@@ -2,7 +2,7 @@
 
 A style and script rethemer for leonard-de-vinci.net.
 
-1. Download [here](https://addons.mozilla.org/firefox/downloads/file/4197481/bdv-0.1.1.xpi)
+Download [here](https://addons.mozilla.org/firefox/downloads/file/4197481/bdv-0.1.1.xpi)
 
 ## TODO:
 
