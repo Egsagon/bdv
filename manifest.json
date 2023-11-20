@@ -98,6 +98,18 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/student/international/*"],
             "css": [ "injections/css/international.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=contacts"],
+            "css": [ "injections/css/contacts.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=abs"],
+            "css": [ "injections/css/absences.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/?my=marks"],
+            "css": [ "injections/css/marks.css" ]
         }
     ],
 

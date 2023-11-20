@@ -131,3 +131,79 @@
     min-width: none !important;
     overflow: scroll !important;
 }
+
+#main .modif_btn {
+    background-color: red !important;
+    display: block !important;
+}
+
+#main .body .table thead {
+    background-color: var(--bdv-bg-color-2) !important;
+}
+
+#main .body #bloc_infos_student span.badge {
+    background-color: var(--bdv-accent-color) !important;
+    padding: 5px 10px !important;
+    margin-right: 10px !important;
+}
+
+#main .body #bloc_infos_student i {
+    color: var(--bdv-accent-color) !important;
+    margin: 9px !important;
+}
+
+#main .body #bloc_infos_student address:first-child {
+    margin-bottom: 0 !important;
+}
+
+#main .body #bloc_infos_student address:first-child br:nth-child(2) {
+    display: none !important;
+}
+
+#main .body #bloc_infos_student abbr {
+    border: none !important;
+}
+
+#main .span5 .body .table {
+    border: 2px solid var(--bdv-accent-color) !important;
+    border-radius: var(--bdv-border-radius) !important;
+}
+
+#main .span5 .body .table tr {
+    background-color: transparent !important;
+}
+
+#main .span5 .body .table tr i {
+    display: none !important;
+}
+
+#main .body .modif_btn span.btn {
+    background-color: var(--bdv-bg-color-2) !important;
+    border-radius: var(--bdv-border-radius) !important;
+    padding: 8px !important;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+#main .body .modif_btn span.btn:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+
+}
+
+#main .body header {
+    font-size: 16px !important;
+}
+
+#main .body header h4 {
+    font-size: inherit !important;
+}
+
+#main .body .tab-content header {
+    padding: 0 !important;
+}
+
+#main .body .tab-content,
+#main .body .tab-content ul {
+    margin: 0 !important;
+}

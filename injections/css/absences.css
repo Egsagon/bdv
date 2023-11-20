@@ -1,0 +1,62 @@
+/* my=abs */
+
+#main .body {
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 45px);
+    overflow-y: scroll !important;
+}
+
+#main .social-box {
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+#main .social-box header {
+    border: none !important;
+}
+
+#main .body a.btn {
+    background-color: var(--bdv-accent-color) !important;
+    background-image: none !important;
+    border-radius: var(--bdv-border-radius) !important;
+    transition: all ease-in-out .2s;
+}
+
+#main .body a.btn i {
+    display: none !important;
+}
+
+#main .body a.btn:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+}
+
+#advancedTab1 {
+    display: none !important;
+}
+
+#main .social-box > header {
+    display: none;
+}
+
+#main .body .span12 {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+#main .body .span12::before {
+    content: 'Mes absences';
+    font-size: 24px;
+}
+
+body #main div.container-fluid div.row-fluid div.social-box div.body
+div.advanced-tab div.tab-content div.tab-pane table.table tbody tr {
+    background-color: red !important;
+    border-radius: var(--bdv-border-radius) !important;
+    padding: 5px !important;
+    border-bottom: 10px solid var(--bdv-bg-color-2) !important;
+}
+
+body #main div.container-fluid div.row-fluid div.social-box div.body
+div.advanced-tab div.tab-content div.tab-pane table.table tbody tr * {
+    background-color: var(--bdv-bg-color) !important;
+}

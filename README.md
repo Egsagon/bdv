@@ -27,40 +27,14 @@ A style and script rethemer for leonard-de-vinci.net.
 |- popup/*          # Firefox popup page
 ```
 
-### Currently rethemed pages:
+### TODO:
 
-- Domain roots
-  - [x] Home page
-  - [x] Portal page
-  - [x] ADFS MS login page
-
-- Globs
-  - [x] Salles
-  - [x] International
-  - [x] Finances page
-  - [x] Promotion page
-  - [x] Presences page
-  - [x] Specific presence page
-  - [ ] Santé
-  - [ ] Cours page
-  - [ ] Plans arche
-  - [ ] Offres de stage
-  - [x] Attestations présence (waiting for content)
-  - [ ] Gestion de stages (waiting for content)
-
-- Root parts
-  - [x] Fiche
-  - [x] Langues
-  - [x] Documents
-  - [x] Emploi du temps
-  - [ ] Notes
-  - [ ] Contacts
-  - [ ] Absences (waiting for content)
-  - [ ] Messages (waiting for content)
-
-- Other
-  - [x] DVL cours
-  - [ ] Logout page
+- [ ] Santé
+- [ ] Cours page
+- [ ] Offres de stage
+- [ ] Logout page
+- [ ] Messages
+- [ ] Gestion de stages
 
 ### Screenshot (WIP)
 

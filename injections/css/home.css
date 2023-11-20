@@ -3,6 +3,7 @@
 * {
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: none !important;
+    text-shadow: none !important;
     scrollbar-width: thin; /* Firefox only */
 }
 

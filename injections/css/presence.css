@@ -8,10 +8,6 @@
     border-bottom: none;
 }
 
-#main tr.warning {
-    background-color: yellow !important;
-}
-
 #main table thead * {
     background-color: var(--bdv-bg-color) !important;
 }   
@@ -37,6 +33,7 @@
 #main .btn-primary span {
     background-color: transparent !important;
     transition: all ease-in-out .3s;
+    white-space: nowrap !important;
 }
 
 #main .btn-primary:hover {
@@ -61,4 +58,24 @@
 
 #main > .row-fluid {
     display: none;
+}
+
+#main tbody tr td:nth-child(4) {
+    display: flex;
+    align-items: center;
+    border: none !important;
+}
+
+#main .page-title{
+    display: none;
+}
+
+#main .panel {
+    margin-bottom: 0 !important;
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px) !important;
+    overflow-y: scroll !important;
+}
+
+#main .panel-body {
+    padding: 0 !important;
 }

@@ -1,0 +1,43 @@
+/* my=contacts */
+
+#main .body {
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 83px);
+    overflow-y: scroll !important;
+}
+
+#main .social-box {
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+#main .social-box header {
+    border: none !important;
+}
+
+#main .social-box header h4 {
+    text-decoration: underline solid 2px red !important;
+}
+
+#main .body hr {
+    display: none !important;
+}
+
+#main .body address,
+#main .body .alert-info {
+    background-color: var(--bdv-bg-color) !important;
+    padding: 10px !important;
+    margin: 10px !important;
+    border-radius: var(--bdv-border-radius) !important;
+    border: none !important;
+}
+
+#main .body address *,
+#main .body .alert-info * {
+    background-color: transparent !important;
+    text-shadow: none !important;
+}
+
+#main .body address p,
+#main .body .alert-info b {
+    color: var(--bdv-accent-color) !important;
+}

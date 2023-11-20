@@ -1,0 +1,22 @@
+/* Marks */
+
+#main .social-box {
+    display: block !important;
+    margin-bottom: 0 !important;
+    border: none !important;
+}
+
+#main .social-box header {
+    display: none;
+}
+
+#main .body {
+    padding-left: 2px !important;
+    padding-top: 0 !important;
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 83px);
+    overflow-y: scroll !important;
+}
+
+#advancedTab1 {
+    display: none;
+}
