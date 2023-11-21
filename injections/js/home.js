@@ -92,8 +92,8 @@ window.bdv.init(async (pool) => {
     
     // Get an appropriate page title from the page URL
     page = /.*\/\?my=(.*?)(?:$|&)|.*\/([a-zA-Z-_]+?)(?:$|\/)/g
-           .exec(location.href)?.slice(-1)[0]
-
+           .exec(location.href)?.slice(-2)?.find(x => x)
+    
     if (!page) {
         username = title.html().trim().split(' ')[0]
 
