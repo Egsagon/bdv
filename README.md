@@ -7,11 +7,11 @@ Download [here](https://github.com/Egsagon/bdv/releases/download/v0.3/bdv-0.3.xp
 ## TODO:
 
 - [ ] Santé
-- [ ] Cours page
 - [ ] Offres de stage
 - [ ] Logout page
 - [ ] Messages
 - [ ] Gestion de stages
+- [ ] Alternate DVL page
 
 ## License
 
