@@ -1,4 +1,4 @@
-// Utilities
+// Injection utilities
 
 comp_to_hex = c => {
     hex = c.toString(16)
@@ -154,9 +154,9 @@ window.bdv = {
         pop.on('click', callback)
         pop.appendTo($('html'))
 
-        setTimeout(() => { pop.css('animation-play-state', 'paused'); console.log('paused') }, 1000)
-        setTimeout(() => { pop.css('animation-play-state', 'running'); console.log('running') }, (time + 1) * 1000)
-        setTimeout(() => { pop.remove(); console.log('deleting') }, (time + 2) * 1000)
+        setTimeout(() => { pop.css('animation-play-state', 'paused')  }, 1000)
+        setTimeout(() => { pop.css('animation-play-state', 'running') }, (time + 1) * 1000)
+        setTimeout(() => { pop.remove()                               }, (time + 2) * 1000)
     }
 }
 

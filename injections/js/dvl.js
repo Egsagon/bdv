@@ -1,4 +1,4 @@
-/* DVL injection */
+/* Injections for DVL */
 
 window.bdv.init(false, async () => {
     // Shorten title because hard to see when you have multiple

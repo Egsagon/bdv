@@ -1,4 +1,4 @@
-/* Cours (extends home.css) */
+/* stylesheet for www.leonard-de-vinci.net/student/cours/ */
 
 #main .row-fluid {
     display: block;
@@ -9,11 +9,25 @@
     overflow-y: scroll !important;
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 46px);
     border: none !important;
+    margin-bottom: 0;
 }
 
 .social-box * {
     border-color: var(--bdv-bg-color) !important;
     border-width: 2px !important;
+}
+
+.social-box header {
+    display: none;
+}
+
+.social-box .body,
+.social-box .panel-body {
+    padding: 0 !important;
+}
+
+.social-box .panel-body {
+    padding-right: 10px !important
 }
 
 #main > .row-fluid:nth-child(2) {
@@ -22,4 +36,51 @@
 
 #main .body {
     overflow-y: scroll !important;
+}
+
+#advancedTab1 {
+    display: none;
+}
+
+#main .tab-pane > ul {
+    margin-left: 0;
+}
+
+#main .pointer {
+    border: none !important;
+    background-color: var(--bdv-bg-color) !important;
+    padding-left: 10px;
+    transition: all ease-in-out .2s;
+    user-select: none;
+}
+
+#main .pointer:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+}
+
+#main ol.flipped {
+    display: none !important;
+}
+
+#main ol table th {
+    background-color: var(--bdv-bg-color) !important;
+}
+
+#main ol table .btn {
+    background-image: none !important;
+    background-color: var(--bdv-accent-color) !important;
+    border: none !important;
+    border-radius: var(--bdv-border-radius);
+    margin: 5px;
+    padding: 10px;
+}
+
+#main ol table .btn * {
+    background-color: transparent !important;
+}
+
+#main ol table .btn:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
 }

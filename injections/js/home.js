@@ -1,4 +1,4 @@
-// Injections for the home page and auth page
+// Injection for the dashboard and auth page
 
 const image_precision = 90
 

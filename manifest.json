@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "BDV",
-    "version": "0.2",
-    "description": "BetterDeVinci - Custom theme for LDV",
+    "version": "0.3",
+    "description": "BetterDeVinci - A custom theme for LDV",
 
     "icons": { "32": "ldv.svg" },
 
@@ -46,7 +46,12 @@
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/student/cours/"],
-            "css": ["injections/css/cours.css"]
+            "css": ["injections/css/cours.css"],
+            "js": [
+                "injections/js/jq.js",
+                "injections/js/cours.js"
+            ],
+            "run_at": "document_end"
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/promotion/"],

@@ -1,12 +1,12 @@
-/* Injections for the ADFS page */
+/* Injection for the ADFS */
 
-window.bdv.init(false)
+window.bdv.init(false, () => {})
 
 $(window).on('DOMContentLoaded', () => {
 
     // window.bdv.log('Starting injection')
 
-    $('#loginMessage').html('<h1>Authentificate</h1>')
+    $('#loginMessage').html('<h1>Login</h1>')
 
     $('#introduction').html(`
         <a onclick="RedirectToPSChange()" href="#">Change password?</a>

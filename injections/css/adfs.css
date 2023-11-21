@@ -1,4 +1,4 @@
-/* ADFS page stylesheet */
+/* stylesheet for the ADFS */
 
 #header,
 #footer,
@@ -65,14 +65,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bdv-fg-color);
-    color: var(--bdv-bg-color);
-}
-
-#submitButton:hover {
     background-color: var(--bdv-accent-color);
     border-color: var(--bdv-accent-color) !important;
     color: var(--bdv-fg-color);
+}
+
+#submitButton:hover {
+    background-color: var(--bdv-fg-color);
+    color: var(--bdv-bg-color);
 }
 
 #submitButton, input {

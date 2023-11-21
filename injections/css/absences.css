@@ -1,4 +1,4 @@
-/* my=abs */
+/* stylesheet for www.leonard-de-vinci.net/?my=abs */
 
 #main .body {
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 45px);
