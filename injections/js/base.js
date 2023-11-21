@@ -42,6 +42,12 @@ window.bdv = {
                 try { await async_func(pool) }
                 catch (err) {
                     console.error('[ BDV ] Error:', err)
+                    
+                    window.bdv.popup(
+                        'Error',
+                        `BDV encountered an error: ${err}`,
+                        'var(--bdv-error-color)', 4
+                    )
                 }
 
                 window.bdv.log('Injecting custom CSS')
@@ -133,6 +139,24 @@ window.bdv = {
         // Log formatter
 
         console.log('%c[ BDV ] ' + msg.join(' '), 'color: cyan')
+    },
+
+    popup: (title, message, color, time, callback = () => {}) => {
+        // Display a popup
+
+        pop = $(`<div class="bdv-popup"
+                      data-time="${time}s"
+                      style="background-color: ${color}">
+            <h3>${title}</h2>
+            <p>${message}</p>
+        </div>`)
+
+        pop.on('click', callback)
+        pop.appendTo($('html'))
+
+        setTimeout(() => { pop.css('animation-play-state', 'paused'); console.log('paused') }, 1000)
+        setTimeout(() => { pop.css('animation-play-state', 'running'); console.log('running') }, (time + 1) * 1000)
+        setTimeout(() => { pop.remove(); console.log('deleting') }, (time + 2) * 1000)
     }
 }
 

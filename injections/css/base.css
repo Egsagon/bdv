@@ -1,6 +1,6 @@
 /*
     Default settings and colors
-    Will be overrided by custom schemes
+    Will be overriden by custom schemes
 */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -26,5 +26,5 @@
        the school accent color (ESILV, EMLV or IIM color)
        based on the user school.
      */
-    --school-accent: transparent;
+    --school-accent: var(--bdv-fg-color);
 }

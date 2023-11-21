@@ -91,9 +91,10 @@ window.bdv.init(async (pool) => {
     title = $('.navbar-inner-title')
     
     // Get an appropriate page title from the page URL
-    page = /.*\/\?my=(.*?)(?:$|&)|.*\/([a-zA-Z-_]+?)(?:$|\/)/g.exec(location.href)[1].replace('/', ' ')
+    page = /.*\/\?my=(.*?)(?:$|&)|.*\/([a-zA-Z-_]+?)(?:$|\/)/g
+           .exec(location.href)?.slice(-1)[0]
 
-    if (page.startsWith('www.')) {
+    if (!page) {
         username = title.html().trim().split(' ')[0]
 
         header = `${window.bdv.choice(hello_sentences).replace('@', username)

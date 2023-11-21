@@ -846,3 +846,27 @@ html::after {
     /* temp */
     display: none;
 }
+
+.bdv-popup {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    min-height: 100px;
+    max-height: 500px;
+    color: var(--bdv-fg-color);
+    border-radius: var(--bdv-border-radius);
+    padding: 10px;
+    margin: var(--bdv-ext-gap);
+    overflow: scroll;
+    animation: popup forwards 2s;
+}
+
+.bdv-popup p {
+    font-size: 10px;
+}
+
+@keyframes popup {
+    50% { transform: translateY(0px) }
+    0%, 100% { transform: translateY(calc(100% + var(--bdv-ext-gap) * 2)) }
+}
