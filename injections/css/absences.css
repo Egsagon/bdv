@@ -48,15 +48,43 @@
     font-size: 24px;
 }
 
-body #main div.container-fluid div.row-fluid div.social-box div.body
-div.advanced-tab div.tab-content div.tab-pane table.table tbody tr {
-    background-color: red !important;
-    border-radius: var(--bdv-border-radius) !important;
-    padding: 5px !important;
-    border-bottom: 10px solid var(--bdv-bg-color-2) !important;
+#main header {
+    display: none;
 }
 
-body #main div.container-fluid div.row-fluid div.social-box div.body
-div.advanced-tab div.tab-content div.tab-pane table.table tbody tr * {
+#main hr {
+    border: none;
+    margin: 10px 0;
+}
+
+#main .table {
+    margin-bottom: 0;
+}
+
+#main .table th {
+    background-color: var(--bdv-bg-color) !important;
+}
+
+#main .table * {
+    border: none;
+}
+
+#main .table tr th:first-child {
+    border-top-left-radius: var(--bdv-border-radius);
+}
+
+#main .table tr th:last-child {
+    border-top-right-radius: var(--bdv-border-radius);
+}
+
+#main .table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--bdv-border-radius);
+}
+
+#main .table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--bdv-border-radius);
+}
+
+#main .table tr:nth-child(odd) {
     background-color: var(--bdv-bg-color) !important;
 }

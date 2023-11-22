@@ -28,11 +28,7 @@
     font-size: 0;
     border: none !important;
     padding: 0 !important;
-}
-
-#main a.well::after {
-    content: 'Reglement intérieur';
-    font-size: 14px;
+    text-decoration: underline var(--bdv-fg-color);
 }
 
 .glyphicons {
@@ -41,5 +37,81 @@
 }
 
 a.well i {
+    display: none;
+}
+
+hr {
+    border-color: var(--bdv-bg-color-2);
+}
+
+hr:last-child {
+    display: none;
+}
+
+#main .header {
+    border-color: transparent;
+}
+
+#main h4 {
+    color: var(--bdv-accent-color) !important;
+}
+
+#main .table {
+    border-color: transparent;
+    border-radius: var(--bdv-border-radius);
+    background-color: var(--bdv-bg-color-2) !important;
+    margin-bottom: 0 !important;
+}
+
+#main .table,
+#main .table * {
+    border-color: transparent;
+}
+
+#main .table th,
+#main .table td {
+    text-align: center;
+    vertical-align: center;
+}
+
+#main .table th {
+    border-bottom: 2px solid var(--bdv-bg-color) !important;
+    width: calc(100% + 5px);
+}
+
+.glyphicons,
+.glyphicons * {
+    all: unset !important;
+    font-size: 0 !important;
+}
+
+#main a.well::after {
+    content: 'Reglement intérieur';
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;    
+}
+
+legend {
+    font-size: 10px;
+    border: none;
+    margin-bottom: 0;
+}
+
+#main .btn {
+    background-image: none;
+    color: var(--bdv-fg-color) !important;
+    background-color: var(--bdv-accent-color) !important;
+    border: none;
+    border-radius: var(--bdv-border-radius);
+    transition: all ease-in-out .2s;
+}
+
+#main .btn:hover {
+    color: var(--bdv-bg-color) !important;
+    background-color: var(--bdv-fg-color) !important;
+}
+
+#main i.icon-download {
     display: none;
 }

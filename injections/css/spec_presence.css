@@ -54,6 +54,21 @@
     background-color: #48ae48 !important;
 }
 
+#body_presence .alert-warning:not(i) {
+    height: fit-content;
+    font-size: 0;
+}
+
+#body_presence .alert-warning i,
+#body_presence .alert-warning b {
+    font-size: 10px;
+}
+
+#body_presence i.icon-remove-sign {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
 #main {
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
     background-color: var(--bdv-bg-color-2) !important;
