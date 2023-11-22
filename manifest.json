@@ -115,6 +115,14 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/?my=marks"],
             "css": [ "injections/css/marks.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/cours/replay/*/*"],
+            "css": [ "injections/css/replays.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/presences/*"],
+            "css": [ "injections/css/spec_presence.css" ]
         }
     ],
 

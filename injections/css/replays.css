@@ -1,0 +1,163 @@
+/* Stylesheet for www.leonard-de-vinci.net/student/cours/replay/ */
+
+#main > .row-fluid {
+    display: block !important;
+}
+
+#main > .row-fluid:nth-child(2) {
+    display: none !important;
+}
+
+#main > .row-fluid br {
+    display: none;
+}
+
+#main > .row-fluid:last-child .panel,
+#main > .row-fluid:last-child .table {
+    margin-bottom: 0;
+}
+
+#main * {
+    margin: 0;
+    padding: 0;
+    border: none !important;
+}
+
+#main td, #main th {
+    padding-top: 10px;
+    padding: 10px;
+}
+
+#main th:nth-child(3) {
+    text-align: center;
+}
+
+#main th:last-child {
+    font-size: 0;
+    vertical-align: middle;
+}
+
+#main th:last-child::after {
+    display: inline-block;
+    content: 'Clé';
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#main th {
+    vertical-align: middle;
+}
+
+#main > .row-fluid:last-child .panel-heading {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+#main > .row-fluid:last-child .panel-heading h3 {
+    padding: 0;
+    margin-top: 0;
+}
+
+#main thead th {
+    background-color: var(--bdv-bg-color) !important;
+}
+
+#main .table td {
+    border: none;
+}
+
+#main .table tr:nth-child(even) td {
+    background-color: var(--bdv-bg-color) !important;
+}   
+
+#main .table .btn {
+    background-image: none;
+    background-color: var(--bdv-accent-color) !important;
+    color: var(--bdv-fg-color) !important;
+    border-radius: var(--bdv-border-radius);
+    padding: 10px;
+    transition: all ease-in-out .2s;
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#main .table .btn i {
+    background-color: transparent !important;
+    transition: all ease-in-out .2s;
+}
+
+#main .table .btn:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+}
+
+#main .table .btn:hover i {
+    color: var(--bdv-accent-color) !important;
+}
+
+#main .table tr td:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+
+#main .table .label {
+    display: none;
+}
+
+#main .table tr td:nth-child(4) {
+    display: table-cell !important;
+    width: calc(30px) !important;
+}
+
+#main .table tr td:nth-child(4) * {
+    background-color: transparent !important;
+}
+
+#main .table .pointer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+#main .table .pointer i.fa-copy {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all ease-in-out .2s;
+}
+
+#main .table .pointer i.fa-copy:hover {
+    background-color: var(--bdv-accent-color) !important;
+    color: var(--bdv-fg-color) !important;
+}
+
+#main .popover {
+    display: none !important;
+}
+
+#main .table th:first-child {
+    border-top-left-radius: var(--bdv-border-radius);
+}
+
+#main .table th:last-child {
+    border-top-right-radius: var(--bdv-border-radius);
+}
+
+#main .table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--bdv-border-radius);
+}
+
+#main .table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--bdv-border-radius);
+}
+
+#main {
+    overflow-y: scroll !important;
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px) !important;
+    background-color: var(--bdv-bg-color-2) !important;
+}

@@ -1,4 +1,4 @@
-/* stylesheet for www.leonard-de-vinci.net/?my=contacts */
+/* Stylesheet for www.leonard-de-vinci.net/?my=contacts */
 
 #main .body {
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 83px);

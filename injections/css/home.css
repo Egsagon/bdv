@@ -1,4 +1,4 @@
-/* stylesheet for www.leonard-de-vinci.net */
+/* Stylesheet for www.leonard-de-vinci.net */
 
 * {
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -869,4 +869,22 @@ html::after {
 @keyframes popup {
     50% { transform: translateY(0px) }
     0%, 100% { transform: translateY(calc(100% + var(--bdv-ext-gap) * 2)) }
+}
+
+.sweet-alert {
+    background-color: var(--bdv-bg-color-2) !important;
+    color: var(--bdv-fg-color) !important;
+    border: 4px solid var(--bdv-bg-color);
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22),
+                0 5px 14px 0 rgba(0, 0, 0, .18) !important;
+}
+
+.sweet-alert .confirm {
+    background-color: var(--bdv-accent-color) !important; 
+    transition: all ease-in-out .2s;   
+}
+
+.sweet-alert .confirm:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color);
 }

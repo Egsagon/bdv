@@ -1,0 +1,60 @@
+/* Stylesheet for https://www.leonard-de-vinci.net/student/presences/* */
+
+#main .page-title {
+    display: none;
+}
+
+#main .panel-heading {
+    border-bottom: none;
+}
+
+#main .panel-heading *,
+#main .panel-heading h3 {
+    padding: 0;
+    text-align: center;
+}
+
+#main .span6 {
+    padding: 10px;
+    border-radius: var(--bdv-border-radius);
+    background-color: var(--bdv-bg-color) !important;
+    float: none;
+    flex-grow: 1;
+}
+
+#social-timeline {
+    display: flex !important;
+}
+
+#presence_cours {
+    margin-left: max(5px, var(--bdv-gap));
+}
+
+#main .span6 * {
+    background-color: transparent !important;
+}
+
+#main .panel-body .table {
+    display: grid;
+    flex-direction: column;
+}
+
+#body_presence .alert {
+    background-color: var(--bdv-accent-color) !important;
+    border: none !important;
+    height: 50px;
+    border-radius: var(--bdv-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#body_presence .alert-success {
+    background-color: #48ae48 !important;
+}
+
+#main {
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
+    background-color: var(--bdv-bg-color-2) !important;
+}
