@@ -73,3 +73,12 @@
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
     background-color: var(--bdv-bg-color-2) !important;
 }
+
+#body-presence span#set-presence.btn {
+    background-image: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-offset: none !important;
+    background-color: #48ae48 !important;
+}
