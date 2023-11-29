@@ -69,6 +69,10 @@
     border: none;
 }
 
+#main .table tr {
+    background-color: transparent !important;
+}
+
 #main .table tr th:first-child {
     border-top-left-radius: var(--bdv-border-radius);
 }
@@ -85,6 +89,8 @@
     border-bottom-right-radius: var(--bdv-border-radius);
 }
 
+/*
 #main .table tr:nth-child(odd) {
     background-color: var(--bdv-bg-color) !important;
 }
+*/

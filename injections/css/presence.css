@@ -8,6 +8,11 @@
     border-bottom: none;
 }
 
+#main .table {
+    display: table !important;
+    margin-bottom: 0px !important;
+}
+
 #main table thead * {
     background-color: var(--bdv-bg-color) !important;
 }   
@@ -66,7 +71,7 @@
     border: none !important;
 }
 
-#main .page-title{
+#main .page-title {
     display: none;
 }
 
