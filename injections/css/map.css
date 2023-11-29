@@ -1,0 +1,10 @@
+
+
+.mapplic-legend,
+.mapplic-sidebar,
+.mapplic-zoom-buttons,
+.mapplic-level-switcher {
+    background-color: var(--bdv-bg-color-2) !important;
+    border-radius: var(--bdv-border-radius);
+    margin: 10px;
+}

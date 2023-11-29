@@ -128,6 +128,27 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/student/presences/*"],
             "css": [ "injections/css/spec_presence.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/LOGOUT.php"],
+            "css": [ "injections/css/logout.css" ]
+        },
+        {
+            "matches": [
+                "*://www.leonard-de-vinci.net/maps/*",
+                "*://www.leonard-de-vinci.net/student/faqcovid/",
+                "*://www.leonard-de-vinci.net/student/print/dashboard",
+                "*://www.leonard-de-vinci.net/student/stages/*"
+            ],
+            "css": [ "injections/css/alt.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/student/faqcovid/"],
+            "css": [ "injections/css/sante.css" ]
+        },
+        {
+            "matches": ["*://www.leonard-de-vinci.net/maps/*"],
+            "css": [ "injections/css/map.css" ]
         }
     ],
 

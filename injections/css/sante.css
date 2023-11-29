@@ -1,0 +1,18 @@
+/* Stylesheet for www.leonard-de-vinci.net/student/faqcovid */
+
+.page .row {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: var(--bdv-bg-color-2) !important;
+    border: none !important;
+    border-radius: var(--bdv-border-radius) !important;
+}
+
+.page .row .panel-heading {
+    border: none !important;
+}
+
+.page h3 {
+    color: var(--bdv-accent-color) !important;
+    text-align: center;
+}

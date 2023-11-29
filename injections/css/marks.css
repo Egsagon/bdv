@@ -13,7 +13,7 @@
 #main .body {
     padding-left: 2px !important;
     padding-top: 0 !important;
-    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 83px);
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 33px);
     overflow-y: scroll !important;
 }
 

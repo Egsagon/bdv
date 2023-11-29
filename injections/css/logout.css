@@ -1,0 +1,7 @@
+body {
+    color: var(--bdv-fg-color);
+}
+
+html {
+    margin: 10px !important;
+}

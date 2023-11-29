@@ -1,0 +1,117 @@
+/* Base stylesheet for the alternative LDV portal */
+
+.site-menubar,
+.navbar-brand {
+    display: none;
+}
+
+.navbar {
+    width: calc(100% - 20px) !important;
+    background-color: red !important;
+    visibility: hidden;
+    top: -300px;
+}
+
+.navbar > a[href='/'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.navbar > a[href='/']::after {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '<';
+    margin: 10px;
+    padding: 10px;
+    color: var(--bdv-fg-color);
+    width: 30px;
+    height: 30px;
+    background-color: var(--bdv-accent-color) !important;
+    border-radius: 50%;
+    transition: all ease-in-out .2s;
+}
+
+.navbar > a[href='/']:hover::after {
+    text-decoration: none !important;
+    scale: 1.1;
+}
+
+html {
+    margin: 5px 30px !important;
+}
+
+body {
+    overflow: auto !important;
+}
+
+footer {
+    display: none;
+}
+
+html::after {
+    display: none !important;
+}
+
+body * {
+    background-color: transparent !important;
+    color: var(--bdv-fg-color) !important;;
+}
+
+.btn {
+    background-color: var(--bdv-accent-color) !important;
+    color: var(--bdv-fg-color) !important;
+    border: none !important;
+    transition: all ease-in-out .2s !important;
+    border-radius: var(--bdv-border-radius);
+}
+
+.btn:hover {
+    background-color: var(--bdv-fg-color) !important;
+    color: var(--bdv-bg-color) !important;
+}
+
+.page-aside {
+    position: fixed;
+    border-right: none;
+    top: 30px;
+}
+
+.page-aside .list-group-item {
+    padding-left: 14px;
+    margin: 2px 10px;
+    border-radius: var(--bdv-border-radius);
+    transition: all ease-in-out .2s;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+
+.page-aside .list-group-item:hover {
+    background-color: var(--bdv-accent-color) !important;
+}
+
+.page-header {
+    display: none;
+}
+
+h1.page-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--bdv-accent-color) !important;
+}
+
+.page .alert,
+.card-deck .card {
+    background-color: var(--bdv-bg-color-2) !important;
+    border: none !important;
+    border-radius: var(--bdv-border-radius) !important;
+}
+
+.card-deck .card h4 {
+    color: var(--bdv-accent-color) !important;
+}

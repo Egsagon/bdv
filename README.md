@@ -2,16 +2,22 @@
 
 A style and script rethemer for leonard-de-vinci.net.
 
-Download [here](https://github.com/Egsagon/bdv/releases/download/v0.33/bdv-0.33-signed.xpi) (Firefox only)
+> [!WARNING]
+> Early dev
 
-## TODO:
+- Firefox: [download](https://github.com/Egsagon/bdv/releases/download/v0.33/bdv-0.33-signed.xpi)
+- Chrome: todo
+- Edge: todo
 
-- [ ] Santé
-- [ ] Offres de stage
-- [ ] Logout page
-- [ ] Messages
-- [ ] Gestion de stages
-- [ ] Alternate DVL page
+## TODO
+- [] [broken] finances
+- [] [broken] messages
+- [] [improv] notes
+- [] [improv] fiche
+- [] [improv] séjours
+- [] [improv] langues
+- [] [improv] plan arche
+- [] [improv] impressions 
 
 ## License
 
