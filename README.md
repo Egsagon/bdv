@@ -2,7 +2,7 @@
 
 A style and script rethemer for leonard-de-vinci.net.
 
-Download [here](https://github.com/Egsagon/bdv/releases/download/v0.3/bdv-0.3.xpi) (Firefox only)
+Download [here](https://github.com/Egsagon/bdv/releases/download/v0.33/bdv-0.33-signed.xpi) (Firefox only)
 
 ## TODO:
 
