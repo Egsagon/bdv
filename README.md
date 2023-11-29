@@ -10,14 +10,14 @@ A style and script rethemer for leonard-de-vinci.net.
 - Edge: todo
 
 ## TODO
-- [] [broken] finances
-- [] [broken] messages
-- [] [improv] notes
-- [] [improv] fiche
-- [] [improv] séjours
-- [] [improv] langues
-- [] [improv] plan arche
-- [] [improv] impressions 
+- [ ] [broken] finances
+- [ ] [broken] messages
+- [ ] [improv] notes
+- [ ] [improv] fiche
+- [ ] [improv] séjours
+- [ ] [improv] langues
+- [ ] [improv] plan arche
+- [ ] [improv] impressions 
 
 ## License
 

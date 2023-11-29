@@ -14,9 +14,25 @@
     padding-left: 2px !important;
     padding-top: 0 !important;
     height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 33px);
+}
+
+#main .tab-content .body {
     overflow-y: scroll !important;
 }
 
 #advancedTab1 {
     display: none;
 }
+
+/*
+#main .notes * {
+    margin-left: 0;
+    padding-left: 0;
+    border: none;
+}
+
+#main .notes .dd-handle {
+    background-color: blue !important;
+    margin: 10px 0;
+}
+*/
