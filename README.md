@@ -5,7 +5,7 @@ A style and script rethemer for leonard-de-vinci.net.
 > [!WARNING]
 > Early dev
 
-- Firefox: [download](https://github.com/Egsagon/bdv/releases/download/v0.33/bdv-0.33-signed.xpi)
+- Firefox: [download](https://github.com/Egsagon/bdv/releases/download/v0.4/bdv-0.4-signed.xpi)
 - Chrome: todo
 - Edge: todo
 
