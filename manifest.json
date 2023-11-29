@@ -11,6 +11,11 @@
         "storage"
     ],
 
+    "background": {
+        "scripts": ["background/app.js"],
+        "persistent": false
+    },
+
     "content_scripts": [
         {
             "matches": [
