@@ -4,7 +4,7 @@
     "version": "0.4.1",
     "description": "BetterDeVinci - A custom theme for LDV",
 
-    "icons": { "32": "ldv.svg" },
+    "icons": { "100": "ldv.png" },
 
     "permissions": [
         "tabs",
@@ -161,7 +161,7 @@
     },
 
     "browser_action": {
-        "default_icon": "ldv.svg",
+        "default_icon": "ldv.png",
         "default_title": "BDV",
         "default_popup": "popup/index.html"
     },
