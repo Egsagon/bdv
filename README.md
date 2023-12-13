@@ -6,8 +6,6 @@ A style and script rethemer for leonard-de-vinci.net.
 > Early dev
 
 - Firefox: [download](https://github.com/Egsagon/bdv/releases/download/v0.4.1/bdv-0.4.1-signed.xpi)
-- Chrome: todo
-- Edge: todo
 
 ## TODO
 - [ ] Customize logo (choose between generic LDV logo or school logo)
