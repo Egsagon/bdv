@@ -1,25 +1,19 @@
-# BetterDeVinci
+<img src="https://raw.githubusercontent.com/Egsagon/bdv/master/assets/main.svg" align="right" width="300px">
 
-A style and script rethemer for leonard-de-vinci.net.
+# BDV - A custom theme for LDV online
 
-> [!WARNING]
-> Early dev
+BDV is a retheme for [leonard-de-vinci.net](https://leonard-de-vinci.net). Its goal is to make navigation
+easier and faster blah blah blah inspired from betterdiscord blah blah blah only available for firefox as
+of right now, but maybe Chrome and Edge in the future blah blah blah. Note this project is in early
+development, and therefore some features on the target website(s) can break. You can fix them by disabling
+the extension temporarly.
 
-- Firefox: [download](https://github.com/Egsagon/bdv/releases/download/v0.4.1/bdv-0.4.1-signed.xpi)
+### Downloads
+- Firefox - [download](https://github.com/Egsagon/bdv/releases/download/v0.4.1/bdv-0.4.1-signed.xpi)
+- Chrome - `TODO`
+- Edge - `TODO`
 
-## TODO
-- [ ] Customize logo (choose between generic LDV logo or school logo)
-- [ ] Separate layout border radius and button border radius
+<br clear="right">
 
-- [ ] [broken] finances
-- [ ] [broken] messages
-- [ ] [improv] notes
-- [ ] [improv] fiche
-- [ ] [improv] séjours
-- [ ] [improv] langues
-- [ ] [improv] plan arche
-- [ ] [improv] impressions 
-
-## License
-
+### License
 This project uses the GPL-v3 license. See the `LICENSE` file for more information.
