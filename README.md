@@ -10,6 +10,9 @@ A style and script rethemer for leonard-de-vinci.net.
 - Edge: todo
 
 ## TODO
+- [ ] Customize logo (choose between generic LDV logo or school logo)
+- [ ] Separate layout border radius and button border radius
+
 - [ ] [broken] finances
 - [ ] [broken] messages
 - [ ] [improv] notes
