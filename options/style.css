@@ -248,3 +248,13 @@ input[type='checkbox']:checked::before {
     height: 16px;
     transform: translate(7px, 7px);
 }
+
+#logo-type {
+    width: 100px;
+    height: 32px;
+    border: 1px solid gray;
+    background-color: transparent;
+    padding-left: 7px;
+    padding-right: 7px;
+    transform: translateY(-.5px);
+}

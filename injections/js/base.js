@@ -60,7 +60,7 @@ window.bdv = {
         }
     },
 
-    fetch: async path => {
+    fetch: async (path, mode = 'text') => {
         // Fetch a local ressource
 
         var url = browser.runtime.getURL(path)
@@ -74,7 +74,14 @@ window.bdv = {
             read.onload = () => {resolve(read.result)}
             read.onerror = reject
 
-            read.readAsText(blob)
+            switch (mode) {
+                case 'bin':
+                    read.readAsBinaryString(blob)
+                    break
+            
+                default:
+                    read.readAsText(blob)
+            }
         })
     },
 

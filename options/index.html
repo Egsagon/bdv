@@ -8,35 +8,37 @@
     <form>
         <h1>Color palette</h1>
 
-        <p>Foreground color <i data-info="Foreground color for text and icons.">i</i> </p>
+        <p>Foreground color <i data-info="Foreground color for text and icons">i</i> </p>
         <input type="color" id="fg-color" value="#F8F8F2"><br>
 
-        <p>Background color <i data-info="Background colors.">i</i></p>
+        <p>Background color <i data-info="Background colors">i</i></p>
         <input type="color" id="bg-color" value="#18181a">
         <input type="color" id="bg-color-2" value="#232327"><br>
 
-        <p>Accent color <i data-info="Dashboard accent. Defaults to the school accent.">i</i></p>
+        <p>Accent color <i data-info="Dashboard accent. Defaults to the school accent">i</i></p>
         <input class="bypass" type="checkbox" id="auto-accent" value="var(--school-accent)">
         <label for="auto-accent"></label>
         <input type="color" id="accent-color" value="#cf0f51" disabled><br>
 
         <h1>Page style</h1>
 
-        <p>Border radius <i data-info="Layout border radius.">i</i></p>
+        <p>Border radius <i data-info="Layout border radius">i</i></p>
         <input type="number" id="border-radius" value="10" min="0"><br>
 
-        <p>In/out gaps <i data-info="Inner and outer layout gaps.">i</i></p>
+        <p>In/out gaps <i data-info="Inner and outer layout gaps">i</i></p>
         <input type="number" id="gap" value="10" min="0">
         <input type="number" id="ext-gap" value="10" min="0"><br>
 
-        <p>Rotate logo <i data-info="Whether to animate the school logo on page load.">i</i></p>
+        <p>Logo <i data-info="Custom logo filename. Logos must be placed in the injections/assets/ folder.
+                              Toggle the checkbox to animate the logo on start.">i</i></p>
+        <input type="text" class="bypass" id="logo-type" placeholder="$school" value="$school">
         <input class="bypass" type="checkbox" id="rotate-logo" checked>
         <label for="rotate-logo"></label>
     </form>
 
     <div id="demo">
         <div class="head">
-            <div class="logo"></div>
+            <div class="logo"><img id="logo"></div>
             <div class="nbar"><p>Demo Minimap</p></div>
         </div>
 

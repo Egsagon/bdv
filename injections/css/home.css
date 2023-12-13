@@ -416,7 +416,6 @@ html:not(.bdv) {
     width: calc(50px - 20px); /* Not gaps, see border property */
     height: calc(50px - 20px);
     border-radius: var(--bdv-border-radius);
-    background-color: none;
     border: none;
     padding: 0;
     margin: 0 !important;
@@ -427,8 +426,9 @@ html:not(.bdv) {
        so people don't notice (temporary color
        until evaluated on js side) */
     border: 10px solid var(--bdv-accent-color) !important;
-}
 
+    background-color: var(--bdv-accent-color) !important;
+}
 
 
 .social-sidebar span {

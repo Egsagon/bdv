@@ -163,59 +163,73 @@ window.bdv.init(async (pool) => {
         $(el).addClass(navbar_icons[i])
     })
 
-    // Re-color school image
+    // Change layout logo
+    if (!pool.logo || pool.logo === '$school') {
+        // Re-color school logo
 
-    hex = '#000000'
-    if (pool.color_scheme?.includes('accent-color: #')) {
-        hex =  /accent-color: #(.*?) /g.exec(pool.color_scheme)[1]
-    }
-
-    rgb = window.bdv.hex_to_rgb(hex)
-
-    if (pool.accent_override && rgb !== null) {
-        window.bdv.log('Modifying school logo with color ' + hex)
-
-        /* Note - The source image is 28x28px so there will be a 1px border around the
-           canvas, which we need to fill. Our output is 30x30px originally because of the
-           10px border (30px+2*10px = 50px = sidebar width = navbar height) */
-
-        canvas = document.createElement('canvas')
-        canvas.width = 30
-        canvas.height = 30
-
-        ctx = canvas.getContext('2d')
-        ctx.fillStyle = 'green'
-        ctx.fillRect(0, 0, 30, 30)
-
-        ctx.drawImage(favicon, -1, -1, favicon.width, favicon.height,
-                               0, 0, canvas.width, canvas.height)
-        
-        image = ctx.getImageData(0, 0, favicon.width, favicon.height)
-
-        for (var i = 0; i < image.data.length; i += 4) {
-
-            if (
-                image.data[i    ] < image_precision ||
-                image.data[i + 1] < image_precision ||
-                image.data[i + 2] < image_precision
-            ) {
-                image.data[i    ] = rgb.r
-                image.data[i + 1] = rgb.g
-                image.data[i + 2] = rgb.b
-            }
+        hex = '#000000'
+        if (pool.color_scheme?.includes('accent-color: #')) {
+            hex = /accent-color: #(.*?) /g.exec(pool.color_scheme)[1]
         }
 
-        ctx.putImageData(image, 0, 0)
+        rgb = window.bdv.hex_to_rgb(hex)
 
-        $('.schoole_pastil img').replaceWith(canvas)
+        if (pool.accent_override && rgb !== null) {
+            window.bdv.log('Modifying school logo with color ' + hex)
+
+            /* Note - The source image is 28x28px so there will be a 1px border around the
+            canvas, which we need to fill. Our output is 30x30px originally because of the
+            10px border (30px+2*10px = 50px = sidebar width = navbar height) */
+
+            canvas = document.createElement('canvas')
+            canvas.width = 30
+            canvas.height = 30
+
+            ctx = canvas.getContext('2d')
+            ctx.fillStyle = 'green'
+            ctx.fillRect(0, 0, 30, 30)
+
+            ctx.drawImage(favicon, -1, -1, favicon.width, favicon.height,
+                                0, 0, canvas.width, canvas.height)
+            
+            image = ctx.getImageData(0, 0, favicon.width, favicon.height)
+
+            for (var i = 0; i < image.data.length; i += 4) {
+
+                if (
+                    image.data[i    ] < image_precision ||
+                    image.data[i + 1] < image_precision ||
+                    image.data[i + 2] < image_precision
+                ) {
+                    image.data[i    ] = rgb.r
+                    image.data[i + 1] = rgb.g
+                    image.data[i + 2] = rgb.b
+                }
+            }
+
+            ctx.putImageData(image, 0, 0)
+
+            $('.schoole_pastil img').replaceWith(canvas)
+        }
+    }
+
+    // Use custom logo
+    else {
+        raw = await window.bdv.fetch(pool.logo, 'bin')
+        img = document.createElement('img')
+        img.src = 'data:image/png;base64,' + btoa(raw)
+        $('.schoole_pastil img').replaceWith(img)
     }
 
     // Startpage mode
     if (location.href.includes('startpage=1')) {
-        // TODO - change css bdv ext gaps
-        // TODO - put that in options ui
+        // TODO - Put that in options ui
+        // TODO - Add clock widgets and remove advanced widgets 
 
-        gap = pool.ext_gap || 80
+        // Estimate best ext_gap value
+        mw = Math.min(window.innerWidth, window.innerHeight)
+        gap = mw > 800 ? 80 : pool.ext_gap
+
         $('html')[0].style.setProperty('--bdv-ext-gap', gap + 'px')
         
         spbg = document.createElement('div')

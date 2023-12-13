@@ -52,6 +52,7 @@ document.querySelector('#reset').addEventListener('mouseup', () => {
     document.querySelector('#auto-accent').checked = true
     document.querySelector('#rotate-logo').checked = true
     document.querySelector('#accent-color').disabled = true
+    document.querySelector('#logo-type').value= '$school'
 
     log('Settings reset amorced')
 })
@@ -77,10 +78,17 @@ document.querySelector('#save').addEventListener('click', () => {
 
     log('Computed CSS scheme: ' + scheme)
 
+    logo_type_in = document.querySelector('#logo-type').value
+
+    logo_type = undefined
+    if (logo_type_in?.startsWith('$')) logo_type = logo_type_in
+    else logo_type = 'injections/assets/' + logo_type_in
+
     browser.storage.sync.set({
         color_scheme: ':root {' + scheme + '}',
         accent_override: auto.checked,
-        disable_logo: !document.getElementById('rotate-logo').checked
+        disable_logo: !document.getElementById('rotate-logo').checked,
+        logo: logo_type
     }).then(async () => {
         
         log('Successfully saved scheme to storage')
@@ -143,6 +151,16 @@ document.querySelector('#auto-accent').addEventListener('click', ev => {
         document.querySelector('#rotate-logo').checked = !pool.disable_logo
         document.querySelector('#auto-accent').checked = pool.accent_override
         document.querySelector('#accent-color').disabled = !pool.accent_override
+    }
+
+    if (pool.logo) {
+        if (pool.logo.startsWith('$')) {
+            document.querySelector('#logo-type').value = pool.logo
+        }
+        else {
+            fname = pool.logo.split('/').slice(-1)
+            document.querySelector('#logo-type').value = fname
+        }
     }
 })()
 
