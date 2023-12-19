@@ -82,6 +82,8 @@
     border: none !important;
     outline: none !important;
     transition: all ease-in-out .2s;
+
+    border-radius: var(--bdv-border-radius);
 }
 
 input {
@@ -103,4 +105,31 @@ input:autofill {
 
 #introduction {
     text-align: center;
+    display: flex;
+}
+
+#loginMessage {
+    font-size: 0;
+}
+
+#loginMessage::after {
+    content: 'Login';
+    font-size: 30px;
+}
+
+#introduction * {
+    font-size: 0;
+}
+
+#introduction a:first-child::after {
+    content: 'Change password';
+    font-size: 14px;
+}
+
+#introduction a[href="https://www.leonard-de-vinci.net/lost_password.php"]::after {
+    content: 'Reset password';
+    font-size: 14px;
+    border-left: 1px solid var(--bdv-fg-color);
+    padding-left: 10px;
+    margin-left: 10px;
 }

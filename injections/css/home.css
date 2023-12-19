@@ -744,11 +744,17 @@ body:not(.bdv) {
 }
 
 .b-current-time-indicator {
-    border-top: 2px solid var(--bdv-accent-color) !important;
+    /* border-top: 2px solid var(--bdv-accent-color) !important; */
+    border-top: none !important;
 }
 
 .b-current-time-indicator::before {
+    /* background-color: var(--bdv-accent-color) !important; */
     background-color: var(--bdv-accent-color) !important;
+    left: 50%;
+    scale: 3;
+    border: 3px solid var(--bdv-bg-color);
+    border-radius: 50% !important;
 }
 
 .b-cal-event-wrap {
@@ -756,7 +762,7 @@ body:not(.bdv) {
 }
 
 .b-cal-event {
-    border-left: 3px solid var(--bdv-accent-color);
+    border-left: none;
 }
 
 .b-event-time,
@@ -818,12 +824,68 @@ b-calendar-1-event-tip-panel-title {
 }
 
 #b-calendar-1-event-tip .b-anchor-bottom {
-    /* might re-enable because it somehow decided to inherit its parent borders */
     display: none;
 }
 
+#main .app-root .b-cal-event-wrap,
+#main .app-root .b-cal-event-wrap * {
+    background-color: var(--bdv-accent-color) !important;
+}
+
+#main .app-root .b-event-time {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#main .app-root .b-cal-event-desc {
+    margin-top: 10px;
+}
+
+#main .app-root .b-event-name[style*="bold"] {
+    text-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#main .app-root .b-event-header *,
+#main .app-root .b-cal-event-desc div[style*="top:5px"] {
+    color: var(--bdv-bg-color) !important;
+}
+
+#b-buttongroup-1 * {
+    font-size: 0;
+    font-weight: unset !important;
+}
+
+#b-buttongroup-1 > button:last-child {
+    display: none;
+}
+
+#b-buttongroup-1 > button > label:hover {
+    color: var(--bdv-accent-color) !important;
+}
+
+#b-buttongroup-1 > button > label {
+    display: flex;
+    align-items: center;
+}
+
+#b-buttongroup-1 > button > label::after {
+    content: '/';
+    display: block;
+    font-size: 16px !important;
+    font-family: "FontAwesome";
+}
+
+#b-buttongroup-1 > button:nth-child(1) > label::after { content: '\f133' }
+#b-buttongroup-1 > button:nth-child(2) > label::after { content: '\f784' }
+#b-buttongroup-1 > button:nth-child(3) > label::after { content: '\f783' }
+#b-buttongroup-1 > button:nth-child(4) > label::after { content: '\f073' }
 
 
+/* Copyright */
+/*
 html::after {
     content: 'ALV - Léonard de Vinci, 2023 + BDV - Egsagon, 2023';
     position: fixed;
@@ -833,6 +895,7 @@ html::after {
     font-size: 5px;
     color: var(--bdv-fg-color);
 }
+*/
 
 #spbg {
     position: fixed;

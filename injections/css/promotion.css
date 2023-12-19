@@ -5,7 +5,7 @@
 }
 
 .social-box {
-    display: block;
+    display: block !important;
 }
 
 .social-box:first-child {
@@ -13,8 +13,8 @@
 }
 
 
-#social-timeline > .row-fluid {
-    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 41px);
+#social-timeline {
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
     overflow-y: scroll !important;
 }
 
