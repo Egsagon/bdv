@@ -21,6 +21,7 @@
     --bdv-border-radius: 10px;
     --bdv-gap: 10px;
     --bdv-ext-gap: var(--bdv-gap);
+    --bdv-logo-border: 0px;
 
     /* This variable will be assigned
        the school accent color (ESILV, EMLV or IIM color)

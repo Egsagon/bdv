@@ -3,7 +3,9 @@ const edit = document.querySelector('#edit')
 edit.addEventListener('click', async () => {
     // Update button style
 
-    await browser.runtime.openOptionsPage()
+    // await browser.runtime.openOptionsPage()
+    
+    await browser.tabs.create({ url: '/settings/index.html' })
     window.close()
 });
 

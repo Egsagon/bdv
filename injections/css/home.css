@@ -413,23 +413,16 @@ html:not(.bdv) {
 
 .schoole_pastil img,
 .schoole_pastil canvas {
-    width: calc(50px - 20px); /* Not gaps, see border property */
-    height: calc(50px - 20px);
+    width: calc(50px);
+    height: calc(50px);
     border-radius: var(--bdv-border-radius);
-    border: none;
-    padding: 0;
+    padding: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
     user-select: none;
-    
-    /* Image is low res, so we reduce it by a bit
-       so people don't notice (temporary color
-       until evaluated on js side) */
-    border: 10px solid var(--bdv-accent-color) !important;
-
     background-color: var(--bdv-accent-color) !important;
+    border: var(--bdv-logo-border) solid var(--bdv-accent-color) !important;
 }
-
 
 .social-sidebar span {
     display: none !important;
