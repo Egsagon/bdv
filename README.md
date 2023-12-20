@@ -9,7 +9,7 @@ development, and therefore some features on the target website(s) can break. You
 the extension temporarly.
 
 ### Downloads
-- Firefox - [download](https://github.com/Egsagon/bdv/releases/download/v0.4.2/bdv-0.4.2-signed.xpi)
+- Firefox - [download](https://github.com/Egsagon/bdv/releases/download/v0.5/bdv-0.5.xpi)
 - Chrome - `TODO`
 - Edge - `TODO`
 
