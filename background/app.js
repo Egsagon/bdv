@@ -1,5 +1,7 @@
 // Define default theme on addon installation
 
+const OPEN_SETTINGS_ON_INSTALL = false
+
 const DEFAULT_THEMES = {
     alv: {
         color_scheme: `:root {
@@ -60,5 +62,6 @@ browser.runtime.onInstalled.addListener(async () => {
     await browser.storage.sync.set(DEFAULT_THEMES.new)
 
     // Open settings page
-    await browser.tabs.create({ url: 'settings/index.html' })
+    if (OPEN_SETTINGS_ON_INSTALL)
+        await browser.tabs.create({ url: 'settings/index.html' })
 })

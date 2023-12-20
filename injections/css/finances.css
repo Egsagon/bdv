@@ -3,3 +3,22 @@
 .social-box {
     display: block;
 }
+
+#main .container-fluid {
+    height: calc(100vh - 50px - 2 * var(--bdv-ext-gap) - var(--bdv-gap) - 21px);
+    overflow-y: scroll;
+}
+
+#main .container-fluid > .row-fluid:first-child {
+    display: none;
+}
+
+#main .alert {
+    border: none;
+    background-color: var(--bdv-bg-color) !important;
+    padding: 15px;
+    border-radius: var(--bdv-border-radius);
+    margin: 10px;
+    height: 60px;
+    text-overflow: ellipsis;
+}
