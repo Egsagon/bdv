@@ -1,17 +1,12 @@
 // Settings configuration
 // User settings are stored in the browser storage
 
-// Structure
-// settings: list
-//   ategory: dict
-//     category: str
-//       settings: list
-//         name: str
-//         id: str
-//         var: str
-//         type: str
-//         help: str
-//         unit: str
+/*
+Structure: list[dict[
+    category: str,
+    settings: list[dict[ name, id, var, type, help, unit ]]
+]]
+*/
 
 const settings = [
 
@@ -47,7 +42,7 @@ const settings = [
                 "name": "Custom accent color",
                 "var": "accent_override",
                 "type": "checkbox",
-                "default": "#cf0f51",
+                "default": false,
                 "help": "Whether to use a custom accent instead of the school accent"
             },
             {
@@ -63,7 +58,8 @@ const settings = [
                 "name": "Error color",
                 "id": "--bdv-error-color",
                 "type": "color",
-                "default": "#FF5555"
+                "default": "#ff5555",
+                "help": "Color shown in case of error"
             }
         ]
     },
@@ -113,11 +109,11 @@ const settings = [
             },
             {
                 // Logo animation
-                "name": "Logo animation",
-                "var": "!disable_logo",
+                "name": "Static logo",
+                "var": "disable_logo",
                 "type": "checkbox",
                 "default": true,
-                "help": "Whether to show a small animation on page opening"
+                "help": "Whether to suppress a small animation on page opening"
             },
             {
                 // Logo source
@@ -125,7 +121,7 @@ const settings = [
                 "var": "logo",
                 "type": "text",
                 "default": "bdv.png",
-                "help": "Logo image"
+                "help": "Filename of a logo in injections/assets/"
             }
         ]
     }

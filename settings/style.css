@@ -107,7 +107,8 @@ h1, h2 {
     padding: 5px;   
 }
 
-.setting button {
+#main .setting > div > button,
+#main #reset > button {
     all: unset;
     font-size: 20px;
     margin-left: 15px;
@@ -117,9 +118,22 @@ h1, h2 {
     transition: all ease-in-out .2s;
 }
 
-.setting button:hover {
+#main .setting > div > button:hover,
+#main #reset > button:hover {
     scale: 1.2;
-    color: #ff5555;
+    color: #ff5555 !important;
+}
+
+#main #reset {
+    background-color: red;
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+}
+
+#main #reset button {
+    color: #f8f8f2;
+    position: absolute;
 }
 
 #save {
@@ -144,4 +158,11 @@ h1, h2 {
 
 #save:hover {
     background-color: #e84040;
+}
+
+.help span {
+    background-color: #18181a;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
