@@ -215,7 +215,7 @@ window.bdv.init(async (pool) => {
 
     // Use custom logo
     else {
-        raw = await window.bdv.fetch(pool.logo, 'bin')
+        raw = await window.bdv.fetch(`injections/assets/${pool.logo}`, 'bin')
         img = document.createElement('img')
         img.src = 'data:image/png;base64,' + btoa(raw)
         $('.schoole_pastil img').replaceWith(img)

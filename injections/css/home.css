@@ -413,8 +413,8 @@ html:not(.bdv) {
 
 .schoole_pastil img,
 .schoole_pastil canvas {
-    width: calc(50px);
-    height: calc(50px);
+    width: calc(50px - 2 * var(--bdv-logo-border));
+    height: calc(50px - 2 * var(--bdv-logo-border));
     border-radius: var(--bdv-border-radius);
     padding: 0 !important;
     margin: 0 !important;

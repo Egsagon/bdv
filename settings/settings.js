@@ -116,12 +116,21 @@ const settings = [
                 "help": "Whether to suppress the logo animation on page opening"
             },
             {
+                // Logo gaps
+                "name": "Logo border",
+                "id": "--bdv-logo-border",
+                "type": "number",
+                "default": "0",
+                "help": "Border around the logo",
+                "unit": "px"
+            },
+            {
                 // Logo source
                 "name": "Logo image",
                 "var": "logo",
                 "type": "text",
                 "default": "bdv.png",
-                "help": "Filename of a logo in injections/assets/"
+                "help": "Filename of one of the logos in injections/assets/"
             }
         ]
     }
