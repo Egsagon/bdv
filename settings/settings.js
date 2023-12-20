@@ -69,7 +69,7 @@ const settings = [
             {
                 // Border radius
                 "name": "Border radius",
-                "id": "--bdv--border-radius",
+                "id": "--bdv-border-radius",
                 "type": "number",
                 "default": "10",
                 "help": "Layout border radius",

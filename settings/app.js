@@ -1,6 +1,4 @@
-/*
- * Config page script
- */
+/* Config page script */
 
 var pool;
 
@@ -10,28 +8,20 @@ document.querySelector('#save').addEventListener('click', async () => {
     let scheme = {color_scheme: ':root{'}
 
     document.querySelectorAll('#main input').forEach(param => {
-
-        console.log(param)
-
         let var_ = param.dataset.var
         if (var_) {
-
-            console.log('detected as var.')
 
             let res = param.getAttribute('value')
 
             if (param.type === 'checkbox') {
-                console.log('further detection: is checkbox')
                 res = param.checked
                 if (var_.startsWith('!')) res = !res
             }
 
-            console.log('Saving value', res)
             scheme[var_.replace('!', '')] = res
 
         } else {
-            console.log('detected as scheme. Saving raw value', param.value)
-            scheme.color_scheme += `${param.id}:${param.value}${param.dataset.unit ?? ''} !important;`
+            scheme.color_scheme += `${param.id}: ${param.value}${param.dataset.unit ?? ''} !important; `
         }
 
     })
