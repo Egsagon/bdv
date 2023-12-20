@@ -10,8 +10,6 @@ browser.runtime.onInstalled.addListener(async () => {
         disable_logo: false
     })
 
-    // Open welcome page
-    // await browser.tabs.create({ url: 'background/index.html' })
-
-    await browser.tabs.create({ url: '/settings/index.html' })
+    // Open settings page
+    await browser.tabs.create({ url: 'settings/index.html' })
 })

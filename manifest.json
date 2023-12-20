@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "BDV",
-    "version": "0.4.2",
+    "version": "0.5",
     "description": "BetterDeVinci - A custom theme for LDV",
 
-    "icons": { "48": "logo.svg" },
+    "icons": { "48": "logo.png" },
 
     "permissions": [
         "tabs",
@@ -161,7 +161,7 @@
     },
 
     "browser_action": {
-        "default_icon": "logo.svg",
+        "default_icon": "logo.png",
         "default_title": "BDV",
         "default_popup": "popup/index.html"
     },
@@ -169,9 +169,5 @@
     "web_accessible_resources": [
         "injections/html/*.html",
         "injections/assets/*"
-    ],
-
-    "options_ui": {
-        "page": "options/index.html"
-    }
+    ]
 }

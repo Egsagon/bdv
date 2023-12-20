@@ -113,7 +113,7 @@ const settings = [
                 "var": "disable_logo",
                 "type": "checkbox",
                 "default": true,
-                "help": "Whether to suppress a small animation on page opening"
+                "help": "Whether to suppress the logo animation on page opening"
             },
             {
                 // Logo source

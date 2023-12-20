@@ -2,6 +2,8 @@
  * Config page script
  */
 
+var pool;
+
 document.querySelector('#save').addEventListener('click', async () => {
     // Save settings
 
@@ -9,18 +11,26 @@ document.querySelector('#save').addEventListener('click', async () => {
 
     document.querySelectorAll('#main input').forEach(param => {
 
+        console.log(param)
+
         let var_ = param.dataset.var
         if (var_) {
 
-            let res = param.dataset.value
+            console.log('detected as var.')
+
+            let res = param.getAttribute('value')
 
             if (param.type === 'checkbox') {
+                console.log('further detection: is checkbox')
                 res = param.checked
                 if (var_.startsWith('!')) res = !res
             }
+
+            console.log('Saving value', res)
             scheme[var_.replace('!', '')] = res
 
         } else {
+            console.log('detected as scheme. Saving raw value', param.value)
             scheme.color_scheme += `${param.id}:${param.value}${param.dataset.unit ?? ''} !important;`
         }
 
@@ -30,7 +40,7 @@ document.querySelector('#save').addEventListener('click', async () => {
 
     // Write to storage
     console.log('Saving', scheme)
-    await browser.storage.sync.set(scheme)
+    await browser.storage.sync.set({...pool, ...scheme})
 
     // Reload tabs
     tabs = await browser.tabs.query({ url: ['*://www.leonard-de-vinci.net/*'] })
@@ -58,7 +68,7 @@ document.querySelector('#reset').addEventListener('click', () => {
 
 ;/*{}*/;(async () => {
     // Fetch saved settings
-    const pool = await browser.storage.sync.get()
+    pool = await browser.storage.sync.get()
 
     console.log('Using pool', pool)
 
@@ -125,9 +135,17 @@ document.querySelector('#reset').addEventListener('click', () => {
         btn.addEventListener('click', btn_ => {
             el = document.getElementById(btn.dataset.id)
 
-            console.log('reseting', btn.dataset.id, el.dataset.default)
+            console.log('reseting', btn.dataset.id, el.dataset.default, el.type)
 
-            el.value = el.checked = el.dataset.default
+            if (el.type === 'checkbox') {
+                el.checked = el.dataset.default === 'true'
+
+            } else {
+                el.value = el.dataset.default
+            }
+
+            console.log(el)
+
             
             // Update change
             el.dispatchEvent(new Event('input', { bubbles: true }))
