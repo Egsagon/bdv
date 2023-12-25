@@ -24,15 +24,18 @@
     display: none;
 }
 
-/*
 #main .notes * {
     margin-left: 0;
     padding-left: 0;
     border: none;
+    background-color: transparent !important;
 }
 
 #main .notes .dd-handle {
-    background-color: blue !important;
+    background-color: var(--bdv-bg-color) !important;
     margin: 10px 0;
 }
-*/
+
+.dd-item.dd-unite-student {
+
+}

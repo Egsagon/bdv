@@ -1,5 +1,10 @@
 /* Stylesheet for www.leonard-de-vinci.net */
 
+:root {
+    --bdv-loader-info-showup-time: 15s;
+
+}
+
 * {
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: none !important;
@@ -31,6 +36,29 @@
     font-size: 0;
     animation: wait forwards infinite linear 4s;
 }
+
+#bdv-loader::after {
+    display: block;
+    content: 'Not loading? Try refreshing the page or disabling the extension.';
+    color: var(--bdv-fg-color);
+    background-color: var(--bdv-bg-color-2) !important;
+    padding: 0;
+    margin: 0;
+    border-radius: var(--bdv-border-radius);
+    max-width: 200px;
+    width: 0;
+    font-size: 0;
+    overflow: hidden;
+    animation: bdv-info-showup 0.001s forwards;
+    animation-delay: var(--bdv-loader-info-showup-time);
+}
+
+@keyframes bdv-info-showup { to {
+    width: unset;
+    font-size: unset;
+    padding: 15px;
+    margin: 30px;
+}}
 
 body:not(.bdv) {
     /* Prevent from showing body until injection has finished */
