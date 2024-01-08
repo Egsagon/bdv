@@ -770,10 +770,9 @@ body:not(.bdv) {
 }
 
 .b-current-time-indicator::before {
-    /* background-color: var(--bdv-accent-color) !important; */
     background-color: var(--bdv-accent-color) !important;
     left: 50%;
-    scale: 3;
+    scale: 2;
     border: 3px solid var(--bdv-bg-color);
     border-radius: 50% !important;
 }
@@ -850,7 +849,15 @@ b-calendar-1-event-tip-panel-title {
 
 #main .app-root .b-cal-event-wrap,
 #main .app-root .b-cal-event-wrap * {
+    background-color: transparent !important;
+}
+
+#main .app-root .b-cal-event-wrap {
     background-color: var(--bdv-accent-color) !important;
+    background-image: linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #main .app-root .b-event-time {

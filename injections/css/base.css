@@ -17,6 +17,8 @@
 
     --bdv-sp-color: var(--bdv-bg-color) /* Startpage background */
 
+    --bdv-cal-gradient: linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931);
+
     /* Layout settings */
     --bdv-border-radius: 10px;
     --bdv-gap: 10px;
