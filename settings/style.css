@@ -14,6 +14,12 @@ img {
     width: 200px;
 }
 
+#main {
+    width: calc(80vw - 80px * 2);
+    min-width: 400px;
+    max-width: 1000px;
+}
+
 .setting {
     background-color: #232327;
     padding: 10px;
@@ -22,9 +28,7 @@ img {
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
-    width: calc(100vw - 2 * 70px);
-    min-width: 200px;
-    max-width: 800px;
+    width: 100% !important;
     color: #f8f8f2;
     transition: all ease-in-out .2s;
 }
@@ -36,6 +40,11 @@ img {
 .setting > div {
     display: flex;
     align-items: center;
+}
+
+
+.setting:first-child {
+    flex-grow: 1;
 }
 
 h1, h2 {
@@ -169,4 +178,19 @@ h1, h2 {
     padding: 8px;
     border-radius: 5px;
     margin-right: 10px;
+}
+
+pre {
+    text-align: center;
+    color: gray;
+    margin-top: 50px;
+}
+
+a {
+    margin-bottom: 100px;
+    color: #e84040;
+}
+
+@media (max-width: 800px) {
+    .help p { display: none; }
 }

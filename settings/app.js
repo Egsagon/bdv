@@ -72,7 +72,7 @@ document.querySelector('#reset').addEventListener('click', () => {
 
             let setting = document.createElement('div')
             setting.classList.add('setting')
-            setting.innerHTML = `<p class="help"><span>${param.name}</span> ${param.help}</p>`
+            setting.innerHTML = `<div class="help"><span>${param.name}</span><p>${param.help}</p></div>`
 
             let wrapper = document.createElement('div')
             

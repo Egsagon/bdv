@@ -60,6 +60,14 @@ const settings = [
                 "type": "color",
                 "default": "#ff5555",
                 "help": "Color shown in case of error"
+            },
+            {
+                // Radiant
+                "name": "Gradiants",
+                "id": "--bdv-gradient",
+                "type": "text",
+                "default": "linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931)",
+                "help": "CSS gradient for specific widgets. set to none to disable."
             }
         ]
     },
@@ -98,15 +106,6 @@ const settings = [
     {
         "category": "Logo",
         "settings": [
-            {
-                // Logo gap
-                "name": "Logo border",
-                "id": "--bdv-logo-border",
-                "type": "number",
-                "default": "10",
-                "help": "Gaps between the logo and its border",
-                "unit": "px"
-            },
             {
                 // Logo animation
                 "name": "Static logo",
