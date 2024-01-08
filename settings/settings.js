@@ -27,7 +27,7 @@ const settings = [
                 "id": "--bdv-bg-color",
                 "type": "color",
                 "default": "#18181a",
-                "help": "Background colors"
+                "help": "Background color"
             },
             {
                 // Background color 2
@@ -35,7 +35,7 @@ const settings = [
                 "id": "--bdv-bg-color-2",
                 "type": "color",
                 "default": "#232327",
-                "help": "Background colors"
+                "help": "Widget background color"
             },
             {
                 // Use custom accent color instead of harvest one
@@ -43,7 +43,7 @@ const settings = [
                 "var": "accent_override",
                 "type": "checkbox",
                 "default": false,
-                "help": "Whether to use a custom accent instead of the school accent"
+                "help": "Override school accent"
             },
             {
                 // Accent color
@@ -51,7 +51,7 @@ const settings = [
                 "id": "--bdv-accent-color",
                 "type": "color",
                 "default": "#cf0f51",
-                "help": "Dashboard accent. Defaults to the school accent"
+                "help": "Custom accent color"
             },
             {
                 // Error color
@@ -59,7 +59,7 @@ const settings = [
                 "id": "--bdv-error-color",
                 "type": "color",
                 "default": "#ff5555",
-                "help": "Color shown in case of error"
+                "help": "Color shown for errors"
             },
             {
                 // Radiant
@@ -67,7 +67,7 @@ const settings = [
                 "id": "--bdv-gradient",
                 "type": "text",
                 "default": "linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931)",
-                "help": "CSS gradient for specific widgets. set to none to disable."
+                "help": "CSS gradients. Set to <kbd>none</kbd> to disable"
             }
         ]
     },
@@ -129,7 +129,7 @@ const settings = [
                 "var": "logo",
                 "type": "text",
                 "default": "bdv.png",
-                "help": "Filename of one of the logos in injections/assets/"
+                "help": "Logo filename (<kbd>$school</kbd>, <kbd>bdv.png</kbd>, <kbd>generic.png</kbd> or custom)"
             }
         ]
     }

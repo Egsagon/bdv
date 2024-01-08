@@ -200,3 +200,9 @@ a {
 @media (max-width: 800px) {
     .help p { display: none; }
 }
+
+kbd {
+    background-color: #18181a;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
