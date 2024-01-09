@@ -809,10 +809,17 @@ body:not(.bdv) {
 }
 
 #b-calendar-1-event-tip {
-    border: 4px solid var(--bdv-bg-color);
+    border: none;
     border-radius: var(--bdv-border-radius) !important;
     box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22),
                 0 5px 14px 0 rgba(0, 0, 0, .18) !important;
+    
+    outline: 4px solid var(--bdv-bg-color);
+}
+
+#b-calendar-1-event-tip > * {
+    background-color: var(--bdv-bg-color-2) !important;
+    border-radius: 0 !important;
 }
 
 b-calendar-1-event-tip-panel-title {
@@ -854,7 +861,7 @@ b-calendar-1-event-tip-panel-title {
 
 #main .app-root .b-cal-event-wrap {
     background-color: var(--bdv-accent-color) !important;
-    background-image: linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931);
+    background-image: var(--bdv-gradient) !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

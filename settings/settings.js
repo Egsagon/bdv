@@ -63,11 +63,11 @@ const settings = [
             },
             {
                 // Radiant
-                "name": "Gradiants",
+                "name": "Gradiant",
                 "id": "--bdv-gradient",
                 "type": "text",
-                "default": "linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931)",
-                "help": "CSS gradients. Set to <kbd>none</kbd> to disable"
+                "default": "linear-gradient(100deg, #fd575a, #fc8151, #f9b931, #f9b931)",
+                "help": "CSS gradient. Set to <kbd>none</kbd> to disable"
             }
         ]
     },

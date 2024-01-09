@@ -1,6 +1,6 @@
 // Define default theme on addon installation
 
-const OPEN_SETTINGS_ON_INSTALL = true
+const OPEN_SETTINGS_ON_INSTALL = false
 
 const DEFAULT_THEMES = {
     alv: {

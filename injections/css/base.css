@@ -12,12 +12,12 @@
     --bdv-bg-color-2: #232327;
     --bdv-fg-color: #F8F8F2;
     --bdv-accent-color: var(--school-accent); /* By default accent color will be school accent */
-    --bdv-error-color: #FF5555; /* Not implemented */
-    --bdv-accent-color-2: #ffff80; /* Not implemented */
+    --bdv-error-color: #FF5555;
+    --bdv-accent-color-2: #ffff80; /* Unused */
 
-    --bdv-sp-color: var(--bdv-bg-color) /* Startpage background */
+    --bdv-sp-color: var(--bdv-bg-color); /* Startpage background */
 
-    --bdv-cal-gradient: linear-gradient(90deg, #fd575a, #fc8151, #f9b931, #f9b931);
+    --bdv-gradient: linear-gradient(100deg, #fd575a, #fc8151, #f9b931, #f9b931);
 
     /* Layout settings */
     --bdv-border-radius: 10px;

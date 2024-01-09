@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "BDV",
-    "version": "0.52",
+    "version": "0.54",
     "description": "BetterDeVinci - A custom theme for LDV",
 
-    "icons": { "48": "logo.png" },
+    "icons": { "100": "logo.png" },
 
     "permissions": [
         "tabs",
