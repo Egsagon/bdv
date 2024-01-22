@@ -14,7 +14,7 @@ BDV is a retheme for [leonard-de-vinci.net](https://leonard-de-vinci.net). It ma
 
 <br clear="right">
 
-<img src="https://raw.githubusercontent.com/Egsagon/bdv/master/assets/demo.png">
+<img src="https://raw.githubusercontent.com/Egsagon/bdv/master/demo.png">
 
 ### License
 This project uses the GPL-v3 license. See the `LICENSE` file for more information.
