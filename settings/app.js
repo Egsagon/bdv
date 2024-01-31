@@ -11,7 +11,7 @@ document.querySelector('#save').addEventListener('click', async () => {
         let var_ = param.dataset.var
         if (var_) {
 
-            let res = param.getAttribute('value')
+            let res = param.value
 
             if (param.type === 'checkbox') {
                 res = param.checked
@@ -23,7 +23,6 @@ document.querySelector('#save').addEventListener('click', async () => {
         } else {
             scheme.color_scheme += `${param.id}: ${param.value}${param.dataset.unit ?? ''} !important; `
         }
-
     })
 
     scheme.color_scheme += '}'

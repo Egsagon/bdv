@@ -19,7 +19,7 @@ const settings = [
                 "id": "--bdv-fg-color",
                 "type": "color",
                 "default": "#f8f8f2",
-                "help": "Foreground color for text and icons"
+                "help": "Color for text and icons"
             },
             {
                 // Background color 1
@@ -43,7 +43,7 @@ const settings = [
                 "var": "accent_override",
                 "type": "checkbox",
                 "default": false,
-                "help": "Override school accent"
+                "help": "Allow school accent override"
             },
             {
                 // Accent color
@@ -67,7 +67,7 @@ const settings = [
                 "id": "--bdv-gradient",
                 "type": "text",
                 "default": "linear-gradient(100deg, #fd575a, #fc8151, #f9b931, #f9b931)",
-                "help": "CSS gradient. Set to <kbd>none</kbd> to disable"
+                "help": "CSS gradient. <kbd>none</kbd> to disable"
             }
         ]
     },
@@ -112,15 +112,15 @@ const settings = [
                 "var": "disable_logo",
                 "type": "checkbox",
                 "default": true,
-                "help": "Whether to suppress the logo animation on page opening"
+                "help": "Whether to suppress logo animation"
             },
             {
                 // Logo gaps
-                "name": "Logo border",
+                "name": "Logo padding",
                 "id": "--bdv-logo-border",
                 "type": "number",
                 "default": "0",
-                "help": "Border around the logo",
+                "help": "Padding around the logo.",
                 "unit": "px"
             },
             {
@@ -129,7 +129,7 @@ const settings = [
                 "var": "logo",
                 "type": "text",
                 "default": "bdv.png",
-                "help": "Logo filename (<kbd>$school</kbd>, <kbd>bdv.png</kbd>, <kbd>generic.png</kbd> or custom)"
+                "help": "Logo image. <kbd>$school</kbd>, <kbd>bdv.png</kbd>, <kbd>alv.png</kbd> or custom"
             }
         ]
     }
