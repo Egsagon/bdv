@@ -4,7 +4,7 @@
     "version": "0.55",
     "description": "BetterDeVinci - A custom theme for LDV",
 
-    "icons": { "100": "logo.png" },
+    "icons": { "310": "assets/logo.png" },
 
     "permissions": [
         "tabs",
