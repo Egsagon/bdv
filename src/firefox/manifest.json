@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "BDV",
-    "version": "0.55",
+    "version": "0.56",
     "description": "BetterDeVinci - A custom theme for LDV",
 
     "icons": { "310": "assets/logo.png" },
@@ -155,8 +155,7 @@
     "browser_specific_settings": {
         "gecko": {
             "id": "betterdevinci@egsagon.id",
-            "strict_min_version": "57.0a1",
-            "update_url": "https://gist.githubusercontent.com/Egsagon/9ceb72b2a6a2cf3dd8170c04ff8e8a99/raw/06e8c60934717ba8cc153d19e90d9e0490ca94f0/update.json"
+            "strict_min_version": "57.0a1"
         }
     },
 

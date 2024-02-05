@@ -28,26 +28,24 @@
             payload = {'act': 'ident_analyse', 'login': id}
             
             $.post('ajax.inc.php', payload, response => {
-                
-                if (response.startsWith('$(location)')) {
-                    // Request succeeded
-                    
-                    ev = new CustomEvent('bdv-id-ok', { detail: id })
-                    window.dispatchEvent(ev)
 
-                    return eval(response) // execute jquery string
-                }
-
-                // Request failed
                 try {
-                    msg = /html: \"(.*?)\",/gms.exec(response)[1]
+                    let params = JSON.parse(/\('(.*?)'\);/g.exec(response)[1])
+
+                    if (response.startsWith('window.logging.connexion')) {
+                        // Request succeeded
+                        
+                        ev = new CustomEvent('bdv-id-ok', { detail: id })
+                        window.dispatchEvent(ev)
+                        window.location.href = '/lssop/' + params.alvsec + '/' + params.login
+                    }
                 } catch {
+                    
                     msg = `
                     Internal error. Check your credentials.
-                    The server might be encountering problems.
-                    <button onclick='alert("${response || 'No data received'}")'>
-                        See received data
-                    </button>`
+                    The server might be encountering problems
+                    <button onclick="alert('Received data: ${response}')">See received data</button>.
+                    `
                 }
                 
                 $('#msg')[0].style.display = 'block'
