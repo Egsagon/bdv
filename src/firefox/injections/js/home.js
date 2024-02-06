@@ -8,7 +8,6 @@ sidebar_icons = Object.entries({
     'Office portal':             'fa-brands fa-microsoft',
     'Intranet SI':               'fa-solid fa-comment',
     'DeVinci Learning':          'fa-solid fa-folder',
-    'DeVinci Online':            'fa-solid fa-folder-minus',
     'Espace santé':              'fa-solid fa-heart',
     'DeVinci Innovation center': 'fa-solid fa-brain',
     'Promotions':                'fa-solid fa-star',

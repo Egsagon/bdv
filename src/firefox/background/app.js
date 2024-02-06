@@ -1,7 +1,5 @@
 // Define default theme on addon installation
 
-const OPEN_SETTINGS_ON_INSTALL = false
-
 const DEFAULT_THEMES = {
     alv: {
         color_scheme: `:root {
@@ -55,13 +53,29 @@ const DEFAULT_THEMES = {
     }
 }
 
+// Default configuration
+const REFRESH_ON_INSTALL = true
+const OPEN_SETTINGS_ON_INSTALL = false
+const DEFAULT_THEME = DEFAULT_THEME.new
+
 browser.runtime.onInstalled.addListener(async () => {
 
     // Save a default scheme
     console.log('Saving default settings to storage')
-    await browser.storage.sync.set(DEFAULT_THEMES.new)
+    await browser.storage.sync.set(DEFAULT_THEME)
 
     // Open settings page
     if (OPEN_SETTINGS_ON_INSTALL)
         await browser.tabs.create({ url: 'settings/index.html' })
+
+    // Refresh opened tabs
+    if (REFRESH_ON_INSTALL) {
+        let tabs = await browser.tabs.query({ url: [
+            '*://www.leonard-de-vinci.net/*',
+            '*://adfs.devinci.fr/adfs/ls/*',
+            '*://learning.devinci.fr/*'
+        ]})
+        
+        tabs.forEach(async tab => await browser.tabs.reload(tab.id))
+    }
 })
