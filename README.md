@@ -8,7 +8,7 @@ BDV is a retheme for [leonard-de-vinci.net](https://leonard-de-vinci.net). It ma
 > Early dev - Some features might not be available with the extension on.
 
 ### Downloads
-- Firefox - [v0.58](https://github.com/Egsagon/bdv/releases/download/v0.58/bdv.xpi)
+- Firefox - [v0.58](https://github.com/Egsagon/bdv/releases/download/v0.58/bdv.xpi) [ status - BROKEN ]
 - Chrome - *not released yet*
 - Edge - *not released yet*
 
