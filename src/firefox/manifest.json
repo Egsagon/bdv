@@ -50,6 +50,11 @@
             "css": ["injections/css/presence.css"]
         },
         {
+            "matches": ["*://www.leonard-de-vinci.net/student/presences/*"],
+            "js": ["injections/js/presence.js"],
+            "run_at": "document_start"
+        },
+        {
             "matches": ["*://www.leonard-de-vinci.net/student/cours/"],
             "css": ["injections/css/cours.css"],
             "js": [

@@ -82,3 +82,14 @@
     outline-offset: none !important;
     background-color: #48ae48 !important;
 }
+
+#bdv-auto-presence {
+    background-color: purple !important;
+    padding: 8px;
+    border: none;
+    border-radius: var(--bdv-border-radius);
+}
+
+#bdv-auto-presence:hover {
+    background-color: blueviolet !important;
+}
