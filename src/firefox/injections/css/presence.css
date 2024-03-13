@@ -17,10 +17,6 @@
     background-color: var(--bdv-bg-color) !important;
 }
 
-#main table tbody tr td:last-child .tooltip {
-    display: none !important;
-}
-
 #body_presences > * {
     border: 0px solid transparent !important;
     border-top: 2px solid var(--bdv-bg-color) !important;
@@ -87,36 +83,4 @@
 
 #main .panel-body {
     padding: 0 !important;
-}
-
-#main .btn-default {
-    background: none !important;
-    border: none !important;
-}
-
-#main .btn-default i.fa-book {
-    visibility: hidden;
-}
-
-#main .btn-default i.fa-book::before {
-    display: none !important;
-}
-
-#main .btn-default i.fa-book:after {
-    visibility: visible !important;
-    display: block !important;
-    content: '\f07b' !important;
-    padding: 4px;
-    font-family: "FontAwesome";
-    font-size: 16px;
-}
-
-#main td > a[href^="https://devinci-online.zoom.us/"] {
-    font-size: 0;
-}
-
-#main td > a[href^="https://devinci-online.zoom.us/"]::before {
-    font-size: small;
-    content: 'Zoom';
-    margin-right: 8px;
 }

@@ -24,10 +24,12 @@
 
 #social-timeline {
     display: flex !important;
+    flex-direction: column;
 }
 
 #presence_cours {
-    margin-left: max(5px, var(--bdv-gap));
+    margin-top: max(5px, var(--bdv-gap));
+    margin-left: 0;
 }
 
 #main .span6 * {
@@ -35,8 +37,31 @@
 }
 
 #main .panel-body .table {
-    display: grid;
-    flex-direction: column;
+    border: none;
+}
+
+#main #recap_cours .table * {
+    border-left: none;
+    border-right: none;
+    border-width: 4px;
+    border-color: var(--bdv-bg-color-2);
+}
+
+#recap_cours, #presence_cours {
+    width: 100%;
+}
+
+#recap_cours h3 {
+    display: none;
+}
+
+#recap_cours h4 {
+    margin-bottom: 32px;
+}
+
+#recap_cours h4::before {
+    content: 'Cours: ';
+    color: gray;
 }
 
 #body_presence .alert {
@@ -74,7 +99,7 @@
     background-color: var(--bdv-bg-color-2) !important;
 }
 
-#body-presence span#set-presence.btn {
+#body_presence span#set-presence.btn {
     background-image: none !important;
     animation: none !important;
     box-shadow: none !important;
@@ -83,13 +108,70 @@
     background-color: #48ae48 !important;
 }
 
-#bdv-auto-presence {
-    background-color: purple !important;
+#main #body_presence #bdv-auto-presence {
+    height: 36px;
+    background-color: blueviolet !important;
     padding: 8px;
     border: none;
     border-radius: var(--bdv-border-radius);
+    opacity: .85;
+    transition: all ease-in-out .2s;
+    text-align: center;
+    vertical-align: middle;
 }
 
-#bdv-auto-presence:hover {
-    background-color: blueviolet !important;
+#main #body_presence #bdv-auto-presence:hover {
+    opacity: 1;
 }
+
+#main #body_presence #bdv-auto-presence.active {
+    background-color: blue !important;
+}
+
+#main .btn-default {
+    background: none !important;
+    border: none !important;
+}
+
+#main .btn-default i.fa-book {
+    visibility: hidden;
+}
+
+#main .btn-default i.fa-book::before {
+    display: none !important;
+}
+
+#main .btn-default i.fa-book:after {
+    visibility: visible !important;
+    display: block !important;
+    content: '\f07b' !important;
+    padding: 4px;
+    font-family: "FontAwesome";
+    font-size: 16px;
+}
+
+#main td > a[href^="https://devinci-online.zoom.us/"] {
+    font-size: 0;
+}
+
+#main td > a[href^="https://devinci-online.zoom.us/"]::before {
+    font-size: small;
+    content: 'Zoom';
+    margin-right: 8px;
+}
+
+#main table tbody tr td:last-child .tooltip {
+    display: none !important;
+}
+
+#main table .tooltip {
+    background-color: var(--bdv-bg-color-2) !important;
+    padding: 10px;
+    border-radius: var(--bdv-border-radius);
+}
+
+#body_presence span.pulsate {
+    background-color: rgba(98, 196, 98, 0.9) !important;
+    background-image: none !important;
+}
+

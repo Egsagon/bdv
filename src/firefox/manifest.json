@@ -51,6 +51,7 @@
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/student/presences/*"],
+            "css": ["injections/css/spec_presence.css"],
             "js": ["injections/js/presence.js"],
             "run_at": "document_start"
         },
@@ -129,10 +130,6 @@
         {
             "matches": ["*://www.leonard-de-vinci.net/student/cours/replay/*/*"],
             "css": [ "injections/css/replays.css" ]
-        },
-        {
-            "matches": ["*://www.leonard-de-vinci.net/student/presences/*"],
-            "css": [ "injections/css/spec_presence.css" ]
         },
         {
             "matches": ["*://www.leonard-de-vinci.net/LOGOUT.php"],
